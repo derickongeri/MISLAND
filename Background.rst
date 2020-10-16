@@ -39,11 +39,14 @@ Productivity
 ------------
 Land productivity is the biological productive capacity of the land (i.e. the ability to produce food, fibre and fuel that sustain life). For easy interpretation the annual mean NDVI values at the pixel level will be used to assess three measures of change as summarized below:
 
-.. image:: ../Images/summarymethodology.png
-	   :height: 400
-	   :width: 450
-	   :alt: alternate text
+.. figure:: ../Images/sdgmethodology.png
+    :width: 700
+    :align: center
+    :height: 500
+    :alt: sdg 15.3.1 Land Productivity
+    :figclass: align-center
 
+    Sammury methodology for conputing Land Productivity
 
 Landcover
 ---------
@@ -61,18 +64,17 @@ Vegetation Loss/Gain hotspots
 Land degradation hotsports (LDH) are produced via the analysis of time-series vegetation indices data and are used to characterize areas of different sizes, where the vegetation cover and the soil types are severely degraded.
 
 Vegetation loss/gain hotspots will be calculated based on time series observation of selected suit of vegetation indices depending on the climatic zones and terrain morphology of the North African countries. The selected indices derived from Landsat data are as listed below:
-	●	NDVI for humid zones, sub-humid and semi-arid zones
 
-	●	MSAVI2 for arid and stepic zones
-
-	●	SAVI for desert areas
+	-NDVI for humid zones, sub-humid and semi-arid zones
+	-MSAVI2 for arid and stepic zones
+	-SAVI for desert areas
 
 
 ----------------------------
-Forest degradation hotspots:
+Forest degradation hotspots
 ----------------------------
-
 The quantification of the forest change will be based on pre-existing high-resolution global maps derived from Hansen Global Forest change dataset that can be accessed using `Google Earth Engine API`_. 
+
 	.. _Google Earth Engine API: https://earthenginepartners.appspot.com/science-2013-global-forest
 
 The maps are produced from time-series analysis of Landsat images characterizing forest extent and change over time.

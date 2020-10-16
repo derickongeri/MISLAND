@@ -45,7 +45,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search"  style="background: white" >
+        <div class="wy-side-nav-search"  style="background: black" >
           
 
           
@@ -103,7 +103,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#vegetation-loss-gain-hotspots">Vegetation Loss/Gain hotspots</a></li>
-<li><a class="reference internal" href="#forest-degradation-hotspots">Forest degradation hotspots:</a></li>
+<li><a class="reference internal" href="#forest-degradation-hotspots">Forest degradation hotspots</a></li>
 </ul>
 </li>
 </ul>
@@ -208,13 +208,16 @@
 <p>The OSS.LDMS Project is a partnership between OSS and LocateIT under the Global Monitoring for Environment and Security and Africa(GMES &amp; Africa) and is co-funded by the African Union and the European Union.</p>
 <p>Contributors to the documentation and to OSS.LDMS include Derick ONGERI, Grace AMONDI, Vivianne META, Toure SOULEYMANE, Seth NYAWACHA, Simon NDARAU, Mustapha MIMOUNI, Nabil KHATRA, Amjed TAIEB and Haithem REJEB.</p>
 <blockquote>
-<div><a class="reference internal image-reference" href="_images/li2.png"><img alt="LocateIT" src="_images/li2.png" style="width: 125px; height: 75px;" /></a>
-<a class="reference internal image-reference" href="_images/oss.png"><img alt="LocateIT" src="_images/oss.png" style="width: 175px; height: 100px;" /></a>
+<div><a class="reference internal image-reference" href="_images/oss.png"><img alt="OSS" src="_images/oss.png" style="width: 150px; height: 100px;" /></a>
+<a class="reference internal image-reference" href="_images/gmeslogo.png"><img alt="GMES &amp; Africa" src="_images/gmeslogo.png" style="width: 150px; height: 75px;" /></a>
+<a class="reference internal image-reference" href="_images/au.jpg"><img alt="AU" src="_images/au.jpg" style="width: 140px; height: 75px;" /></a>
+<a class="reference internal image-reference" href="_images/Eu.png"><img alt="EU" src="_images/Eu.png" style="width: 85px; height: 75px;" /></a>
+<a class="reference internal image-reference" href="_images/li2.png"><img alt="LocateIT" src="_images/li2.png" style="width: 125px; height: 75px;" /></a>
 </div></blockquote>
 </div>
 <div class="section" id="aknowledgement">
 <h3>Aknowledgement<a class="headerlink" href="#aknowledgement" title="Permalink to this headline">¶</a></h3>
-<p>Special appreciation for the Trends.Earth. Conservation International. Available online at <a class="reference external" href="http://trends.earth">http://trends.earth</a>
+<p>Special appreciation to the Trends.Earth. Conservation International. Available online at <a class="reference external" href="http://trends.earth">http://trends.earth</a>
 .2018. for providing input on the implementation of the SDG 15.3 and LDN indicators in OSS.LDMS, on the UNCCD reporting process, and also provided early input and testing of the tool.</p>
 <p>The project also acknowledges the contribution of national and regional stakeholders; Algerian Space Agency(ASAL), ASAL (Algeria), DRC (Egypt), LCRSSS (Libya), CRTS (Morocco), AL-Aasriya University of Nouakchott (Mauritania) and CNCT (Tunisia) for the national level and CRTEAN and CRASTE-LF for the regional level</p>
 </div>
@@ -252,7 +255,10 @@
 <div class="section" id="productivity">
 <h4>Productivity<a class="headerlink" href="#productivity" title="Permalink to this headline">¶</a></h4>
 <p>Land productivity is the biological productive capacity of the land (i.e. the ability to produce food, fibre and fuel that sustain life). For easy interpretation the annual mean NDVI values at the pixel level will be used to assess three measures of change as summarized below:</p>
-<a class="reference internal image-reference" href="_images/summarymethodology.png"><img alt="alternate text" src="_images/summarymethodology.png" style="width: 450px; height: 400px;" /></a>
+<div class="align-center figure" id="id2">
+<a class="reference internal image-reference" href="_images/sdgmethodology.png"><img alt="sdg 15.3.1 Land Productivity" src="_images/sdgmethodology.png" style="width: 700px; height: 500px;" /></a>
+<p class="caption"><span class="caption-text">Sammury methodology for conputing Land Productivity</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="landcover">
 <h4>Landcover<a class="headerlink" href="#landcover" title="Permalink to this headline">¶</a></h4>
@@ -266,18 +272,18 @@
 <div class="section" id="vegetation-loss-gain-hotspots">
 <h3>Vegetation Loss/Gain hotspots<a class="headerlink" href="#vegetation-loss-gain-hotspots" title="Permalink to this headline">¶</a></h3>
 <p>Land degradation hotsports (LDH) are produced via the analysis of time-series vegetation indices data and are used to characterize areas of different sizes, where the vegetation cover and the soil types are severely degraded.</p>
-<dl>
-<dt>Vegetation loss/gain hotspots will be calculated based on time series observation of selected suit of vegetation indices depending on the climatic zones and terrain morphology of the North African countries. The selected indices derived from Landsat data are as listed below:</dt><dd><p>●       NDVI for humid zones, sub-humid and semi-arid zones</p>
-<p>●       MSAVI2 for arid and stepic zones</p>
-<p>●       SAVI for desert areas</p>
-</dd>
-</dl>
+<p>Vegetation loss/gain hotspots will be calculated based on time series observation of selected suit of vegetation indices depending on the climatic zones and terrain morphology of the North African countries. The selected indices derived from Landsat data are as listed below:</p>
+<blockquote>
+<div><p>-NDVI for humid zones, sub-humid and semi-arid zones
+-MSAVI2 for arid and stepic zones
+-SAVI for desert areas</p>
+</div></blockquote>
 </div>
 <div class="section" id="forest-degradation-hotspots">
-<h3>Forest degradation hotspots:<a class="headerlink" href="#forest-degradation-hotspots" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>The quantification of the forest change will be based on pre-existing high-resolution global maps derived from Hansen Global Forest change dataset that can be accessed using <a class="reference external" href="https://earthenginepartners.appspot.com/science-2013-global-forest">Google Earth Engine API</a>.</dt><dd></dd>
-</dl>
+<h3>Forest degradation hotspots<a class="headerlink" href="#forest-degradation-hotspots" title="Permalink to this headline">¶</a></h3>
+<p>The quantification of the forest change will be based on pre-existing high-resolution global maps derived from Hansen Global Forest change dataset that can be accessed using <a class="reference external" href="https://earthenginepartners.appspot.com/science-2013-global-forest">Google Earth Engine API</a>.</p>
+<blockquote>
+<div></div></blockquote>
 <p>The maps are produced from time-series analysis of Landsat images characterizing forest extent and change over time.</p>
 </div>
 </div>

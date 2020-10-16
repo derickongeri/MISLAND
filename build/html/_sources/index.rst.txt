@@ -11,7 +11,6 @@ North Africa Land Degradation Monitoring Service  documentation!
 	   :width: 800
 	   :alt: LocateIT
 
-
 =======================================================
 Introduction to the Land degradation Monitoring service
 =======================================================
@@ -37,20 +36,35 @@ The OSS.LDMS Project is a partnership between OSS and LocateIT under the Global 
 
 Contributors to the documentation and to OSS.LDMS include Derick ONGERI, Grace AMONDI, Vivianne META, Toure SOULEYMANE, Seth NYAWACHA, Simon NDARAU, Mustapha MIMOUNI, Nabil KHATRA, Amjed TAIEB and Haithem REJEB.
 
+	.. image:: ../Images/oss.png
+	   :height: 100
+	   :width: 150
+	   :alt: OSS
+
+	.. image:: ../Images/gmeslogo.png
+	   :height: 75
+	   :width: 150
+	   :alt: GMES & Africa
+
+	.. image:: ../Images/au.jpg
+	   :height: 75
+	   :width: 140
+	   :alt: AU
+
+	.. image:: ../Images/Eu.png
+	   :height: 75
+	   :width: 85
+	   :alt: EU
+
 	.. image:: ../Images/li2.png
 	   :height: 75
 	   :width: 125
 	   :alt: LocateIT
 
-	.. image:: ../Images/oss.png
-	   :height: 100
-	   :width: 175
-	   :alt: LocateIT
-
 --------------
 Aknowledgement
 --------------
-Special appreciation for the Trends.Earth. Conservation International. Available online at http://trends.earth 
+Special appreciation to the Trends.Earth. Conservation International. Available online at http://trends.earth 
 .2018. for providing input on the implementation of the SDG 15.3 and LDN indicators in OSS.LDMS, on the UNCCD reporting process, and also provided early input and testing of the tool.
 
 The project also acknowledges the contribution of national and regional stakeholders; Algerian Space Agency(ASAL), ASAL (Algeria), DRC (Egypt), LCRSSS (Libya), CRTS (Morocco), AL-Aasriya University of Nouakchott (Mauritania) and CNCT (Tunisia) for the national level and CRTEAN and CRASTE-LF for the regional level
