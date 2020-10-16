@@ -10,7 +10,7 @@ North Africa Land Degradation Monitoring Service  documentation!
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
    :caption: Contents:
 
    index
@@ -60,7 +60,6 @@ OSS.LDMS is free and open-source. It is licensed under the GNU General Public Li
 This site and the products of OSS.LDMS are made available under the terms of the Creative Commons Attribution 4.0 International License (CC BY 4.0). The boundaries and names used, and the designations used, in OSS.LDMS do not imply official endorsement or acceptance by OSS, or its partner organizations and contributors.
 
 
-.. include:: ../Introduction.rst
 .. include:: ../Background.rst
 
 
