@@ -34,11 +34,9 @@ Productivity
 Land productivity is the biological productive capacity of the land (i.e. the ability to produce food, fibre and fuel that sustain life). For easy interpretation the annual mean NDVI values at the pixel level will be used to assess three measures of change as summarized below:
 
 	.. image:: ../Images/summarymethodology.png
-	   :height: 500
-	   :width: 500
+	   :height: 400
+	   :width: 450
 	   :alt: alternate text
-
-	   Summary methodology for computing Land Proudctivity
 
 
 Landcover

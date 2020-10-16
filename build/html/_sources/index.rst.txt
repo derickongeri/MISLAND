@@ -3,19 +3,11 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 North Africa Land Degradation Monitoring Service  documentation!
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-.. toctree::
-   :maxdepth: 4
-   :caption: Contents:
 
-   index
-   Bacground
-   Introudction
 
 =======================================================
 Introduction to the Land degradation Monitoring service
@@ -42,7 +34,15 @@ The OSS.LDMS Project is a partnership between OSS and LocateIT under the Global 
 
 Contributors to the documentation and to OSS.LDMS include Derick ONGERI, Grace AMONDI, Vivianne META, Toure SOULEYMANE, Seth NYAWACHA, Simon NDARAU, Mustapha MIMOUNI, Nabil KHATRA, Amjed TAIEB and Haithem REJEB.
 
+	.. image:: ../Images/li2.png
+	   :height: 75
+	   :width: 125
+	   :alt: LocateIT
 
+	.. image:: ../Images/oss.png
+	   :height: 100
+	   :width: 175
+	   :alt: LocateIT
 
 --------------
 Aknowledgement
@@ -61,9 +61,9 @@ This site and the products of OSS.LDMS are made available under the terms of the
 
 
 .. include:: ../Background.rst
+.. include:: ../Service Guide.rst
 
-
-
+==================
 Indices and tables
 ==================
 

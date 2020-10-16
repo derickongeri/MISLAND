@@ -30,10 +30,10 @@ release = '0.0.1'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-
+import sphinx_rtd_theme
 
 extensions = [
-
+	
 ]
 
 
@@ -53,48 +53,30 @@ exclude_patterns = []
 #
 #html_theme = 'alabaster'
 html_theme_path = [better_theme_path]
-html_theme = "better"
+html_theme = "sphinx_rtd_theme"
 
 html_sidebars = { '**': ['globaltoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html'] }
 
 
 html_theme_options = {
-    # show sidebar on the right instead of on the left
-	'rightsidebar': False,
-	# inline CSS to insert into the page if you're too lazy to make a
-	# separate file
-	'inlinecss': '',
-	# CSS files to include after all other CSS files
-	# (refer to by relative path from conf.py directory, or link to a
-	# remote file)
-	'cssfiles': ['_static/my_style.css'], # default is empty list
-	# show a big text header with the value of html_title
-	'showheader': True,
-	# show the breadcrumbs and index|next|previous links at the top of
-	# the page
-	'showrelbartop': True,
-	# same for bottom of the page
-	'showrelbarbottom': True,
-	# show the self-serving link in the footer
-	'linktotheme': True,
-	# width of the sidebar. page width is determined by a CSS rule.
-	# I prefer to define things in rem because it scales with the
-	# global font size rather than pixels or the local font size.
-	'sidebarwidth': '15rem',
-	# color of all body text
-	'textcolor': '#000000',
-	# color of all headings (<h1> tags); defaults to the value of
-	# textcolor, which is why it's defined here at all.
-	'headtextcolor': '',
-	# color of text in the footer, including links; defaults to the
-	# value of textcolor
-	'footertextcolor': '',
-	# Google Analytics info
-	'ga_ua': '',
-	'ga_domain': '',
+	'canonical_url': '',
+    'analytics_id': '',  #  Provided by Google in your dashboard
+    #'analytics_anonymize_ip': False,
+    'logo_only': False,
+    'display_version': True,
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': False,
+    #'vcs_pageview_mode': '',
+    'style_nav_header_background': 'white',
+    # Toc options
+    'collapse_navigation': True,
+    'sticky_navigation': True,
+    'navigation_depth': 4,
+    'includehidden': True,
+    'titles_only': False
 	}
 
-html_theme_options['cssfiles'] = ['_static/style.css']
+#html_theme_options['cssfiles'] = ['_static/style.css']
 #html_theme_path = []
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
