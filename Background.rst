@@ -16,14 +16,20 @@ Target 15.3 aims to: “By 2030, combat desertification, restore degraded land a
 The indicator used to assess the progress of each SDG target is the 15.3.1 indicator: “Proportion of land that is degraded over total land area’’
 
 The basic land degradation indicators include three main sub-indicators of the SDG target 15.3.1 (proportion of land that is degraded over the total land area). As the custodian agency of SDG 15.3, the United Nations Convention to Combat Desertification (UNCCD) has developed recommendations/Good practice guide on how to compute SDG indicator 15.3.1  from 3 sub-indicators:
-	• Vegetation productivity
-	• Landcover
-	• Soil Organic carbon
 
-	.. image:: ../Images/sdg.png
-	   :height: 300
-	   :width: 500
-	   :alt: alternate text
+	- Vegetation productivity
+	- Landcover
+	- Soil Organic carbon
+
+
+.. figure:: ../Images/sdg.png
+    :width: 500
+    :align: center
+    :height: 300
+    :alt: sdg 15.3.1 sub-indicators
+    :figclass: align-center
+
+    SDG 15.3.1 Indicators
 
 -------------------------
 SDG 15.3.1 Sub-indicators
@@ -33,7 +39,7 @@ Productivity
 ------------
 Land productivity is the biological productive capacity of the land (i.e. the ability to produce food, fibre and fuel that sustain life). For easy interpretation the annual mean NDVI values at the pixel level will be used to assess three measures of change as summarized below:
 
-	.. image:: ../Images/summarymethodology.png
+.. image:: ../Images/summarymethodology.png
 	   :height: 400
 	   :width: 450
 	   :alt: alternate text
@@ -51,6 +57,7 @@ These sub-inidcators represent a minimum that are complemented by other indicato
 -----------------------------
 Vegetation Loss/Gain hotspots
 -----------------------------
+
 Land degradation hotsports (LDH) are produced via the analysis of time-series vegetation indices data and are used to characterize areas of different sizes, where the vegetation cover and the soil types are severely degraded.
 
 Vegetation loss/gain hotspots will be calculated based on time series observation of selected suit of vegetation indices depending on the climatic zones and terrain morphology of the North African countries. The selected indices derived from Landsat data are as listed below:
@@ -64,6 +71,7 @@ Vegetation loss/gain hotspots will be calculated based on time series observatio
 ----------------------------
 Forest degradation hotspots:
 ----------------------------
+
 The quantification of the forest change will be based on pre-existing high-resolution global maps derived from Hansen Global Forest change dataset that can be accessed using `Google Earth Engine API`_. 
 	.. _Google Earth Engine API: https://earthenginepartners.appspot.com/science-2013-global-forest
 
