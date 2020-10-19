@@ -19,6 +19,11 @@ The core-service provides land degradation indicators for six North African Coun
 
 	- At the pilot site level, where(customized indicators) can be developed, using medium resoultion data(landsat time series imagery and derived vegetation indices, combined with different satellite-derived climate data)
 
+.. note::
+   You can download the PDF Version of this doucument `here`_
+
+   .. _her: https://locateit-oss-ldms.readthedocs.io/_/downloads/en/latest/pdf/
+
 .. contents::
 
 .. toctree::
