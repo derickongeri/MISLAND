@@ -415,7 +415,7 @@ Compute SDG Indicator 15.3.1
 ____________________________
 
 .. note::
-    Refer to the :ref:`indicator-15-3-1-combining-indicators` section of this 
+    Refer to the :ref:`` section of this 
     manual for a detailed explanation of how the sub-indicators are combined to 
     calculate the final SDG 15.3.1 indicator.
 

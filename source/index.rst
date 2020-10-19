@@ -37,7 +37,17 @@ The core-service provides land degradation indicators for six North African Coun
 
 .. toctree::
    :maxdepth: 3
-   :caption: Qgis Plugin
+   :caption: Web Service Guide
+
+   Service/Registration
+   Service/Calculate_indicators
+   Service/Download_results
+   Service/Registration
+
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Qgis Plugin Guide
 
    Qgis_Plugin/Registration
    Qgis_Plugin/Calculate_indicators
