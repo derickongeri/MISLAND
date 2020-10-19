@@ -13,7 +13,7 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
-from better import better_theme_path
+#from better import better_theme_path
 
 # -- Project information -----------------------------------------------------
 
@@ -52,7 +52,7 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 #html_theme = 'alabaster'
-html_theme_path = [better_theme_path]
+#html_theme_path = [better_theme_path]
 html_theme = "sphinx_rtd_theme"
 
 html_sidebars = { '**': ['globaltoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html'] }
@@ -69,10 +69,10 @@ html_theme_options = {
     #'vcs_pageview_mode': '',
     'style_nav_header_background': 'black',
     # Toc options
-    'collapse_navigation': True,
+    'collapse_navigation': False,
     'sticky_navigation': True,
     'navigation_depth': 4,
-    'includehidden': True,
+    'includehidden': False,
     'titles_only': False
 	}
 
