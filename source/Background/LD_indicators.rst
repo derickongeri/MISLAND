@@ -52,15 +52,9 @@ Landcover
 Monitoring of Land Use and Land Cover Changes (LULCCs) at both regional and local scales presents a major opportunity for identifying areas threatened by land degradation where mitigation measures should be taken. Traditionally, LULCCs have been interpreted by distinguishing between two transformation types: conversion and modification.
 
 .. figure:: ../_static/Images/lulc.png
-<<<<<<< HEAD
-    :width: 700
-    :align: center
-    :height: 500
-=======
     :width: 621
     :align: center
     :height: 251
->>>>>>> updated download_data.rst
     :alt: sdg 15.3.1 Land Cover change
     :figclass: align-center
 
@@ -69,10 +63,7 @@ Monitoring of Land Use and Land Cover Changes (LULCCs) at both regional and loca
 Carbon-stocks
 -------------
 
-<<<<<<< HEAD
-=======
 
->>>>>>> updated download_data.rst
 These sub-inidcators represent a minimum that are complemented by other indicators for compresensive assesment of land degradation. 
 
 -----------------------------
