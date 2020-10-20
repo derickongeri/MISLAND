@@ -179,9 +179,6 @@ The change in carbon stock for the selected area and period will be displayed on
     :figclass: align-center
 
     Carbon stock change map and statistics
->>>>>>> updated download_data.rst
-
-
 
 Vegetation Loss/Gain indicators
 -------------------------------
