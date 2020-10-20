@@ -7,8 +7,13 @@
 OSS.LDMS
 """""""""
 	.. image:: ../Images/cs.png
+<<<<<<< HEAD
 	   :height: 400
 	   :width: 800
+=======
+	   :height: 393
+	   :width: 698
+>>>>>>> updated download_data.rst
 	   :alt: LocateIT
 
 Oss LDMS is an operational instrument relying on the international standards for reporting SDG 15.3.1 and technical approaches allowing the delivery of regular information on vegetation cover gain/loss to decision makers and environmental agencies at the first place.
@@ -20,9 +25,15 @@ The core-service provides land degradation indicators for six North African Coun
 	- At the pilot site level, where(customized indicators) can be developed, using medium resoultion data(landsat time series imagery and derived vegetation indices, combined with different satellite-derived climate data)
 
 .. note::
+<<<<<<< HEAD
    You can download the PDF Version of this doucument `here`_
 
    .. _here: https://locateit-oss-ldms.readthedocs.io/_/downloads/en/latest/pdf/
+=======
+   You can download the `PDF Version of this doucument`_ here.
+
+   .. _PDF Version of this doucument: https://locateit-oss-ldms.readthedocs.io/_/downloads/en/latest/pdf/
+>>>>>>> updated download_data.rst
 
 .. toctree::
    :maxdepth: 3
