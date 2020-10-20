@@ -2,13 +2,8 @@
 Calculate Indicators
 ====================
 
-<<<<<<< HEAD
 SDG 15.3.1 indicators
 ---------------------
-=======
-SDG 15.3.1 indicator
---------------------
->>>>>>> updated download_data.rst
 To compute the SDG 15.3.1 indicator on the service platform, follow these simple steps,
 
 1. Select the SDG 15.3.1 service, on the listed services menu-bar as shown below
@@ -45,14 +40,6 @@ To compute the SDG 15.3.1 indicator on the service platform, follow these simple
 The map and computed statistics will be displayed on the map panel and summary pannel respectively.
 
 .. figure:: ../_static/Images/sdg4.png
-<<<<<<< HEAD
-    :width: 700
-    :align: center
-    :height: 500
-    :alt: combining all indicators
-    :figclass: align-center
-
-=======
     :width: 770
     :align: center
     :height: 393
@@ -201,11 +188,7 @@ Vegetation Loss/Gain indicators
 
 To compute vegetation loss/gain on the service platform,
 
-<<<<<<< HEAD
-1. On the services menu, select the VEGETATION GAIN/LOSS option as shown below
-=======
 1. On the services menu, select the 'VEGETATION GAIN/LOSS' option 
->>>>>>> updated download_data.rst
 
 .. figure:: ../_static/Images/vegetation_gain_loss.png
     :width: 790
@@ -259,15 +242,9 @@ To compute the change in forest cover on the service platform
 1. On the services menu, select the FOREST CHANGE option as shown below
 
 .. figure:: ../_static/Images/forestchange.png
-<<<<<<< HEAD
-    :width: 600
-    :align: center
-    :height: 55
-=======
     :width: 795
     :align: center
     :height: 51
->>>>>>> updated download_data.rst
     :alt: register
     :figclass: align-center
 
