@@ -62,4 +62,4 @@ The downloaded data is in .csv format and can be open in microsoft exel or simil
     :figclass: align-center
 
     Downloaded Data in csv format displayed in MS Excel
->>>>>>> updated download_data.rst
+
