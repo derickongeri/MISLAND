@@ -6,9 +6,9 @@
 """""""""
 OSS.LDMS
 """""""""
-	.. image:: ../Images/cs.png
-	   :height: 393
-	   :width: 698
+	.. image:: ../source/_static/Images/LDMS.png
+	   :height: 400
+	   :width: 800
 	   :alt: LocateIT
 
 Oss LDMS is an operational instrument relying on the international standards for reporting SDG 15.3.1 and technical approaches allowing the delivery of regular information on vegetation cover gain/loss to decision makers and environmental agencies at the first place.
@@ -55,11 +55,12 @@ The core-service provides land degradation indicators for six North African Coun
    :maxdepth: 3
    :caption: Qgis Plugin Guide
 
+   Qgis_Plugin/before_installing
+   Qgis_Plugin/installing
    Qgis_Plugin/Registration
    Qgis_Plugin/Calculate_indicators
    Qgis_Plugin/Plot_data
    Qgis_Plugin/Download_data
-   Qgis_Plugin/Load_data
    Qgis_Plugin/visualization
 
 ==================

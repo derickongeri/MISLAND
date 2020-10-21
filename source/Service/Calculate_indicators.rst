@@ -98,7 +98,7 @@ To compute land cover changes, users can follow these simple steps
 1. Select 'SDG 15.3.1' option on the services menu-bar and, under the 'Select SDG indicator' dropdown, choose LULC as shown below
 
 
-.. figure:: ../_static/Images/Service/lulc1.png
+.. figure:: ../_static/Images/Service/lulc.png
     :width: 181
     :align: center
     :height: 215

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Download data &mdash; North Africa Land Degradation Monitoring Service 0.0.1 documentation</title>
+  <title>Before installing the toolbox &mdash; North Africa Land Degradation Monitoring Service 0.0.1 documentation</title>
   
 
   
@@ -36,8 +36,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Visualization tools" href="visualization.html" />
-    <link rel="prev" title="Plot data" href="Plot_data.html" /> 
+    <link rel="next" title="Installing the toolbox" href="installing.html" />
+    <link rel="prev" title="Exporting Outputs" href="../Service/Download_results.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -206,9 +206,9 @@
 </ul>
 <p class="caption"><span class="caption-text">Qgis Plugin Guide</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="before_installing.html">Before installing the toolbox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="before_installing.html#download-qgis">Download QGIS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="before_installing.html#install-qgis">Install QGIS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Before installing the toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#download-qgis">Download QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-qgis">Install QGIS</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="installing.html">Installing the toolbox</a><ul>
@@ -238,7 +238,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Plot_data.html">Plot data</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Download data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization tools</a></li>
 </ul>
 
@@ -286,13 +286,13 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Download data</li>
+      <li>Before installing the toolbox</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/Qgis_Plugin/Download_data.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/Qgis_Plugin/before_installing.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -305,18 +305,53 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="download-data">
-<h1>Download data<a class="headerlink" href="#download-data" title="Permalink to this headline">¶</a></h1>
-<img alt="../_images/plugin_toolbar_download.png" class="align-center" src="../_images/plugin_toolbar_download.png" />
-<p>To download data, select the download icon highlighted above. This will open up the
-“Download Data” dialog box:</p>
-<p>If you would like to work with the original raw data used in LDMS,
-you can select select an area of interest and download the desired data for
-further analysis.</p>
-<img alt="../_images/download_data.png" class="align-center" src="../_images/download_data.png" />
-<p>The table below describes all the data available through the toolbox.
-It specifies data sources, resolutions, coverage and the different indicators
-for which each data set is used.</p>
+  <div class="section" id="before-installing-the-toolbox">
+<span id="before-installing"></span><h1>Before installing the toolbox<a class="headerlink" href="#before-installing-the-toolbox" title="Permalink to this headline">¶</a></h1>
+<p>Before installing the toolbox, QGIS version <a href="#id1"><span class="problematic" id="id2">|qgisMinVersion|</span></a> or higher
+needs to be installed on your computer.</p>
+<div class="section" id="download-qgis">
+<h2>Download QGIS<a class="headerlink" href="#download-qgis" title="Permalink to this headline">¶</a></h2>
+<p>To install the plugin, first install QGIS 3.10.3+ following the below steps:</p>
+<ol class="arabic">
+<li><p>Choose either 32 or 64 bit version</p>
+<p>You have the option of installing a 32-bit or 64-bit version of QGIS. To
+know which version to install, check which type of operating system you have
+following the below instructions. If you are unsure which you need, try
+downloading the 64 bit version first. If that version doesn’t work properly,
+un-install it and then install the 32 bit version.</p>
+<ul class="simple">
+<li><p>Windows 8 or Windows 10</p>
+<ul>
+<li><p>From the “Start” screen, type “This PC”.</p></li>
+<li><p>Right click (or tap and hold) “This PC”, and click “Properties”.</p></li>
+</ul>
+</li>
+<li><p>Windows 7, or Vista</p>
+<ul>
+<li><p>Open “System” by clicking the “Start” button , right-clicking
+“Computer”, and then clicking “Properties”.</p></li>
+<li><p>Under System, you can view the system type.</p></li>
+</ul>
+</li>
+<li><p>Mac: Click the Apple icon in the top left and select “About this Mac”.</p></li>
+</ul>
+</li>
+<li><p>After determining whether you need the 32 or 64 bit version, download the
+appropriate installer:</p>
+<ul class="simple">
+<li><p>Windows: <a class="reference external" href="https://qgis.org/en/site/forusers/download.html#windows">Download Windows installer from here</a>.</p></li>
+<li><p>MacOS: <a class="reference external" href="https://qgis.org/en/site/forusers/download.html#mac">Download MacOS installer from here</a>.</p></li>
+<li><p>Linux: <a class="reference external" href="https://qgis.org/en/site/forusers/download.html#linux">Download Linux installer from here, or from the repository for
+your Linux distribution</a>.</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="install-qgis">
+<h2>Install QGIS<a class="headerlink" href="#install-qgis" title="Permalink to this headline">¶</a></h2>
+<p>Once the installer is downloaded from the website, it needs to be run (double
+click on it). Select the Default settings for all options.</p>
+</div>
 </div>
 
 
@@ -327,10 +362,10 @@ for which each data set is used.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="visualization.html" class="btn btn-neutral float-right" title="Visualization tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="installing.html" class="btn btn-neutral float-right" title="Installing the toolbox" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Plot_data.html" class="btn btn-neutral float-left" title="Plot data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../Service/Download_results.html" class="btn btn-neutral float-left" title="Exporting Outputs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
