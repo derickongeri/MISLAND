@@ -49,7 +49,6 @@ The core-service provides land degradation indicators for six North African Coun
    Service/Registration
    Service/Calculate_indicators
    Service/Download_results
-   Service/Registration
 
 
 .. toctree::
