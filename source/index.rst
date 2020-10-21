@@ -38,6 +38,9 @@ The core-service provides land degradation indicators for six North African Coun
    :caption: Background
 
    Background/LD_indicators
+   Background/SDG_indicators
+   Background/Vegetation_loss_gain
+   Background/Forest_change
 
 .. toctree::
    :maxdepth: 3
@@ -58,7 +61,6 @@ The core-service provides land degradation indicators for six North African Coun
    Qgis_Plugin/Plot_data
    Qgis_Plugin/Download_data
    Qgis_Plugin/Load_data
-   Qgis_Plugin/view
    Qgis_Plugin/visualization
 
 ==================
