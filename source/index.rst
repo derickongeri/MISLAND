@@ -46,7 +46,7 @@ The core-service provides land degradation indicators for six North African Coun
    :maxdepth: 3
    :caption: Web Service Guide
 
-   Service/Service Guide
+   Service/Service_Guide
 
 .. toctree::
    :maxdepth: 3
