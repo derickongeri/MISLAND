@@ -247,10 +247,6 @@ tool allows selecting the area of interest in one of two ways:
    Then click "Save". The layer will be saved on your computer and 
    automatically loaded into yoour current QGIS project.
 
-.. image:: ../_static/documentation/calculate/output_productivity.png
-   :align: center
-
-
 Calculate land cover
 ____________________
 
@@ -342,8 +338,6 @@ To calculate the land cover change indicator:
    Then click "Save". The layer will be saved on your computer and 
    automatically loaded into yoour current QGIS project.
 
-.. image:: ../_static/documentation/calculate/output_landcover.png
-   :align: center
    
 Calculate soil carbon
 _____________________
@@ -397,8 +391,6 @@ To calculate degradation in soil organic carbon:
    Then click "Save". The layer will be saved on your computer and 
    automatically loaded into your current QGIS project.
 
-.. image:: ../_static/documentation/calculate/output_soc.png
-   :align: center
 
 Compute SDG Indicator 15.3.1
 ____________________________
@@ -448,8 +440,6 @@ ____________________________
 7. Click OK and two layers will be loaded to your map: the **5 classes 
    productivity** and the **SDG 15.3.1** indicators.
 
-.. image:: ../_static/documentation/calculate/sdg_maps.png
-   :align: center
 
 8. If you navigate to the folder you selected for storing the files, you can 
    open the Excel files with the areas computed for each of the sub-indicators 
@@ -457,8 +447,6 @@ ____________________________
    just click ok and the file will open regardless. We are working to fix this 
    error.
 
-.. image:: ../_static/documentation/calculate/sdg_excel.png
-   :align: center
   
    
 .. toctree::
