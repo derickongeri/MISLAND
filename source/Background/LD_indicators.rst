@@ -3,9 +3,9 @@ Background
 ###########
 
 .. contents::
-
+***************************
 Land Degradation Indicators
-============================
+***************************
 
 Land degradation, as defined by the United Nations Convention to Combat Desertification (UNCCD), is a complex process that refers to the long-lasting reduction or loss of biological and economic productivity of lands, caused by human activities, sometimes exacerbated by natural phenomena. Terrestrial vegetation including crops depend on appropriate soil which is the substrate on which vegetation/crops grow, besides other climatic factor requirements.
 
@@ -27,7 +27,7 @@ The OSS.LDMS focuses on provision of evidence-based proofs on land degradation a
    
 
 SDG15.3.1 Indicator
---------------------
+===================
 
 As part of the Sustainable development Goals(SDGs), SDG 15 is to: “Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forest, combat desertification, and halt and reverse land degradation and halt biodiversity loss”
 
@@ -53,10 +53,10 @@ The basic land degradation indicators include three main sub-indicators of the S
 
 
 SDG 15.3.1 Sub-indicators
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
 
 Productivity
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 Land productivity is the biological productive capacity of the land (i.e. the ability to produce food, fibre and fuel that sustain life). For easy interpretation the annual mean vegetation indices values at the pixel level will be used to assess three measures of change (trajectory, state and performance) as summarized in the figure below and explained in the subsequent sub-sections:
 
 .. figure:: ../_static/Images/sdgmethodology.png
@@ -69,14 +69,14 @@ Land productivity is the biological productive capacity of the land (i.e. the ab
     Sammury methodology for conputing Land Productivity
 
 Trajectory
-**********
+~~~~~~~~~~~
 The rate of change in primary productivity over time which will be computed using linear regression at the pixel level for various Landsat derived vegetation indices (NDVI, MSAVI2, SAVI). To identify areas experiencing changes in the primary productivity, a non-parametric significance test will be performed to show the significant changes (p-value of 0.05). Positive significant trends in the vegetation indices will indicate potential improvement while a negative significant trend will indicate potential degradation.
 
 The annual integrals of the vegetation indices are interpreted alongside historical precipitation data as a context. The climatic correction method that will be applied is the Rain Use Efficiency (RUE). The rain use efficiency is the ratio of annual NPP to annual precipitation. After the RUE is computed, linear regression and nonparametric significance testing will be applied to the RUE over time. Positive significance in RUE indicates improvement while negative significance will indicate potential degradation.
 
 
 State
-*****
+~~~~~
 The Productivity State indicator will be used to show recent changes in primary productivity compared to a baseline period. The indicator is computed from (NDVI, MSAVI2, SAVI) derived from medium resolution Landsat imagery following the steps outlined below:
 
 1.  A baseline period (historical period for comparison to recent primary productivity) will be defined. (This will be left open for selection of different periods by the users).
@@ -92,7 +92,7 @@ The Productivity State indicator will be used to show recent changes in primary 
 6.  The difference between the assigned class number for the comparison and the baseline period (comparison minus baseline) will be computed and thresholded to show the productivity state of the land.
 
 Perfomance
-**********
+~~~~~~~~~~
 
 The Productivity Performance indicator will measure the local productivity relative to other similar vegetation types in similar ecological units. A combination of soil units (based on Soil Grids data at 250m resolution) and land cover (ESA CCI at 300m resolution) will be used to define the ecological units. The indicator will be computed as follows:
 
@@ -117,7 +117,7 @@ The Productivity Performance indicator will measure the local productivity relat
 
 
 Landcover
-~~~~~~~~~
+^^^^^^^^^^
 Monitoring of Land Use and Land Cover Changes (LULCCs) at both regional and local scales presents a major opportunity for identifying areas threatened by land degradation where mitigation measures should be taken. Traditionally, LULCCs have been interpreted by distinguishing between two transformation types: conversion and modification.
 
 To assess changes in land cover users need land cover maps covering the study 
@@ -141,7 +141,7 @@ maps can also be used. The indicator is computed as follows:
 .. image:: ../_static/Images/understanding_indicators15/lc_matrix.PNG
    :align: center
    
-#. LDMS will combine the information from the land cover maps and the 
+4. LDMS will combine the information from the land cover maps and the 
    table of degradation typologies by land cover transition to compute the land 
    cover sub-indicator.
 
@@ -156,7 +156,7 @@ maps can also be used. The indicator is computed as follows:
     Sammary methodology for computing land cover change
 
 Carbon-stocks
-~~~~~~~~~~~~
+^^^^^^^^^^^^^^
 The third sub-indicator for monitoring land degradation as part of the SDG 
 process quantifies changes in soil organic carbon (SOC) over the reporting 
 period. Changes in SOC are particularly difficult to assess for several 
@@ -207,7 +207,7 @@ Tropical Montane (f = 0.64).
    :align: center
 
 Combining Productivity Indicators
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 The three productivity sub-indicators are then combined as indicated in the 
 tables below. For SDG 15.3.1 reporting, the 3-class indicator is required, but 
