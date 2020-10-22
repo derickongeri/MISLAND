@@ -251,9 +251,9 @@ The NBR will be calculated for Landsat/Sentinel images before the fire (pre-fire
 Classification of the dNBR will be used for burn severity assessment, as areas with higher dNBR values indicate more severe damage whereas areas with negative dNBR values might show increased vegetation productivity. dNBR will be classified according to burn severity ranges proposed by the United States Geological Survey(USGS)
 
 .. figure:: ../_static/Images/Forest_fires.png
-    :width: 700
+    :width: 550
     :align: center
-    :height: 500
+    :height: 300
     :alt: Forest fires methodology
     :figclass: align-center
 
