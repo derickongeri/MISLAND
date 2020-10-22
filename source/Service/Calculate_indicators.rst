@@ -1,9 +1,9 @@
-====================
+********************
 Calculate Indicators
-====================
+********************
 
 SDG 15.3.1 indicators
----------------------
+=====================
 To compute the SDG 15.3.1 indicator on the service platform, follow these simple steps,
 
 1. Select the SDG 15.3.1 service, on the listed services menu-bar as shown below
@@ -51,7 +51,7 @@ compute SDG 15.3.1 Sub-indicators
 In additin to computing the SDG 15.3.1 indicator, users of the OSS.LDMS can compute and visualize the SDG 15.3.1 sub-indicators i.e Land productivity, Landcover change, and changes in carbon stock as discussed below:
 
 Land Productivity
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 Land productivity is computed form vegetation indices using three measures of change i.e trajectory, state and performace. To compute land productivity on the service  platform, users can follow these simple steps
 
 1. Select SDG 15.3.1 option on the service menu-bar and on the select SDG indicator drop-down below the service menu-bar, choose the 'Productivity' option
@@ -92,7 +92,7 @@ Land productivity is computed form vegetation indices using three measures of ch
 
 
 Landcover Change
-~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 To compute land cover changes, users can follow these simple steps
 
 1. Select 'SDG 15.3.1' option on the services menu-bar and, under the 'Select SDG indicator' dropdown, choose LULC as shown below
@@ -154,7 +154,7 @@ The results will be displayed on the map panel and the summary statistics panel 
     Landcover change outputs
 
 Carbon Stocks
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 To compute changes in carbon stocks,
 
 1. Select 'SDG 15.3.1' option on the services menu-bar and under the 'Select SDG indicator' dropdown, choose 'Carbon Stock Change' option and select the start year and the end year.
