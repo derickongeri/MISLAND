@@ -181,7 +181,7 @@ The change in carbon stock for the selected area and period will be displayed on
     Carbon stock change map and statistics
 
 Vegetation Loss/Gain indicators
--------------------------------
+===============================
 
 To compute vegetation loss/gain on the service platform,
 
@@ -231,7 +231,7 @@ To compute vegetation loss/gain on the service platform,
     Vegetation gain/loss outputs
 
 Forest Change
--------------
+=============
 The current release of the OSS.LDMS uses ESA CCI landcover data to compute yearly changes in forest cover using the forest class.
 
 To compute the change in forest cover on the service platform
