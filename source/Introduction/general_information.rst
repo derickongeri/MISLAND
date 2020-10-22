@@ -22,8 +22,8 @@ The OSS.LDMS Project is a partnership between OSS and LocateIT under the Global 
 Contributors to the documentation and to OSS.LDMS include Derick ONGERI, Grace AMONDI, Vivianne META, Toure SOULEYMANE, Seth NYAWACHA, Simon NDARAU, Mustapha MIMOUNI, Nabil KHATRA, Amjed TAIEB and Haithem REJEB.
 
 	.. image:: /_static/Images/partners.png
-	   :height: 115
-	   :width: 655
+	   :height: 94
+	   :width: 550
 	   :alt: partners
 	   :align: center
 
