@@ -7,8 +7,8 @@
 OSS.LDMS
 """""""""
 	.. image:: ../source/_static/Images/LDMS.png
-	   :height: 400
-	   :width: 800
+	   :height: 277
+	   :width: 550
 	   :alt: LocateIT
 
 Oss LDMS is an operational instrument relying on the international standards for reporting SDG 15.3.1 and technical approaches allowing the delivery of regular information on vegetation cover gain/loss to decision makers and environmental agencies at the first place.
