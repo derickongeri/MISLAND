@@ -1,9 +1,9 @@
-====================
+********************
 Calculate Indicators
-====================
+********************
 
 SDG 15.3.1 indicators
----------------------
+=====================
 To compute the SDG 15.3.1 indicator on the service platform, follow these simple steps,
 
 1. Select the SDG 15.3.1 service, on the listed services menu-bar as shown below
@@ -48,10 +48,10 @@ The map and computed statistics will be displayed on the map panel and summary p
 
 compute SDG 15.3.1 Sub-indicators
 ----------------------------------
-In additin to computing the SDG 15.3.1 indicator, users of the OSS.LDMS can compute and visualize the SDG 15.3.1 sub-indicators i.e Land productivity, Landcover change, and changes in carbon stock as discussed below:
+In additin to computing the SDG 15.3.1 indicator, users of the OSS NORTH-AFRICA STATES LDMS can compute and visualize the SDG 15.3.1 sub-indicators i.e Land productivity, Landcover change, and changes in carbon stock as discussed below:
 
 Land Productivity
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 Land productivity is computed form vegetation indices using three measures of change i.e trajectory, state and performace. To compute land productivity on the service  platform, users can follow these simple steps
 
 1. Select SDG 15.3.1 option on the service menu-bar and on the select SDG indicator drop-down below the service menu-bar, choose the 'Productivity' option
@@ -92,7 +92,7 @@ Land productivity is computed form vegetation indices using three measures of ch
 
 
 Landcover Change
-~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 To compute land cover changes, users can follow these simple steps
 
 1. Select 'SDG 15.3.1' option on the services menu-bar and, under the 'Select SDG indicator' dropdown, choose LULC as shown below
@@ -154,7 +154,7 @@ The results will be displayed on the map panel and the summary statistics panel 
     Landcover change outputs
 
 Carbon Stocks
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 To compute changes in carbon stocks,
 
 1. Select 'SDG 15.3.1' option on the services menu-bar and under the 'Select SDG indicator' dropdown, choose 'Carbon Stock Change' option and select the start year and the end year.
@@ -181,7 +181,7 @@ The change in carbon stock for the selected area and period will be displayed on
     Carbon stock change map and statistics
 
 Vegetation Loss/Gain indicators
--------------------------------
+===============================
 
 To compute vegetation loss/gain on the service platform,
 
@@ -230,11 +230,49 @@ To compute vegetation loss/gain on the service platform,
 
     Vegetation gain/loss outputs
 
-Forest Change
--------------
-The current release of the OSS.LDMS uses ESA CCI landcover data to compute yearly changes in forest cover using the forest class.
+To compute vegetation indices using Landsat derived vegetation indices, 
 
-To compute the change in forest cover on the service platform
+1. On the services menu, select the 'VEGETATION GAIN/LOSS' option, and under the 'Source' dropdown menu, select Landsat 7 option
+
+.. figure:: ../_static/Images/Service/landsat.png
+    :width: 400
+    :align: center
+    :height: 187
+    :alt: Vegetation gain/loss service
+    :figclass: align-center
+
+    Selecting the Landsat-derived vegetation index option
+
+2. On the 'Veg index' dropdown, select the vegetation index to compute and select the start and end period
+
+.. figure:: ../_static/Images/Service/vegindex.png
+    :width: 428
+    :align: center
+    :height: 195
+    :alt: select vegetation index
+    :figclass: align-center
+
+    Choosing the vegetation index to compute
+
+The map and computed statistics will be displayed on the map panel and summary pannel respectively.
+
+.. figure:: ../_static/Images/Service/landsat_vegetation_loss.png
+    :width: 712
+    :align: center
+    :height: 332
+    :alt: register
+    :figclass: align-center
+
+    Landsat derived vegetation loss and gain output
+
+
+
+Forest Change
+=============
+The current release of the OSS NORTH-AFRICA STATES LDMS uses ESA CCI landcover data to compute yearly changes in forest cover using the forest class and the high resolution Hansen Global forest change dataset to quantify forest loss.
+
+
+To compute the change in forest cover from ESA CCI landcover;
 
 1. On the services menu, select the FOREST CHANGE option as shown below
 
@@ -264,6 +302,53 @@ The map and computed statistics will be displayed on the map panel and summary p
     :width: 600
     :align: center
     :height: 300
+    :alt: register
+    :figclass: align-center
+
+    Foret change outputs
+
+.. note::
+   On the current release of the OSS NORTH-AFRICA STATES LDMS, forest loss from Hansen Global forest change dataset can only be computed for small areas.
+
+To compute forest loss using the Hansen Global forest change dataset;
+
+1. On the top left conner of the Map pannel, click on the 'Draw a Polygon' tool and draw an area on the map where you wish to compute the forest loss
+
+.. figure:: ../_static/Images/Service/draw.png
+    :width: 345
+    :align: center
+    :height: 349
+    :alt: draw polygon
+    :figclass: align-center
+
+    Draw a polygon tool
+
+.. figure:: ../_static/Images/Service/drawarea.png
+    :width: 345
+    :align: center
+    :height: 349
+    :alt: draw polygon
+    :figclass: align-center
+
+    Draw a polygon tool
+
+2. Select FOREST CHANGE on the service menu bar and under the 'Source dropdown' options, choose 'Hansen' and select the year you wish to compute the forest loss.
+
+.. figure:: ../_static/Images/Service/Hansen.png
+    :width: 400
+    :align: center
+    :height: 397
+    :alt: Hansen
+    :figclass: align-center
+
+    Selecting the Hansen Forest loss data
+
+The map and computed statistics will be displayed on the map panel and summary pannel respectively.
+
+.. figure:: ../_static/Images/Service/hansenoutput.png
+    :width: 705
+    :align: center
+    :height: 325
     :alt: register
     :figclass: align-center
 

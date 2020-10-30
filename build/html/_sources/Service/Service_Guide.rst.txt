@@ -1,9 +1,42 @@
-********************
-Calculate Indicators
-********************
+***************
+Serivice Guide
+***************
 
-SDG 15.3.1 indicators
-=====================
+Registration and Log in
+=======================
+
+New users to the service will be required to register a new account to use the service. Registering a new account is a simple two step process
+
+1. Click on the log-in icon on the right hand side of the navigation-bar
+
+.. figure:: ../_static/Images/login.png
+    :width: 250
+    :align: center
+    :height: 75
+    :alt: register
+    :figclass: align-center
+
+    Finding the log in option
+
+2. Choose the 'Not a user? Sing up' option on the log in menu that pops up
+
+.. figure:: ../_static/Images/register.png
+    :width: 250
+    :align: center
+    :height: 300
+    :alt: register
+    :figclass: align-center
+
+    new user registration
+
+Registered users can proceed to log in with their Email and password.
+
+
+Calculate Indicators
+====================
+
+SDG 15.3.1 indicator
+--------------------
 To compute the SDG 15.3.1 indicator on the service platform, follow these simple steps,
 
 1. Select the SDG 15.3.1 service, on the listed services menu-bar as shown below
@@ -47,11 +80,11 @@ The map and computed statistics will be displayed on the map panel and summary p
     :figclass: align-center
 
 compute SDG 15.3.1 Sub-indicators
-----------------------------------
-In additin to computing the SDG 15.3.1 indicator, users of the OSS NORTH-AFRICA STATES LDMS can compute and visualize the SDG 15.3.1 sub-indicators i.e Land productivity, Landcover change, and changes in carbon stock as discussed below:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In additin to computing the SDG 15.3.1 indicator, users of the OSS.LDMS can compute and visualize the SDG 15.3.1 sub-indicators i.e Land productivity, Landcover change, and changes in carbon stock as discussed below:
 
 Land Productivity
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 Land productivity is computed form vegetation indices using three measures of change i.e trajectory, state and performace. To compute land productivity on the service  platform, users can follow these simple steps
 
 1. Select SDG 15.3.1 option on the service menu-bar and on the select SDG indicator drop-down below the service menu-bar, choose the 'Productivity' option
@@ -92,7 +125,7 @@ Land productivity is computed form vegetation indices using three measures of ch
 
 
 Landcover Change
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 To compute land cover changes, users can follow these simple steps
 
 1. Select 'SDG 15.3.1' option on the services menu-bar and, under the 'Select SDG indicator' dropdown, choose LULC as shown below
@@ -154,7 +187,7 @@ The results will be displayed on the map panel and the summary statistics panel 
     Landcover change outputs
 
 Carbon Stocks
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~
 To compute changes in carbon stocks,
 
 1. Select 'SDG 15.3.1' option on the services menu-bar and under the 'Select SDG indicator' dropdown, choose 'Carbon Stock Change' option and select the start year and the end year.
@@ -181,7 +214,7 @@ The change in carbon stock for the selected area and period will be displayed on
     Carbon stock change map and statistics
 
 Vegetation Loss/Gain indicators
-===============================
+-------------------------------
 
 To compute vegetation loss/gain on the service platform,
 
@@ -230,49 +263,11 @@ To compute vegetation loss/gain on the service platform,
 
     Vegetation gain/loss outputs
 
-To compute vegetation indices using Landsat derived vegetation indices, 
-
-1. On the services menu, select the 'VEGETATION GAIN/LOSS' option, and under the 'Source' dropdown menu, select Landsat 7 option
-
-.. figure:: ../_static/Images/Service/landsat.png
-    :width: 400
-    :align: center
-    :height: 187
-    :alt: Vegetation gain/loss service
-    :figclass: align-center
-
-    Selecting the Landsat-derived vegetation index option
-
-2. On the 'Veg index' dropdown, select the vegetation index to compute and select the start and end period
-
-.. figure:: ../_static/Images/Service/vegindex.png
-    :width: 428
-    :align: center
-    :height: 195
-    :alt: select vegetation index
-    :figclass: align-center
-
-    Choosing the vegetation index to compute
-
-The map and computed statistics will be displayed on the map panel and summary pannel respectively.
-
-.. figure:: ../_static/Images/Service/landsat_vegetation_loss.png
-    :width: 712
-    :align: center
-    :height: 332
-    :alt: register
-    :figclass: align-center
-
-    Landsat derived vegetation loss and gain output
-
-
-
 Forest Change
-=============
-The current release of the OSS NORTH-AFRICA STATES LDMS uses ESA CCI landcover data to compute yearly changes in forest cover using the forest class and the high resolution Hansen Global forest change dataset to quantify forest loss.
+-------------
+The current release of the OSS.LDMS uses ESA CCI landcover data to compute yearly changes in forest cover using the forest class.
 
-
-To compute the change in forest cover from ESA CCI landcover;
+To compute the change in forest cover on the service platform
 
 1. On the services menu, select the FOREST CHANGE option as shown below
 
@@ -306,50 +301,67 @@ The map and computed statistics will be displayed on the map panel and summary p
     :figclass: align-center
 
     Foret change outputs
+    
 
-.. note::
-   On the current release of the OSS NORTH-AFRICA STATES LDMS, forest loss from Hansen Global forest change dataset can only be computed for small areas.
+Exporting Outputs
+=================
+Exporting outputs on the service is as simple and intuitive as all the other functions of the service. Users can download the maps, charts and data as will be discussed in this section of the documentation.
 
-To compute forest loss using the Hansen Global forest change dataset;
 
-1. On the top left conner of the Map pannel, click on the 'Draw a Polygon' tool and draw an area on the map where you wish to compute the forest loss
+Export Map
+----------
+The map outputs for every coputatio on the service platform can be exported as an image file in either portrait or landscape mode.
 
-.. figure:: ../_static/Images/Service/draw.png
-    :width: 345
+To export the map outputs, users can click on the export map tool that is found on the map navigation tools as shown below.
+
+
+
+.. figure:: ../_static/Images/Service/exportmap.png
+    :width: 800
     :align: center
-    :height: 349
-    :alt: draw polygon
+    :height: 634
+    :alt: download data
     :figclass: align-center
 
-    Draw a polygon tool
+    Image file of exported map
 
-.. figure:: ../_static/Images/Service/drawarea.png
-    :width: 345
+
+Export Chart
+------------
+The 'export chart as image' option can be found just below the service menu-bar.
+
+By clicking on the option the user will be able to download the resultant summary chart as an image file. An example of an image file export is shown below.
+
+.. figure:: ../_static/Images/Service/exportchart.png
+    :width: 144
     :align: center
-    :height: 349
-    :alt: draw polygon
+    :height: 78
+    :alt: download data
     :figclass: align-center
 
-    Draw a polygon tool
+    Export chart tool
 
-2. Select FOREST CHANGE on the service menu bar and under the 'Source dropdown' options, choose 'Hansen' and select the year you wish to compute the forest loss.
+Download data
+-------------
+In addition to exporting charts as an option, users can also downlad the data and plot their own custom charts or perform further analyses. 
 
-.. figure:: ../_static/Images/Service/Hansen.png
-    :width: 400
+The Download Data option can be found just below the service menu-bar as shown below.
+
+.. figure:: ../_static/Images/Service/downloaddata.png
+    :width: 144
     :align: center
-    :height: 397
-    :alt: Hansen
+    :height: 78
+    :alt: download data
     :figclass: align-center
 
-    Selecting the Hansen Forest loss data
+    Download Data tool
 
-The map and computed statistics will be displayed on the map panel and summary pannel respectively.
+The downloaded data is in .csv format and can be open in microsoft exel or similar software
 
-.. figure:: ../_static/Images/Service/hansenoutput.png
-    :width: 705
+.. figure:: ../_static/Images/Service/download1.png
+    :width: 637
     :align: center
-    :height: 325
-    :alt: register
+    :height: 709
+    :alt: download data
     :figclass: align-center
 
-    Foret change outputs
