@@ -263,6 +263,41 @@ To compute vegetation loss/gain on the service platform,
 
     Vegetation gain/loss outputs
 
+To compute vegetation indices using Landsat derived vegetation indices, 
+
+1. On the services menu, select the 'VEGETATION GAIN/LOSS' option, and under the 'Source' dropdown menu, select Landsat 7 option
+
+.. figure:: ../_static/Images/Service/landsat.png
+    :width: 400
+    :align: center
+    :height: 187
+    :alt: Vegetation gain/loss service
+    :figclass: align-center
+
+    Selecting the Landsat-derived vegetation index option
+
+2. On the 'Veg index' dropdown, select the vegetation index to compute and select the start and end period
+
+.. figure:: ../_static/Images/Service/vegindex.png
+    :width: 428
+    :align: center
+    :height: 195
+    :alt: select vegetation index
+    :figclass: align-center
+
+    Choosing the vegetation index to compute
+
+The map and computed statistics will be displayed on the map panel and summary pannel respectively.
+
+.. figure:: ../_static/Images/Service/landsat_vegetation_loss.png
+    :width: 712
+    :align: center
+    :height: 332
+    :alt: register
+    :figclass: align-center
+
+    Landsat derived vegetation loss and gain output
+
 Forest Change
 -------------
 The current release of the OSS.LDMS uses ESA CCI landcover data to compute yearly changes in forest cover using the forest class.
@@ -302,6 +337,54 @@ The map and computed statistics will be displayed on the map panel and summary p
 
     Foret change outputs
     
+
+.. note::
+   On the current release of the OSS NORTH-AFRICA STATES LDMS, forest loss from Hansen Global forest change dataset can only be computed for small areas.
+
+To compute forest loss using the Hansen Global forest change dataset;
+
+1. On the top left conner of the Map pannel, click on the 'Draw a Polygon' tool and draw an area on the map where you wish to compute the forest loss
+
+.. figure:: ../_static/Images/Service/draw.png
+    :width: 345
+    :align: center
+    :height: 349
+    :alt: draw polygon
+    :figclass: align-center
+
+    Draw a polygon tool
+
+.. figure:: ../_static/Images/Service/drawarea.png
+    :width: 345
+    :align: center
+    :height: 349
+    :alt: draw polygon
+    :figclass: align-center
+
+    Draw a polygon tool
+
+2. Select FOREST CHANGE on the service menu bar and under the 'Source dropdown' options, choose 'Hansen' and select the year you wish to compute the forest loss.
+
+.. figure:: ../_static/Images/Service/Hansen.png
+    :width: 400
+    :align: center
+    :height: 397
+    :alt: Hansen
+    :figclass: align-center
+
+    Selecting the Hansen Forest loss data
+
+The map and computed statistics will be displayed on the map panel and summary pannel respectively.
+
+.. figure:: ../_static/Images/Service/hansenoutput.png
+    :width: 705
+    :align: center
+    :height: 325
+    :alt: register
+    :figclass: align-center
+
+    Foret change outputs
+
 
 Exporting Outputs
 =================

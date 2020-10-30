@@ -3,9 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-"""""""""
-OSS.LDMS
-"""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+MISLAND North Africa - Monitoring Integrated Service for Land Degradation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 	.. image:: ../source/_static/Images/LDMS.png
 	   :height: 277
 	   :width: 550
@@ -31,7 +31,6 @@ The core-service provides land degradation indicators for six North African Coun
 
    /Introduction/general_information
    /Introduction/data
-   /Introduction/faq
    /Introduction/Layers
 
 .. toctree::
@@ -57,6 +56,7 @@ The core-service provides land degradation indicators for six North African Coun
    Qgis_Plugin/Plot_data
    Qgis_Plugin/Download_data
    Qgis_Plugin/visualization
+
 
 ==================
 Indices and tables

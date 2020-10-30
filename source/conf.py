@@ -17,12 +17,12 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'North Africa Land Degradation Monitoring Service'
+project = 'MISLAND - Monitoring Integrated Service for Land Degradation'
 copyright = '2020, LocateIT Kenya Ltd'
 author = 'Derick ONGERI, Grace Amondi'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
+release = '1.0.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -62,7 +62,7 @@ html_theme_options = {
 	'canonical_url': '',
     'analytics_id': '',  #  Provided by Google in your dashboard
     #'analytics_anonymize_ip': False,
-    'logo_only': False,
+    'logo_only': True,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': False,
@@ -82,7 +82,7 @@ html_theme_options = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
+html_logo = 'logo.png'
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
 #'papersize': 'letterpaper',
