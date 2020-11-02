@@ -19,7 +19,7 @@ Authors
 -------
 The MISLAND-North Africa is a project by the OSS under the Global Monitoring for Environment and Security and Africa(GMES & Africa) framework that is co-funded by the African Union and the European Union.
 
-Contributors to the documentation and to MISLAND-North Africa include Mustapha MIMOUNI, Nabil KHATRA, Amjed TAIEB, Haithem REJEB, Vivianne META, Toure SOULEYMANE, Derick ONGERI, Grace AMONDI, Seth NYAWACHA, and Simon NDARAU.
+Contributors to the documentation and to MISLAND-North Africa include Mustapha MIMOUNI, Nabil KHATRA, Amjed TAIEB, Haithem REJEB, Toure SOULEYMANE, Vivianne META, Derick ONGERI, Grace AMONDI, Seth NYAWACHA, and Simon NDARAU.
 
 	.. image:: /_static/Images/partners.png
 	   :height: 94
