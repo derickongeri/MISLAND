@@ -1,6 +1,29 @@
 ***************
 Serivice Guide
 ***************
+MISLAND Service Tour
+====================
+.. figure:: ../_static/Images/Service/site.png
+    :width: 750
+    :align: center
+    :height: 406
+    :alt: Service tour
+    :figclass: align-center
+
+    MISLAND Service overview
+
+1. Site Navigation-bar
+2. Area Selection Panel
+3. Service Menu-bar
+4. Out-put Layer options
+5. Export Data tools
+6. Summary Chart
+7. Map Panel
+8. Map Navigation(zoom in, zoom out)
+9. Draw polygon tools
+10. Export Map tool
+11. Select Base-map
+
 
 Registration and Log in
 =======================
@@ -339,7 +362,7 @@ The map and computed statistics will be displayed on the map panel and summary p
     
 
 .. note::
-   On the current release of the OSS NORTH-AFRICA STATES LDMS, forest loss from Hansen Global forest change dataset can only be computed for small areas.
+   On the current release of the MISLAND-North Africa, forest loss from Hansen Global forest change dataset can only be computed for small areas.
 
 To compute forest loss using the Hansen Global forest change dataset;
 
@@ -385,6 +408,61 @@ The map and computed statistics will be displayed on the map panel and summary p
 
     Foret change outputs
 
+Forest Fires
+=============
+
+1. Select the FOREST FIRES option from the service menu as shown below
+
+.. figure:: ../_static/Images/Service/forestfireselection.png
+    :width: 449
+    :align: center
+    :height: 47
+    :alt: register
+    :figclass: align-center
+
+    Selecting the Forest-fires option from the service menu.
+
+2. On the output layer options, select the pre and post fire dates using the calender
+
+.. figure:: ../_static/Images/Service/calender.png
+    :width: 435
+    :align: center
+    :height: 475
+    :alt: seting the pre- and post-fire dates
+    :figclass: align-center
+
+    Selecting the date from the calender tool.
+
+.. figure:: ../_static/Images/Service/firedates.png
+    :width: 438
+    :align: center
+    :height: 156
+    :alt: register
+    :figclass: align-center
+
+    Pre-fire and Post-fire dates
+
+3. Choose the platform to use to compute the burnt area
+
+.. figure:: ../_static/Images/Service/platform.png
+    :width: 229
+    :align: center
+    :height: 216
+    :alt: register
+    :figclass: align-center
+
+    Choosing the Platform/Sensor for computing forest fires.
+
+The output showin the extent and severity of the fire will be as shown below
+
+.. figure:: ../_static/Images/Service/fireoutput.png
+    :width: 793
+    :align: center
+    :height: 406
+    :alt: register
+    :figclass: align-center
+
+    Forest-fire Output.    
 
 Exporting Outputs
 =================
