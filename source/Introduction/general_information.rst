@@ -1,6 +1,6 @@
-====================
+=====================
 General Infortmation
-====================
+=====================
 MISLAND-North Africa is an operational instrument relying on the international standards for reporting SDG 15.3.1 and technical approaches allowing the delivery of regular information on vegetation cover gain/loss to decision makers and environmental agencies at the first place.
 
 The core-service provides land degradation indicators for six North African Countries at two levels:
@@ -17,9 +17,9 @@ Contact the MISLAND-North Africa team with any comments or suggestions. If you h
 
 Authors
 -------
-The MISLAND-North Africa Project is a partnership between OSS and LocateIT under the Global Monitoring for Environment and Security and Africa(GMES & Africa) and is co-funded by the African Union and the European Union.
+The MISLAND-North Africa is a project by the OSS under the Global Monitoring for Environment and Security and Africa(GMES & Africa) framework that is co-funded by the African Union and the European Union.
 
-Contributors to the documentation and to MISLAND-North Africa include Derick ONGERI, Grace AMONDI, Vivianne META, Toure SOULEYMANE, Seth NYAWACHA, Simon NDARAU, Mustapha MIMOUNI, Nabil KHATRA, Amjed TAIEB and Haithem REJEB.
+Contributors to the documentation and to MISLAND-North Africa include Mustapha MIMOUNI, Nabil KHATRA, Amjed TAIEB, Haithem REJEB, Vivianne META, Toure SOULEYMANE, Derick ONGERI, Grace AMONDI, Seth NYAWACHA, and Simon NDARAU.
 
 	.. image:: /_static/Images/partners.png
 	   :height: 94

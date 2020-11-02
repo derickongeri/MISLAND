@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'MISLAND - Monitoring Integrated Service for Land Degradation'
+project = 'Monitoring Integrated Service for Land Degradation'
 copyright = '2020, LocateIT Kenya Ltd'
 author = 'Derick ONGERI, Grace Amondi'
 
@@ -62,7 +62,7 @@ html_theme_options = {
 	'canonical_url': '',
     'analytics_id': '',  #  Provided by Google in your dashboard
     #'analytics_anonymize_ip': False,
-    'logo_only': True,
+    'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': False,

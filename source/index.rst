@@ -11,7 +11,7 @@ MISLAND North Africa - Monitoring Integrated Service for Land Degradation
 	   :width: 550
 	   :alt: LocateIT
 
-Oss LDMS is an operational instrument relying on the international standards for reporting SDG 15.3.1 and technical approaches allowing the delivery of regular information on vegetation cover gain/loss to decision makers and environmental agencies at the first place.
+MISLAND-North Africa is an operational instrument relying on the international standards for reporting SDG 15.3.1 and technical approaches allowing the delivery of regular information on vegetation cover gain/loss to decision makers and environmental agencies at the first place.
 
 The core-service provides land degradation indicators for six North African Countries at two levels:
 
