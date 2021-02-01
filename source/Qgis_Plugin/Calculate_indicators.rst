@@ -1,5 +1,5 @@
 Calculate indicators
-====================
+=====================
 
 .. image:: ../_static/common/plugin_toolbar_calculate.png
    :align: center
@@ -27,7 +27,7 @@ Select the Land degradation indicator (SDG indicator 15.3.1) to open the window 
    :align: center
 
 There are several options for calculating the SDG 15.3.1 Indicator. 
-LDMS supports calculating the indicator using the same process as was 
+MISLAND supports calculating the indicator using the same process as was 
 used by the UNCCD for the default data provided to countries for the 2018 
 reporting process. The tool also supports customizing this data, or even 
 replacing individual datasets with national-level or other global datasets.
@@ -66,7 +66,7 @@ indicator
 .. note::
     Refer to the :ref:`indicator-15-3-1` section of this manual for a detailed 
     explanation of how each of these sub-indicators is computed in 
-    LDMS
+    MISLAND
 
 There are two ways to calculate the indicators: 1) using a simplified tool that 
 will calculate all three indicators at once, but with limited options for 
@@ -115,11 +115,11 @@ requires two datasets to compare change over time. Select Next.
     The provided boundaries are from `Natural Earth 
     <http://www.naturalearthdata.com>`_, and are in the `public domain
     <https://creativecommons.org/publicdomain>`_. The boundaries and names 
-    used, and the designations used, in LDMS do not imply official 
+    used, and the designations used, in MISLAND do not imply official 
     endorsement or acceptance by Conservation International Foundation, or by 
     its partner organizations and contributors.
 
-    If using LDMS for official purposes, it is recommended that users 
+    If using MISLAND for official purposes, it is recommended that users 
     choose an official boundary provided by the designated office of their 
     country.
 
@@ -142,7 +142,7 @@ ______________________
     manual for a detailed explanation of how productivity is computed.
 
 Productivity measures the trajectory, performance and state of primary 
-productivity using either 8km AVHRR or 250m MODIS datasets. The user can select 
+productivity using either 8km AVHRR, 250m MODIS or 30m LANDSAT 7 (under development) datasets. The user can select 
 one or multiple indicators to calculate, the NDVI dataset, name the tasks and 
 enter in explanatory notes for their intended reporting area.
 
@@ -188,6 +188,17 @@ trajectory:
   used to analyze the variability of vegetation production in arid and 
   semi-arid biomes, where rainfall is a major limiting factor for plant growth
 
+
+* **RESTREND**: this method attempts to adjust the NDVI signals from the effect 
+  of particular climatic drivers, such as rainfall or soil moisture, using a 
+  pixel-by-pixel linear regression on the NDVI time series and the climate 
+  signal. The linear model and the climatic data is used then to predict NDVI, 
+  and to compute the residuals between the observed and climate-predicted NDVI 
+  annual integrals. The NDVI residual trend is finally plotted to spatially 
+  represent overall trends in primary productivity independent of climate. 
+
+* **WUE**: is defined as the ratio between net primary production (NPP), in 
+  this case annual integrals of NDVI, and evapotranspiration.
 
 .. image:: ../_static/documentation/calculate/image030.png
    :align: center
@@ -246,6 +257,10 @@ tool allows selecting the area of interest in one of two ways:
    will open for you to select where to save the layer and to assign it a name. 
    Then click "Save". The layer will be saved on your computer and 
    automatically loaded into yoour current QGIS project.
+
+.. image:: ../_static/documentation/calculate/output_productivity.png
+   :align: center
+
 
 Calculate land cover
 ____________________
@@ -338,6 +353,8 @@ To calculate the land cover change indicator:
    Then click "Save". The layer will be saved on your computer and 
    automatically loaded into yoour current QGIS project.
 
+.. image:: ../_static/documentation/calculate/output_landcover.png
+   :align: center
    
 Calculate soil carbon
 _____________________
@@ -391,12 +408,14 @@ To calculate degradation in soil organic carbon:
    Then click "Save". The layer will be saved on your computer and 
    automatically loaded into your current QGIS project.
 
+.. image:: ../_static/documentation/calculate/output_soc.png
+   :align: center
 
 Compute SDG Indicator 15.3.1
 ____________________________
 
 .. note::
-    Refer to the :ref:`` section of this 
+    Refer to the :ref:`indicator-15-3-1-combining-indicators` section of this 
     manual for a detailed explanation of how the sub-indicators are combined to 
     calculate the final SDG 15.3.1 indicator.
 
@@ -440,6 +459,8 @@ ____________________________
 7. Click OK and two layers will be loaded to your map: the **5 classes 
    productivity** and the **SDG 15.3.1** indicators.
 
+.. image:: ../_static/documentation/calculate/sdg_maps.png
+   :align: center
 
 8. If you navigate to the folder you selected for storing the files, you can 
    open the Excel files with the areas computed for each of the sub-indicators 
@@ -447,7 +468,200 @@ ____________________________
    just click ok and the file will open regardless. We are working to fix this 
    error.
 
+.. image:: ../_static/documentation/calculate/sdg_excel.png
+   :align: center
   
-   
+Compute Vegatation Indices
+____________________________
+
+Land degradation hotspots (LDH) are produced via the analysis of time-series
+vegetation indices data and are used to characterize areas of different sizes, 
+where the vegetation cover and the soil types are severely degraded. Vegetation 
+loss/gain hotspots will be calculated based on time series observation of selected 
+suit of vegetation indices depending on the climatic zones and terrain morphology 
+of the North African countries 
+
+Vegation Indices computed from Landsat 7 ETM+ include:
+
+1. **NDVI (humid, sub-humid and semi-arid zones)**
+
+   DVI is preferable for global vegetation monitoring since it helps to compensate for 
+   changes in lighting conditions, surface slope, exposure, and other external factors.
+   NDVI is calculated in accordance with the formula: 
+
+   .. image:: ../_static/documentation/calculate/ndvi.png
+      :align: center
+
+   NIR – reflection in the near-infrared spectrum 
+   RED – reflection in the red range of the spectrum 
+
+   According to this formula, the density of vegetation (NDVI) at a certain point of the 
+   image is equal to the difference in the intensities of reflected light in the red and 
+   infrared range divided by the sum of these intensities. 
+
+   This index defines values ​​from -1.0 to 1.0, basically representing greens, where negative 
+   values ​​are mainly formed from clouds, water and snow, and values ​​close to zero are 
+   primarily formed from rocks and bare soil. Very small values ​​(0.1 or less) of the NDVI 
+   function correspond to empty areas of rocks, sand or snow. Moderate values ​​(from 0.2 to 0.3) 
+   represent shrubs and meadows, while large values ​​(from 0.6 to 0.8) indicate temperate and 
+   tropical forests. 
+
+2. **MSAVI2 (arid and stepic zones)**
+
+   MSAVI2 is soil adjusted vegetation indices that seek to address some of the limitation of 
+   NDVI when applied to areas with a high degree of exposed soil surface.It eliminates the need 
+   to find the soil line from a feature-space plot or even explicitly specify the soil brightness 
+   correction factor: 
+
+   .. image:: ../_static/documentation/calculate/msavi2.png
+      :align: center
+
+
+3. **SAVI (desert areas)**
+
+   SAVI is used to correct Normalized Difference Vegetation Index (NDVI) for the influence of 
+   soil brightness in areas where vegetative cover is low. Landsat Surface Reflectance-derived 
+   SAVI is calculated as a ratio between the R and NIR values with a soil brightness correction 
+   factor (L) defined as 0.5 to accommodate most land cover types.
+
+   .. image:: ../_static/documentation/calculate/savi.png
+      :align: center
+
+To compute the above vegetation indices, click on the calculator icon . This will open up the 
+“Calculate Indicators” dialog box. 
+
+.. image:: ../_static/common/plugin_toolbar_calculate.png
+   :align: center
+
+Select the "Vegetation Indices Time-Series" to open the window for this analysis.
+
+.. image:: ../_static/documentation/calculate/vegetation_indices.png
+   :align: center
+
+From the list of vegetation indices provided select your desired index and provide a title to your
+plot. Select the area of interest i.e point or polygon, label your task and calculate the index. 
+
+.. image:: ../_static/documentation/calculate/vegetation_indices_calc.png
+   :align: center
+
+To view your final plot go to "Download results from Earth Engine" and refresh the list, then select
+the task and download the results. This will plot a graph of your index over time.
+
+.. image:: ../_static/documentation/calculate/vegetation_indices_task.png
+   :align: center
+
+.. image:: ../_static/documentation/calculate/vegetation_indices_plot.png
+   :align: center
+
+
+Compute Forest Fires
+______________________
+
+Burnt areas and forest fires are be highlighted and mapped out form remotely sensed **Landsat 8 /Sentinel 2**
+data using the Normalized Burn Ratio (NBR). NBR is designed to highlight burned areas and estimate burn 
+severity. It uses near-infrared (NIR) and shortwave-infrared (SWIR) wavelengths. Before fire events, 
+healthy vegetation has very high NIR reflectance and a low SWIR reflectance. In contrast, recently 
+burned areas show low reflectance in the NIR and high reflectance in the SWIR band. 
+
+The NBR is be calculated for Landsat/Sentinel images before the fire (pre-fire NBR) and after 
+the fire (post-fire NBR). The **difference between the pre-fire NBR and the post-fire NBR** referred 
+to as **delta NBR (dNBR)** is computed to highlight the areas of forest disturbance by fire event. 
+
+Classification of the dNBR is be used for burn severity assessment, as areas with higher dNBR 
+values indicate more severe damage whereas areas with negative dNBR values might show increased 
+vegetation productivity. dNBR is classified according to burn severity ranges proposed by 
+the United States Geological Survey(USGS) 
+
+To compute the above forest fires, click on the calculator icon . This will open up the 
+“Calculate Indicators” dialog box. 
+
+.. image:: ../_static/common/plugin_toolbar_calculate.png
+   :align: center
+
+Select the "Forest Degradation Hotspots" to open the window for this analysis then select Forest Fires.
+
+.. image:: ../_static/documentation/calculate/forest_degradation.png
+   :align: center
+
+Select either "Landsat 8" or  "Sentinel 2", a Pre-fire and Post-fire perio, the area of interest then calculate 
+your parameters. 
+
+.. image:: ../_static/documentation/calculate/forest_degradation_dataset.png
+   :align: center
+
+To view your final result go to "Download results from Earth Engine" and refresh the list, then select
+the task and download the results. This will add 3 datasets to the map view i.e Prefire NBR, Postfire NBR and dNBR imagery.
+
+.. image:: ../_static/documentation/calculate/vegetation_indices.png
+   :align: center
+
+
+Compute Forest Change and Total Carbon & Summary
+_________________________________________________
+
+The quantification of the forest gain/loss hotspots will be based on pre-existing high-resolution 
+global maps derived from Hansen Global Forest change dataset that can be accessed using Google 
+Earth Engine API. The maps are produced from time-series analysis of Landsat images characterizing 
+forest extent and change over time.
+
+Step 1: Compute Forest Change and Total Carbon
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To compute Forest Change and Total Carbon, click on the calculator icon . This will open up the 
+“Calculate Indicators” dialog box. 
+
+Select Forest Change and Total Carbon and select **Step 1**, calculate Forest Change and Total Carbon 
+to open the window for this analysis. 
+
+.. image:: ../_static/documentation/calculate/vegetation_indices.png
+   :align: center
+
+.. image:: ../_static/documentation/calculate/forest_carbon.png
+   :align: center
+
+.. image:: ../_static/documentation/calculate/forest_carbon_1.png
+   :align: center
+
+Provide an Initial and Target year for the Hansen Global Forest Change dataset. Also provide 
+a value considered forest cover percentage. 
+
+.. image:: ../_static/documentation/calculate/forest_carbon_1_year.png
+   :align: center
+
+Next select the above ground biomass dataset to be used and the method for calculating the root to shoot
+ratio. Procees to select the area of interest and label your task then calculate.
+
+.. image:: ../_static/documentation/calculate/forest_carbon_1_method.png
+   :align: center
+
+To view your final result go to "Download results from Earth Engine" and refresh the list, then select
+the task and download the results. This will add 2 datasets to the map view i.e Total carbon and Forest loss
+
+.. image:: ../_static/documentation/calculate/forest_fire_result.png
+   :align: center
+
+Step 2: Generate Carbon Change Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To generate a carbon change summary, select **Step 2**, Calculate carbon change summary table to open the window
+for analysis. 
+
+.. image:: ../_static/documentation/calculate/forest_carbon_2.png
+   :align: center
+
+Provide the input datasets generated from step 1 (Auto-detected if already loaded onto the map view). 
+
+.. image:: ../_static/documentation/calculate/forest_carbon_2_input.png
+   :align: center
+
+Set the output location for the summary table file, select the same area of interest as in step 1 and calculate.
+
+.. image:: ../_static/documentation/calculate/forest_carbon_2_output.png
+   :align: center
+
+A summary file in xlsx format will be generated on completion similar to the one shown below.
+
+.. image:: ../_static/documentation/calculate/forest_carbon_excel.png
+   :align: center
+
 .. toctree::
    :maxdepth: 2
