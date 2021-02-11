@@ -606,6 +606,7 @@ forest extent and change over time.
 
 Step 1: Compute Forest Change and Total Carbon
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 To compute Forest Change and Total Carbon, click on the calculator icon . This will open up the 
 “Calculate Indicators” dialog box. 
 
@@ -662,6 +663,24 @@ A summary file in xlsx format will be generated on completion similar to the one
 
 .. image:: ../_static/documentation/calculate/forest_carbon_excel.png
    :align: center
+   
+Compute Mediterrenean Desertification and Land Use (MEDALUS)
+_____________________________________________________________
+
+1. Soil Quality Index
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+2. Vegetation Quality Index
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+3. Climate Quality Index
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+4. Land Management System Quality Index
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Combined desertification Layer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
    :maxdepth: 2
