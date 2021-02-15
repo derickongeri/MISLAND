@@ -232,7 +232,7 @@ To compute vegetation loss/gain on the service platform,
 
 To compute vegetation indices using Landsat derived vegetation indices, 
 
-1. On the services menu, select the 'VEGETATION GAIN/LOSS' option, and under the 'Source' dropdown menu, select Landsat 7 option
+1. On the services menu, select the 'VEGETATION GAIN/LOSS' option, and under the 'Source' dropdown menu, select Landsat option
 
 .. figure:: ../_static/Images/Service/landsat.png
     :width: 400
