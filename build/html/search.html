@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Search &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -36,6 +39,7 @@
 
     
     <script type="text/javascript" src="_static/searchtools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="#" /> 
 </head>
@@ -51,7 +55,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Monitoring Integrated Service for Land Degradation
+            <a href="index.html" class="icon icon-home"> Monitoring Integrated Service for Land Degradation
           
 
           
@@ -189,6 +193,36 @@
 </ul>
 <p class="caption"><span class="caption-text">Qgis Plugin Guide</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="Qgis_Plugin/plugin_development.html">Plugin Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#modifying-the-qgis-plugin-code">Modifying the QGIS Plugin code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#downloading-the-misland-code">Downloading the MISLAND code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#installing-dependencies">Installing dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#python">Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#python-dependencies">Python dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#pyqt">PyQt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#changing-the-version-of-the-plugin">Changing the version of the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#testing-changes-to-the-plugin">Testing changes to the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#syncing-and-deploying-changes-to-the-binaries">Syncing and deploying changes to the binaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#building-a-plugin-zip-file">Building a plugin ZIP file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#deploying-the-development-version-zip-file">Deploying the development version ZIP file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#modifying-the-earth-engine-processing-code">Modifying the Earth Engine processing code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#setting-up-dependencies">Setting up dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#trends-earth-cli">trends.earth-CLI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#docker">docker</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#testing-an-earth-engine-script-locally">Testing an Earth Engine script locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/plugin_development.html#deploying-a-gee-script-to-api-trends-earth">Deploying a GEE script to api.trends.earth</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Qgis_Plugin/before_installing.html">Before installing the toolbox</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Qgis_Plugin/before_installing.html#download-qgis">Download QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Qgis_Plugin/before_installing.html#install-qgis">Install QGIS</a></li>
@@ -220,7 +254,23 @@
 <li class="toctree-l2"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#compute-forest-fires">Compute Forest Fires</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#step-1-compute-forest-change-and-total-carbon">Step 1: Compute Forest Change and Total Carbon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#compute-mediterrenean-desertification-and-land-use-medalus">Compute Mediterrenean Desertification and Land Use (MEDALUS)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#soil-quality-index-sqi">1. Soil Quality Index (SQI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#a-using-default-data-computed-on-google-earth-engine">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#b-using-custom-data-computed-locally-on-device">b. Using Custom data (Computed locally on device)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#vegetation-quality-index-vqi">2. Vegetation Quality Index (VQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#climate-quality-index-cqi">3. Climate Quality Index (CQI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#id1">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#id2">b. Using Custom data (Computed locally on device)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#management-quality-index-mqi">4. Management Quality Index (MQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Qgis_Plugin/Calculate_indicators.html#environmentally-sensitive-area-esa-index-combined-desertification-layer">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -255,6 +305,8 @@
         <div class="rst-content">
         
           
+
+
 
 
 
@@ -305,14 +357,12 @@
            
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, LocateIT Kenya Ltd
+        &#169; Copyright 2020, LocateIT Kenya Ltd.
       <span class="lastupdated">
         Last updated on True.
       </span>
@@ -322,14 +372,13 @@
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

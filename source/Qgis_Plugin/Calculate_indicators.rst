@@ -1,7 +1,7 @@
 Calculate indicators
 =====================
 
-.. image:: ../_static/common/plugin_toolbar_calculate.png
+.. image:: /_static/common/plugin_toolbar_calculate.png
    :align: center
 
 Sustainable Development Goal 15.3 intends to combat desertification, restore 
@@ -18,12 +18,12 @@ To select the methods and datasets to calculate these indicators, indicators
 click on the calculator icon highlighted above. This will open up the 
 "Calculate Indicators" dialog box.
 
-.. image:: ../_static/documentation/calculate/LDindicator.png
+.. image:: /_static/documentation/calculate/LDindicator.png
    :align: center
 
 Select the Land degradation indicator (SDG indicator 15.3.1) to open the window for this analysis.
 
-.. image:: ../_static/documentation/calculate/SDG15.png
+.. image:: /_static/documentation/calculate/SDG15.png
    :align: center
 
 There are several options for calculating the SDG 15.3.1 Indicator. 
@@ -83,30 +83,30 @@ Select the "Calculate all three sub-indicators in one step" button.
    for the analysis and select one of the two Land Productivity datasets. 
    Select Next.
 
-.. image:: ../_static/documentation/calculate/image022.png
+.. image:: /_static/documentation/calculate/image022.png
    :align: center
    
 2. Select the Land Cover dataset. The first option is the default ESA dataset.
 
-.. image:: ../_static/documentation/calculate/image023.png
+.. image:: /_static/documentation/calculate/image023.png
    :align: center
 
 3. Select Edit definition to change the aggregation from the ESA Land Cover 
    dataset into 7 classes.
 
-.. image:: ../_static/documentation/calculate/image024.png
+.. image:: /_static/documentation/calculate/image024.png
    :align: center
 
 The second option allows users to upload a custom land cover dataset. This 
 requires two datasets to compare change over time. Select Next.
 
-.. image:: ../_static/documentation/calculate/image025.png
+.. image:: /_static/documentation/calculate/image025.png
    :align: center
 
 4. The user can now define the effects of land cover change and how it is 
    classified as degrading or improving.
 
-.. image:: ../_static/documentation/calculate/image026.png
+.. image:: /_static/documentation/calculate/image026.png
    :align: center
 
 5. Select an area to run the analysis or upload a shapefile boundary
@@ -123,7 +123,7 @@ requires two datasets to compare change over time. Select Next.
     choose an official boundary provided by the designated office of their 
     country.
 
-.. image:: ../_static/documentation/calculate/image027.png
+.. image:: /_static/documentation/calculate/image027.png
    :align: center
 
 6. Name the task and make notes for future reference
@@ -131,7 +131,7 @@ requires two datasets to compare change over time. Select Next.
 7. Click on "Calculate" to submit your task to Google Earth Engine
 
    
-.. image:: ../_static/documentation/calculate/image028.png
+.. image:: /_static/documentation/calculate/image028.png
    :align: center
 
 Calculate productivity
@@ -164,7 +164,7 @@ trajectory:
     The valid date range is set by the NDVI dataset selected within the first 
     tab: AVHRR dates compare 1982-2015 and MODIS 2001-2016.
 
-.. image:: ../_static/documentation/calculate/image029.png
+.. image:: /_static/documentation/calculate/image029.png
    :align: center
 
 3) In the tab "Advanced", select the method to be used to compute the 
@@ -200,7 +200,7 @@ trajectory:
 * **WUE**: is defined as the ratio between net primary production (NPP), in 
   this case annual integrals of NDVI, and evapotranspiration.
 
-.. image:: ../_static/documentation/calculate/image030.png
+.. image:: /_static/documentation/calculate/image030.png
    :align: center
 
 Productivity Performance
@@ -236,13 +236,13 @@ tool allows selecting the area of interest in one of two ways:
 2. The user can provide a shapefile, KML, or geojson defining an area of 
    interest. Once this is done, Select Next.
 
-.. image:: ../_static/documentation/calculate/image031.png
+.. image:: /_static/documentation/calculate/image031.png
    :align: center
    
 3. The next step is to write a Task name and some notes to indicate which 
    options were selected for the analysis.
 
-.. image:: ../_static/documentation/calculate/image032.png
+.. image:: /_static/documentation/calculate/image032.png
    :align: center
    
 4. When all the parameters have been defined, click "Calculate", and the task 
@@ -258,7 +258,7 @@ tool allows selecting the area of interest in one of two ways:
    Then click "Save". The layer will be saved on your computer and 
    automatically loaded into yoour current QGIS project.
 
-.. image:: ../_static/documentation/calculate/output_productivity.png
+.. image:: /_static/documentation/calculate/output_productivity.png
    :align: center
 
 
@@ -285,12 +285,12 @@ To calculate the land cover change indicator:
 1. Click on the Calculate Indicators button from the toolbox bar, then select 
    Land cover.
    
-.. image:: ../_static/documentation/calculate/image033.png
+.. image:: /_static/documentation/calculate/image033.png
    :align: center
 
 2. Within the "Land Cover Setup tab" the user selects the baseline and target years
 
-.. image:: ../_static/documentation/calculate/image034.png
+.. image:: /_static/documentation/calculate/image034.png
    :align: center
    
 3. The land cover aggregation can be customized using the 'Edit definition' 
@@ -304,7 +304,7 @@ To calculate the land cover change indicator:
 
    C. Select "Save definition" and select Next
 
-.. image:: ../_static/documentation/calculate/image035.png
+.. image:: /_static/documentation/calculate/image035.png
    :align: center
    
 4. Within the "Define Degradation tab" user define the meaning of each land 
@@ -320,7 +320,7 @@ To calculate the land cover change indicator:
    Users can keep the default values or create unique transition values of 
    their own.
    
-.. image:: ../_static/documentation/calculate/image036.png
+.. image:: /_static/documentation/calculate/image036.png
    :align: center
    
 5. The next step is to define the study area on which to perform the analysis. 
@@ -331,12 +331,12 @@ To calculate the land cover change indicator:
 
    B. The user can upload a shapefile with an area of interest.
 
-.. image:: ../_static/documentation/calculate/image037.png
+.. image:: /_static/documentation/calculate/image037.png
    :align: center
 
 6. The next step is to add the task name and relevant notes for the analysis.
 
-.. image:: ../_static/documentation/calculate/image038.png
+.. image:: /_static/documentation/calculate/image038.png
    :align: center
    
 7. When all the parameters have been defined, click "Calculate", and the task 
@@ -353,7 +353,7 @@ To calculate the land cover change indicator:
    Then click "Save". The layer will be saved on your computer and 
    automatically loaded into yoour current QGIS project.
 
-.. image:: ../_static/documentation/calculate/output_landcover.png
+.. image:: /_static/documentation/calculate/output_landcover.png
    :align: center
    
 Calculate soil carbon
@@ -368,29 +368,29 @@ using soil data and changes in land cover.
 
 To calculate degradation in soil organic carbon:
 
-.. image:: ../_static/documentation/calculate/image039.png
+.. image:: /_static/documentation/calculate/image039.png
    :align: center
 
 1. Select Soil organic carbon button under Calculate Indicators
 
-.. image:: ../_static/documentation/calculate/image040.png
+.. image:: /_static/documentation/calculate/image040.png
    :align: center
 
 2. The Land Cover Setup tab allows the user to define the period for analysis 
    with the baseline and target year. Users can select the Edit definition 
    button to change the land cover aggregation method or upload a datasets.   
 
-.. image:: ../_static/documentation/calculate/image041.png
+.. image:: /_static/documentation/calculate/image041.png
    :align: center
    
 3. The "Advanced" tab allows users to specify the Climate regime.
 
-.. image:: ../_static/documentation/calculate/image042.png
+.. image:: /_static/documentation/calculate/image042.png
    :align: center
    
 4. Users can select an area or upload a polygon shapefile for analysis
    
-.. image:: ../_static/documentation/calculate/image043.png
+.. image:: /_static/documentation/calculate/image043.png
    :align: center
 
 6. The next step is to add the task name and relevant notes for the analysis.
@@ -408,7 +408,7 @@ To calculate degradation in soil organic carbon:
    Then click "Save". The layer will be saved on your computer and 
    automatically loaded into your current QGIS project.
 
-.. image:: ../_static/documentation/calculate/output_soc.png
+.. image:: /_static/documentation/calculate/output_soc.png
    :align: center
 
 Compute SDG Indicator 15.3.1
@@ -428,23 +428,23 @@ ____________________________
 2. The input window will open already populated with the correct sub-indicators 
    (that if you have them loaded to the QGIS map)
 
-.. image:: ../_static/documentation/calculate/sdg_input.png
+.. image:: /_static/documentation/calculate/sdg_input.png
    :align: center
 
 3. Select the name and location where to save the output raster layer and the 
    excel file with the areas computed.  
  
-.. image:: ../_static/documentation/calculate/sdg_output.png
+.. image:: /_static/documentation/calculate/sdg_output.png
    :align: center
 
 4. Define the area of analysis. In this example, the country boundary.
   
-.. image:: ../_static/documentation/calculate/sdg_area.png
+.. image:: /_static/documentation/calculate/sdg_area.png
    :align: center
    
 5. Give a name to the task and click "Calculate"
    
-.. image:: ../_static/documentation/calculate/sdg_options.png
+.. image:: /_static/documentation/calculate/sdg_options.png
    :align: center
 
 6. This calculation is run on your computer, so depending on the size of the 
@@ -453,13 +453,13 @@ ____________________________
    the Excel file with the areas will be saved in the folder you selected. when 
    done, a message will pop up.
 
-.. image:: ../_static/documentation/calculate/sdg_done.png
+.. image:: /_static/documentation/calculate/sdg_done.png
    :align: center
    
 7. Click OK and two layers will be loaded to your map: the **5 classes 
    productivity** and the **SDG 15.3.1** indicators.
 
-.. image:: ../_static/documentation/calculate/sdg_maps.png
+.. image:: /_static/documentation/calculate/sdg_maps.png
    :align: center
 
 8. If you navigate to the folder you selected for storing the files, you can 
@@ -468,7 +468,7 @@ ____________________________
    just click ok and the file will open regardless. We are working to fix this 
    error.
 
-.. image:: ../_static/documentation/calculate/sdg_excel.png
+.. image:: /_static/documentation/calculate/sdg_excel.png
    :align: center
   
 Compute Vegatation Indices
@@ -489,7 +489,7 @@ Vegation Indices computed from Landsat 7 ETM+ include:
    changes in lighting conditions, surface slope, exposure, and other external factors.
    NDVI is calculated in accordance with the formula: 
 
-   .. image:: ../_static/documentation/calculate/ndvi.png
+   .. image:: /_static/documentation/calculate/ndvi.png
       :align: center
 
    NIR – reflection in the near-infrared spectrum 
@@ -513,7 +513,7 @@ Vegation Indices computed from Landsat 7 ETM+ include:
    to find the soil line from a feature-space plot or even explicitly specify the soil brightness 
    correction factor: 
 
-   .. image:: ../_static/documentation/calculate/msavi2.png
+   .. image:: /_static/documentation/calculate/msavi2.png
       :align: center
 
 
@@ -524,33 +524,33 @@ Vegation Indices computed from Landsat 7 ETM+ include:
    SAVI is calculated as a ratio between the R and NIR values with a soil brightness correction 
    factor (L) defined as 0.5 to accommodate most land cover types.
 
-   .. image:: ../_static/documentation/calculate/savi.png
+   .. image:: /_static/documentation/calculate/savi.png
       :align: center
 
 To compute the above vegetation indices, click on the calculator icon . This will open up the 
 “Calculate Indicators” dialog box. 
 
-.. image:: ../_static/common/plugin_toolbar_calculate.png
+.. image:: /_static/common/plugin_toolbar_calculate.png
    :align: center
 
 Select the "Vegetation Indices Time-Series" to open the window for this analysis.
 
-.. image:: ../_static/documentation/calculate/vegetation_indices.png
+.. image:: /_static/documentation/calculate/vegetation_indices.png
    :align: center
 
 From the list of vegetation indices provided select your desired index and provide a title to your
 plot. Select the area of interest i.e point or polygon, label your task and calculate the index. 
 
-.. image:: ../_static/documentation/calculate/vegetation_indices_calc.png
+.. image:: /_static/documentation/calculate/vegetation_indices_calc.png
    :align: center
 
 To view your final plot go to "Download results from Earth Engine" and refresh the list, then select
 the task and download the results. This will plot a graph of your index over time.
 
-.. image:: ../_static/documentation/calculate/vegetation_indices_task.png
+.. image:: /_static/documentation/calculate/vegetation_indices_task.png
    :align: center
 
-.. image:: ../_static/documentation/calculate/vegetation_indices_plot.png
+.. image:: /_static/documentation/calculate/vegetation_indices_plot.png
    :align: center
 
 
@@ -575,24 +575,24 @@ the United States Geological Survey(USGS)
 To compute the above forest fires, click on the calculator icon . This will open up the 
 “Calculate Indicators” dialog box. 
 
-.. image:: ../_static/common/plugin_toolbar_calculate.png
+.. image:: /_static/common/plugin_toolbar_calculate.png
    :align: center
 
 Select the "Forest Degradation Hotspots" to open the window for this analysis then select Forest Fires.
 
-.. image:: ../_static/documentation/calculate/forest_degradation.png
+.. image:: /_static/documentation/calculate/forest_degradation.png
    :align: center
 
 Select either "Landsat 8" or  "Sentinel 2", a Pre-fire and Post-fire perio, the area of interest then calculate 
 your parameters. 
 
-.. image:: ../_static/documentation/calculate/forest_degradation_dataset.png
+.. image:: /_static/documentation/calculate/forest_degradation_dataset.png
    :align: center
 
 To view your final result go to "Download results from Earth Engine" and refresh the list, then select
 the task and download the results. This will add 3 datasets to the map view i.e Prefire NBR, Postfire NBR and dNBR imagery.
 
-.. image:: ../_static/documentation/calculate/vegetation_indices.png
+.. image:: /_static/documentation/calculate/vegetation_indices.png
    :align: center
 
 
@@ -606,38 +606,37 @@ forest extent and change over time.
 
 Step 1: Compute Forest Change and Total Carbon
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 To compute Forest Change and Total Carbon, click on the calculator icon . This will open up the 
 “Calculate Indicators” dialog box. 
 
 Select Forest Change and Total Carbon and select **Step 1**, calculate Forest Change and Total Carbon 
 to open the window for this analysis. 
 
-.. image:: ../_static/documentation/calculate/vegetation_indices.png
+.. image:: /_static/documentation/calculate/vegetation_indices.png
    :align: center
 
-.. image:: ../_static/documentation/calculate/forest_carbon.png
+.. image:: /_static/documentation/calculate/forest_carbon.png
    :align: center
 
-.. image:: ../_static/documentation/calculate/forest_carbon_1.png
+.. image:: /_static/documentation/calculate/forest_carbon_1.png
    :align: center
 
 Provide an Initial and Target year for the Hansen Global Forest Change dataset. Also provide 
 a value considered forest cover percentage. 
 
-.. image:: ../_static/documentation/calculate/forest_carbon_1_year.png
+.. image:: /_static/documentation/calculate/forest_carbon_1_year.png
    :align: center
 
 Next select the above ground biomass dataset to be used and the method for calculating the root to shoot
 ratio. Procees to select the area of interest and label your task then calculate.
 
-.. image:: ../_static/documentation/calculate/forest_carbon_1_method.png
+.. image:: /_static/documentation/calculate/forest_carbon_1_method.png
    :align: center
 
 To view your final result go to "Download results from Earth Engine" and refresh the list, then select
 the task and download the results. This will add 2 datasets to the map view i.e Total carbon and Forest loss
 
-.. image:: ../_static/documentation/calculate/forest_fire_result.png
+.. image:: /_static/documentation/calculate/forest_fire_result.png
    :align: center
 
 Step 2: Generate Carbon Change Summary
@@ -646,41 +645,259 @@ Step 2: Generate Carbon Change Summary
 To generate a carbon change summary, select **Step 2**, Calculate carbon change summary table to open the window
 for analysis. 
 
-.. image:: ../_static/documentation/calculate/forest_carbon_2.png
+.. image:: /_static/documentation/calculate/forest_carbon_2.png
    :align: center
 
 Provide the input datasets generated from step 1 (Auto-detected if already loaded onto the map view). 
 
-.. image:: ../_static/documentation/calculate/forest_carbon_2_input.png
+.. image:: /_static/documentation/calculate/forest_carbon_2_input.png
    :align: center
 
 Set the output location for the summary table file, select the same area of interest as in step 1 and calculate.
 
-.. image:: ../_static/documentation/calculate/forest_carbon_2_output.png
+.. image:: /_static/documentation/calculate/forest_carbon_2_output.png
    :align: center
 
 A summary file in xlsx format will be generated on completion similar to the one shown below.
 
-.. image:: ../_static/documentation/calculate/forest_carbon_excel.png
+.. image:: /_static/documentation/calculate/forest_carbon_excel.png
    :align: center
-   
+
 Compute Mediterrenean Desertification and Land Use (MEDALUS)
 _____________________________________________________________
 
-1. Soil Quality Index
+The Mediterranean Desertification and Land Use (MEDALUS) is the name of a project supported 
+by Europe to assess, model and understand the desertification phenomena that increasingly 
+affect the Mediterranean area. It provides a satisfied result about land degradation vulnerability. 
+
+The MEDALUS approach identifies environmentally sensitive areas (ESAs) through the Environmentally 
+Sensitive Area Index (ESAI). This index can be used to obtain an in-depth understanding of the parameters 
+causing the desertification threat at a certain point. This approach is simple, robust, widely applicable, 
+and acceptable to new indicators and parameters and can be adjusted to several level scales. , the method 
+was used for the analysis of the main indicators identified to be driving forces of land degradation. 
+
+.. note::
+   Maintain the same area of interest for all computations within MEDALUS.
+
+1. Soil Quality Index (SQI)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-2. Vegetation Quality Index
+Soil is a crucial factor in evaluating the Environmental Sensitivity of an ecosystem, especially in the arid, 
+semi-arid and dry sub-humid zones. Soil properties related to desertification and degradation phenomena affect two principal parameters:
+(i) water storage and retention capacity;
+(ii) erosion resistance.
+   
+The formula used to compute the SQI is as shown below:
+
+**SQI  = (Parent material x Depth x Texture x Slope x Drainage x Rock Fragments)^1/6**
+
+Default datasets used for sqi are as shown below:
+
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Indicator**                   | **Variables**                  | **Data Source**                                                                                                                                                                      |
++=================================+================================+======================================================================================================================================================================================+
+| Soil Quality Index              | Slope                          | `SRTM Digital Elevation <https://developers.google.com/earth-engine/datasets/catalog/CGIAR_SRTM90_V4>`__                                                                             |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                 | Soil Depth                     | Custom User Input                                                                                                                                                                    |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                 | Rock Fragments                 | `Harmonized World Soil Database <https://webarchive.iiasa.ac.at/Research/LUC/External-World-soil-database/HTML/HWSD_Data.html?sb=4>`__                                               |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                 | Parent Material                | `Digital Sol Map of the world <http://www.fao.org/geonetwork/srv/en/metadata.show%3Fid=14116>`__                                                                                     |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                 | Drainage                       | `Harmonized World Soil Database <https://webarchive.iiasa.ac.at/Research/LUC/External-World-soil-database/HTML/HWSD_Data.html?sb=4>`__                                               |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                 | Soil Texture                   | `OpenLandMap Soil texture class (USDA system) <https://developers.google.com/earth-engine/datasets/catalog/OpenLandMap_SOL_SOL_TEXTURE-CLASS_USDA-TT_M_v02>`__                       |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+Soil Quality Index can be calculated in two ways:
+
+   a. Using default data (Computed on Google Earth Engine)
+   b. Using Custom data (Computed locally on device)
+
+a. Using default data (Computed on Google Earth Engine)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Inorder to compute Soil Quality Index using default data use the following steps.
+
+First open the calculate indicators toolbox and select MEDALUS then select the Soil Quality Index 
+option as shown.
+
+.. image:: /_static/documentation/calculate/medalus_toolbox.png
+   :align: center
+
+.. image:: /_static/documentation/calculate/medalus_sqi.png
+   :align: center
+
+Input soil depth (cm) and edit soil texture aggregation method according to case study as shown. This
+will reclassify soil depth values according to the definition selected.
+
+.. image:: /_static/documentation/calculate/sqi_toolbox.png
+   :align: center
+
+.. image:: /_static/documentation/calculate/sqi_texture_agg.png
+   :align: center
+
+Proceed to select an area of interest and run the computation.
+
+b. Using Custom data (Computed locally on device)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This step requires the data to be available locally. First Input soil depth (cm) then Select Custom soil 
+quality datasets instead of default and import sqi datasets as below. 
+
+.. image:: /_static/documentation/calculate/sqi_custom.png
+   :align: center
+
+Select import and select a raster or vector dataset of interest. Select the band number for the 
+raster dataset. Input the aggregation definition, study year and the reclassified output destination file as shown:
+
+.. image:: /_static/documentation/calculate/sqi_load_raster.png
+   :align: center
+
+Ensure to reclassifiy values correctly according to case study. Once all 4 datasets are imported proceed 
+to select an area of interest and run the computation. You will be required to select a destination for your 
+output file.
+
+.. image:: /_static/documentation/calculate/sqi_aggregation.png
+   :align: center
+
+
+2. Vegetation Quality Index (VQI)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The Vegetation Quality index is derived as the geometric mean of the characteristics of the vegetation. Fire Hazard layers (RI), 
+Fire Resistance (FR), drought (RS), vegetation erosion protection (PE) and cover plant (CV) according to the 
+following formula: 
+
+**VQI = (RI x PE x RS x CV) ^ ¼**
+
+Default datasets used for vqi are as shown below:
+
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Indicator**                   | **Variables**                  | **Data Source**                                                                                                                                                                      |
++=================================+================================+======================================================================================================================================================================================+
+| Vegetation Quality Index        | Fire Risk                      | `ESA CCI–land cover map v2.0.7–2015 <http://maps.elie.ucl.ac.be/CCI/viewer/>`__                                                                                                      |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                 | Drought Resistance             | `ESA CCI–land cover map v2.0.7–2015 <http://maps.elie.ucl.ac.be/CCI/viewer/>`__                                                                                                      |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                 | Erosion Protection             | `ESA CCI–land cover map v2.0.7–2015 <http://maps.elie.ucl.ac.be/CCI/viewer/>`__                                                                                                      |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                 | Plant Cover                    | `PROBA-V C1 Top Of Canopy Daily Synthesis 100m <https://developers.google.com/earth-engine/datasets/catalog/VITO_PROBAV_C1_S1_TOC_100M>`__                                           |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+To compute vegetation quality index, select Vegetation Quality Index option under the MEDALUS toolbar. For each of the 3 datasets, i.e 
+- Fire Risk
+- Drought Resistance
+- Erosion Protection
+
+.. image:: /_static/documentation/calculate/vqi_toolbox.png
+   :align: center
+
+Select the land cover year and an aggregation definition or use default set aggregation. This will reclassify 
+land cover classes based on definition provided. 
+
+.. image:: /_static/documentation/calculate/vqi_agg.png
+   :align: center
+
+For Plant cover, select a start and end date. Proceed to select an area of interest and run the computation.
+
+
+3. Climate Quality Index (CQI)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-3. Climate Quality Index
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Climate quality is assessed on the basis of how it influences water availability to the plants. The climate quality index, according to the MEDALUS approach, is obtained by cross-referencing the three layers of 
+information namely precipitation and aridity index using the following equation: 
 
-4. Land Management System Quality Index
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**CQI = (precipitation x aridity index) ^ 1/2**
 
-Combined desertification Layer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Default datasets used for CQI are:
+
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Indicator**                   | **Variables**                  | **Data Source**                                                                                                                                                                      |
++=================================+================================+======================================================================================================================================================================================+
+| Climate Quality Index           | Precipitation                  | `TerraClimate Monthly Climate and Climatic Water Balance for Global Terrestrial Surfaces <developers.google.com/earth-engine/datasets/catalog/IDAHO_EPSCOR_TERRACLIMATE>`__          |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                 | Potential Evapotranspiration   | `TerraClimate Monthly Climate and Climatic Water Balance for Global Terrestrial Surfaces <developers.google.com/earth-engine/datasets/catalog/IDAHO_EPSCOR_TERRACLIMATE>`__          |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Climate Quality Index can be calculated in two ways:
+
+   a. Using default data (Computed on Google Earth Engine)
+   b. Using Custom data (Computed locally on device)
+
+a. Using default data (Computed on Google Earth Engine)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Select a year of study between 1979-2020. Proceed to select and area of interest and run the computation.
+
+.. image:: /_static/documentation/calculate/cqi_toolbox.png
+   :align: center
+
+b. Using Custom data (Computed locally on device)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This step requires the data to be available locally. Load both a potential evapotranspiration and precipitation dataset to the 
+plugin as shown below.
+
+.. image:: /_static/documentation/calculate/cqi_toolbox_custom.png
+   :align: center
+
+Proceed to select an area of interest and run the computation. You will be required to select a destination for your 
+output file.
+
+4. Management Quality Index (MQI)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Management quality index, according to the MEDALUS approach, is obtained by cross-referencing the two layers of information 
+namely Land-Use intensity (LU) and Population Density (PD) using the following equation: 
+
+**MQI = (LU X PD)^1/2**
+
+Default datasets used for MQI are:
+
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Indicator**                   | **Variables**                  | **Data Source**                                                                                                                                                                      |
++=================================+================================+======================================================================================================================================================================================+
+| Management Quality Index        | Land Use Intensity             | `ESA CCI–land cover map v2.0.7–2015 <http://maps.elie.ucl.ac.be/CCI/viewer/>`__                                                                                                      |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                 | Population Density             | `GPWv411: Population Density (Gridded Population of the World Version 4.11) <https://developers.google.com/earth-engine/datasets/catalog/CIESIN_GPWv411_GPW_Population_Density>`__   |
++---------------------------------+--------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+To compute vegetation quality index, select Management Quality Index option under the MEDALUS toolbar. Select 
+the land cover year an and set aggregation definition for Land Use Intensity. This will reclassify land cover classes 
+based on definition provided. 
+
+.. image:: /_static/documentation/calculate/mqi_toolbox.png
+   :align: center
+
+.. image:: /_static/documentation/calculate/mqi_agg.png
+   :align: center
+
+Proceed to select an area of interest and run the computation. You will be required to select a destination for your 
+output file.
+
+Environmentally sensitive area (ESA) Index (Combined Desertification Layer)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The environmentally sensitive area (ESA) index (ESAI) is computed according to the original procedure as a geometric 
+mean of the four quality values recorded at each location (i.e., in each elementary pixel; Equation 2):
+
+**ESAI = (SQI x VQI x CQI x MQI) ^ 1/4**
+
+To compute the final desertification layer all MEDALUS subindicator must be already computed i.e SQI, VQI, CQI, MQI.
+In the MEDALUS toolbox select Calculate **final MEDALUS option** as shown below:
+
+.. image:: /_static/documentation/calculate/esai.png
+   :align: center
+
+Load all 4 layers to the plugin, select the area of interest and compute the ESAI. You will be required to 
+select a destination for your output file.
+
+.. note::
+   All layers will be automatically loaded into the plugin if they are available and loaded within QGIS.
+
+.. image:: /_static/documentation/calculate/esai_toolbox.png
+   :align: center
+   
 
 .. toctree::
    :maxdepth: 2
