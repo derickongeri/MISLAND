@@ -18,12 +18,12 @@ To select the methods and datasets to calculate these indicators, indicators
 click on the calculator icon highlighted above. This will open up the 
 "Calculate Indicators" dialog box.
 
-.. image:: /_static/documentation/calculate/LDindicator.png
+.. image:: /_static/documentation/calculate/LDindicator.PNG
    :align: center
 
 Select the Land degradation indicator (SDG indicator 15.3.1) to open the window for this analysis.
 
-.. image:: /_static/documentation/calculate/SDG15.png
+.. image:: /_static/documentation/calculate/SDG15.PNG
    :align: center
 
 There are several options for calculating the SDG 15.3.1 Indicator. 
