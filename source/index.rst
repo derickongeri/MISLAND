@@ -49,6 +49,7 @@ The core-service provides land degradation indicators for six North African Coun
    :maxdepth: 3
    :caption: Qgis Plugin Guide
 
+   Qgis_Plugin/plugin_development
    Qgis_Plugin/before_installing
    Qgis_Plugin/installing
    Qgis_Plugin/Registration
