@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Load Custom Data &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
+  <title>Calculate Forest Degradation &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Download data" href="Download_data.html" />
-    <link rel="prev" title="View and download results" href="gee_tasks.html" /> 
+    <link rel="next" title="Calculate Desertification (MEDALUS)" href="Calculate_medalus.html" />
+    <link rel="prev" title="Compute Vegatation Indices" href="Calculate_vegetation.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -256,11 +256,11 @@
 <li class="toctree-l1"><a class="reference internal" href="Calculate_vegetation.html">Compute Vegatation Indices</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Calculate_forest.html">Calculate Forest Degradation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Calculate_forest.html#compute-forest-fires">Compute Forest Fires</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Calculate_forest.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Calculate_forest.html#step-1-compute-forest-change-and-total-carbon">Step 1: Compute Forest Change and Total Carbon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Calculate_forest.html#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a><ul class="simple">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calculate Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-compute-forest-change-and-total-carbon">Step 1: Compute Forest Change and Total Carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -289,18 +289,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="gee_tasks.html">View and download results</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Load Custom Data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#load-a-dataset-produced-by-misland">Load a dataset produced by MISLAND</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#productivity">Productivity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#land-cover">Land cover</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#soil-organic-carbon">Soil organic carbon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="load_data.html">Load data tool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="load_data.html#load-a-dataset-produced-by-misland">Load a dataset produced by MISLAND</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#productivity">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#land-cover">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#soil-organic-carbon">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#load-a-custom-input-dataset">Load a custom input dataset</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Productivity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Land cover</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Soil organic carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_data.html#load-a-custom-input-dataset">Load a custom input dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id1">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id2">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id5">Soil organic carbon</a></li>
 </ul>
 </li>
 </ul>
@@ -355,7 +355,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Load Custom Data</li>
+      <li>Calculate Forest Degradation</li>
     
     
 
@@ -367,108 +367,71 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="load-custom-data">
-<h1>Load Custom Data<a class="headerlink" href="#load-custom-data" title="Permalink to this headline">¶</a></h1>
-<img alt="../_images/plugin_toolbar_loaddata.png" class="align-center" src="../_images/plugin_toolbar_loaddata.png" />
-<p>The “Load data” function allows the user to load data into QGIS and
-MISLAND for analysis.</p>
-<p>There are two options, to load results of MISLAND analysis or to load
-custom datasets which will be used to compute the indicators.</p>
-<img alt="../_images/custom_load.png" class="align-center" src="../_images/custom_load.png" />
-<div class="section" id="load-a-dataset-produced-by-misland">
-<h2>Load a dataset produced by MISLAND<a class="headerlink" href="#load-a-dataset-produced-by-misland" title="Permalink to this headline">¶</a></h2>
-<p>This option lets you load already downloaded results from MISLAND. eg Productivity, Land Cover, Soil Organic Carbon,
-Forest Fires, Soil Quality Index, Vegetation Quality Index, Climate Quality Index, Management Quality Index, etc.</p>
-<div class="section" id="productivity">
-<h3>Productivity<a class="headerlink" href="#productivity" title="Permalink to this headline">¶</a></h3>
-<p>Use this function to load into the QGIS map pre-computed productivity indicators which had been
-processed to identify land degradation.</p>
-<p>Navigate to the folder where you stored the downloaded file and select it. The downloaded file is an 8 band raster,
-with each band representing the three subindicators (trajectory, performance and state) plus other information which may
-help you interpret the trends identified. The layers to be loaded into the QGIS maps are the ones highlighted in gray. By default: trajectory
-(degradation and slope), performance and state. If you want to load the other layers, simply select them and click OK.</p>
-<img alt="../_images/loaddata_trendsearth_productivity.png" class="align-center" src="../_images/loaddata_trendsearth_productivity.png" />
-<p>The layers will be loaded in the QGIS map with its corresponding symbology.</p>
-<img alt="../_images/loaddata_trendsearth_productivity_loaded.png" class="align-center" src="../_images/loaddata_trendsearth_productivity_loaded.png" />
+  <div class="section" id="calculate-forest-degradation">
+<h1>Calculate Forest Degradation<a class="headerlink" href="#calculate-forest-degradation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="compute-forest-fires">
+<h2>Compute Forest Fires<a class="headerlink" href="#compute-forest-fires" title="Permalink to this headline">¶</a></h2>
+<p>Burnt areas and forest fires are be highlighted and mapped out form remotely sensed <strong>Landsat 8 /Sentinel 2</strong>
+data using the Normalized Burn Ratio (NBR). NBR is designed to highlight burned areas and estimate burn
+severity. It uses near-infrared (NIR) and shortwave-infrared (SWIR) wavelengths. Before fire events,
+healthy vegetation has very high NIR reflectance and a low SWIR reflectance. In contrast, recently
+burned areas show low reflectance in the NIR and high reflectance in the SWIR band.</p>
+<p>The NBR is be calculated for Landsat/Sentinel images before the fire (pre-fire NBR) and after
+the fire (post-fire NBR). The <strong>difference between the pre-fire NBR and the post-fire NBR</strong> referred
+to as <strong>delta NBR (dNBR)</strong> is computed to highlight the areas of forest disturbance by fire event.</p>
+<p>Classification of the dNBR is be used for burn severity assessment, as areas with higher dNBR
+values indicate more severe damage whereas areas with negative dNBR values might show increased
+vegetation productivity. dNBR is classified according to burn severity ranges proposed by
+the United States Geological Survey(USGS)</p>
+<p>To compute the above forest fires, click on the calculator icon . This will open up the
+“Calculate Indicators” dialog box.</p>
+<img alt="../_images/plugin_toolbar_calculate.png" class="align-center" src="../_images/plugin_toolbar_calculate.png" />
+<p>Select the “Forest Degradation Hotspots” to open the window for this analysis then select Forest Fires.</p>
+<img alt="../_images/forest_degradation.png" class="align-center" src="../_images/forest_degradation.png" />
+<p>Select either “Landsat 8” or  “Sentinel 2”, a Pre-fire and Post-fire perio, the area of interest then calculate
+your parameters.</p>
+<img alt="../_images/forest_degradation_dataset.png" class="align-center" src="../_images/forest_degradation_dataset.png" />
+<p>To view your final result go to “Download results from Earth Engine” and refresh the list, then select
+the task and download the results. This will add 3 datasets to the map view i.e Prefire NBR, Postfire NBR and dNBR imagery.</p>
+<img alt="../_images/vegetation_indices.png" class="align-center" src="../_images/vegetation_indices.png" />
 </div>
-<div class="section" id="land-cover">
-<h3>Land cover<a class="headerlink" href="#land-cover" title="Permalink to this headline">¶</a></h3>
-<p>This option lets you load pre-computed land cover indicators which had been
-processed to identify land degradation.</p>
-<p>Navigate to the folder where you stored the downloaded file and select it. The downloaded file is a multi band raster. The number
-of bands will depend on the period of analysis selected and the data source used. If the default ESA CCI land cover was used, for example,
-annual land cover maps will be downloaded.</p>
-<p>The bands in the stack represent: initial and final land cover (annual if available) both in the original classification scheme and using
-the UNCCD 7 class land cover table, land cover transitions and land cover degradation as
-identified by this subindicator. If you want to load the other layers not selected by default, simply select them and click OK.</p>
-<img alt="../_images/loaddata_trendsearth_landcover.png" class="align-center" src="../_images/loaddata_trendsearth_landcover.png" />
-<p>The layers will be loaded in the QGIS map with its corresponding symbology.</p>
-<img alt="../_images/loaddata_trendsearth_landcover_loaded.png" class="align-center" src="../_images/loaddata_trendsearth_landcover_loaded.png" />
+<div class="section" id="compute-forest-change-and-total-carbon-summary">
+<h2>Compute Forest Change and Total Carbon &amp; Summary<a class="headerlink" href="#compute-forest-change-and-total-carbon-summary" title="Permalink to this headline">¶</a></h2>
+<p>The quantification of the forest gain/loss hotspots will be based on pre-existing high-resolution
+global maps derived from Hansen Global Forest change dataset that can be accessed using Google
+Earth Engine API. The maps are produced from time-series analysis of Landsat images characterizing
+forest extent and change over time.</p>
+<div class="section" id="step-1-compute-forest-change-and-total-carbon">
+<h3>Step 1: Compute Forest Change and Total Carbon<a class="headerlink" href="#step-1-compute-forest-change-and-total-carbon" title="Permalink to this headline">¶</a></h3>
+<p>To compute Forest Change and Total Carbon, click on the calculator icon . This will open up the
+“Calculate Indicators” dialog box.</p>
+<p>Select Forest Change and Total Carbon and select <strong>Step 1</strong>, calculate Forest Change and Total Carbon
+to open the window for this analysis.</p>
+<img alt="../_images/vegetation_indices.png" class="align-center" src="../_images/vegetation_indices.png" />
+<img alt="../_images/forest_carbon.png" class="align-center" src="../_images/forest_carbon.png" />
+<img alt="../_images/forest_carbon_1.png" class="align-center" src="../_images/forest_carbon_1.png" />
+<p>Provide an Initial and Target year for the Hansen Global Forest Change dataset. Also provide
+a value considered forest cover percentage.</p>
+<img alt="../_images/forest_carbon_1_year.png" class="align-center" src="../_images/forest_carbon_1_year.png" />
+<p>Next select the above ground biomass dataset to be used and the method for calculating the root to shoot
+ratio. Procees to select the area of interest and label your task then calculate.</p>
+<img alt="../_images/forest_carbon_1_method.png" class="align-center" src="../_images/forest_carbon_1_method.png" />
+<p>To view your final result go to “Download results from Earth Engine” and refresh the list, then select
+the task and download the results. This will add 2 datasets to the map view i.e Total carbon and Forest loss</p>
+<img alt="../_images/forest_fire_result.png" class="align-center" src="../_images/forest_fire_result.png" />
 </div>
-<div class="section" id="soil-organic-carbon">
-<h3>Soil organic carbon<a class="headerlink" href="#soil-organic-carbon" title="Permalink to this headline">¶</a></h3>
-<p>This option lets you load pre-computed soil organic carbon indicators which had been
-processed to identify land degradation.</p>
-<p>Navigate to the folder where you stored the downloaded file and select it. The downloaded file is a multi band raster. The number
-of bands will depend on the period of analysis selected and the data source used. If the default ESA CCI land cover was used, for example,
-annual soil organic carbon maps will be downloaded.</p>
-<p>The bands in the stack represent: initial and final soil organic carbon stocks (annual soc if annual land data is available),
-initial and final land cover maps using the UNCCD 7 class land cover classification,and degradation as identified by this
-subindicator. The units of the degradation layer are “% change”, if changes are larger than 10% for the period, they will be
-considered as improvement or degradation depending on the sign of the change. If you want to load the other layers not
-selected by default, simply select them and click OK.</p>
-<img alt="../_images/loaddata_trendsearth_soc.png" class="align-center" src="../_images/loaddata_trendsearth_soc.png" />
-<p>The layers will be loaded in the QGIS map with its corresponding symbology.</p>
-<img alt="../_images/loaddata_trendsearth_soc_loaded.png" class="align-center" src="../_images/loaddata_trendsearth_soc_loaded.png" />
-</div>
-<div class="section" id="sdg-15-3-1-indicator">
-<h3>SDG 15.3.1 indicator<a class="headerlink" href="#sdg-15-3-1-indicator" title="Permalink to this headline">¶</a></h3>
-<p>This option lets you load pre-computed productivity subindicator (the integration of trajectory,
-performance and state) as well as the final SDG 15.3.1 (the integration of productivity,
-land cover and soil organic carbon)</p>
-<p>Navigate to the folder where you stored the downloaded file and select it. The downloaded file is an 2 band raster, the first one
-containing information on the SDG and the second on the 5 classes productivity subindicator.</p>
-<img alt="../_images/loaddata_trendsearth_sdg.png" class="align-center" src="../_images/loaddata_trendsearth_sdg.png" />
-<p>The layers will be loaded in the QGIS map with its corresponding symbology.</p>
-<img alt="../_images/loaddata_trendsearth_sdg_loaded.png" class="align-center" src="../_images/loaddata_trendsearth_sdg_loaded.png" />
-</div>
-</div>
-<div class="section" id="load-a-custom-input-dataset">
-<h2>Load a custom input dataset<a class="headerlink" href="#load-a-custom-input-dataset" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3>Productivity<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Use this option to load productivity datasets which have already been generated outside of MISLAND.</p>
-<p>Productivity classes in the input data must be coded as follows:</p>
-<p>1: Declining
-2: Early signs of decline
-3: Stable but stressed
-4: Stable
-5: Increasing
-0 or -32768: No data</p>
-<img alt="../_images/loaddata_landproductivity.png" class="align-center" src="../_images/loaddata_landproductivity.png" />
-</div>
-<div class="section" id="id2">
-<h3>Land cover<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>Use this option to load land cover datasets which will then be used for land
-cover change analysis and/or soil organic carbon change analysis.</p>
-<img alt="../_images/loaddata_landcover.png" class="align-center" src="../_images/loaddata_landcover.png" />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you’ll be using the <a class="reference external" href="https://www.eea.europa.eu/publications/COR0-landcover">CORINE land cover data</a> , you can use
-<a class="reference external" href="https://s3.amazonaws.com/trends.earth/sharing/Corine_Land_Cover_to_UNCCD_TrendsEarth_Definition.json">this definition file</a>
-to pre-load a suggested aggregation of the land cover classes in Corine to convert them to the 7 UNCCD land cover classes.</p>
-</div>
-</div>
-<div class="section" id="id3">
-<h3>Soil organic carbon<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>Processing of custom soil organic carbon data can be handled using this
-tool.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This tool assumes that the units of the raster layer to be imported
-are <strong>Metrics Tons of organic carbon per hectare</strong>. If your layer is in
-different units, please make the necessary conversions before using it in
-MISLAND.</p>
+<div class="section" id="step-2-generate-carbon-change-summary">
+<h3>Step 2: Generate Carbon Change Summary<a class="headerlink" href="#step-2-generate-carbon-change-summary" title="Permalink to this headline">¶</a></h3>
+<p>To generate a carbon change summary, select <strong>Step 2</strong>, Calculate carbon change summary table to open the window
+for analysis.</p>
+<img alt="../_images/forest_carbon_2.png" class="align-center" src="../_images/forest_carbon_2.png" />
+<p>Provide the input datasets generated from step 1 (Auto-detected if already loaded onto the map view).</p>
+<img alt="../_images/forest_carbon_2_input.png" class="align-center" src="../_images/forest_carbon_2_input.png" />
+<p>Set the output location for the summary table file, select the same area of interest as in step 1 and calculate.</p>
+<img alt="../_images/forest_carbon_2_output.png" class="align-center" src="../_images/forest_carbon_2_output.png" />
+<p>A summary file in xlsx format will be generated on completion similar to the one shown below.</p>
+<img alt="../_images/forest_carbon_excel.png" class="align-center" src="../_images/forest_carbon_excel.png" />
+<div class="toctree-wrapper compound">
 </div>
 </div>
 </div>
@@ -480,8 +443,8 @@ MISLAND.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="Download_data.html" class="btn btn-neutral float-right" title="Download data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="gee_tasks.html" class="btn btn-neutral float-left" title="View and download results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Calculate_medalus.html" class="btn btn-neutral float-right" title="Calculate Desertification (MEDALUS)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Calculate_vegetation.html" class="btn btn-neutral float-left" title="Compute Vegatation Indices" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

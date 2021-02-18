@@ -1,5 +1,5 @@
 Plugin Development
-==================
+===================
 
 MISLAND is free and open-source software, licensed under the `GNU 
 General Public License, version 2.0 or later 

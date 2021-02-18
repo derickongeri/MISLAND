@@ -53,8 +53,12 @@ The core-service provides land degradation indicators for six North African Coun
    Qgis_Plugin/before_installing
    Qgis_Plugin/installing
    Qgis_Plugin/Registration
-   Qgis_Plugin/Calculate_indicators
-   Qgis_Plugin/Plot_data
+   Qgis_Plugin/Calculate_sdg15
+   Qgis_Plugin/Calculate_vegetation
+   Qgis_Plugin/Calculate_forest
+   Qgis_Plugin/Calculate_medalus
+   Qgis_Plugin/gee_tasks
+   Qgis_Plugin/load_data
    Qgis_Plugin/Download_data
    Qgis_Plugin/visualization
 
