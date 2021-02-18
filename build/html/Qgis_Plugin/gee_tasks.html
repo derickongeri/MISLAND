@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Load Custom Data &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
+  <title>View and download results &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Download data" href="Download_data.html" />
-    <link rel="prev" title="View and download results" href="gee_tasks.html" /> 
+    <link rel="next" title="Load data tool" href="load_data.html" />
+    <link rel="prev" title="Plot data" href="Plot_data.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -248,21 +248,15 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#calculate-land-cover">Calculate land cover</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#calculate-soil-carbon">Calculate soil carbon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#compute-sdg-indicator-15-3-1">Compute SDG Indicator 15.3.1</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#compute-sdg-indicator-15-3-1">Compute SDG Indicator 15.3.1</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Calculate_vegetation.html">Compute Vegatation Indices</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_vegetation.html">Compute Vegatation Indices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Calculate_forest.html">Calculate Forest Degradation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Calculate_forest.html#compute-forest-fires">Compute Forest Fires</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Calculate_forest.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Calculate_forest.html#step-1-compute-forest-change-and-total-carbon">Step 1: Compute Forest Change and Total Carbon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Calculate_forest.html#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_forest.html#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a></li>
 </ul>
 </li>
 </ul>
@@ -288,19 +282,20 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="gee_tasks.html">View and download results</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Load Custom Data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#load-a-dataset-produced-by-misland">Load a dataset produced by MISLAND</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#productivity">Productivity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#land-cover">Land cover</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#soil-organic-carbon">Soil organic carbon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Plot_data.html">Plot data</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">View and download results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="load_data.html">Load data tool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="load_data.html#load-a-dataset-produced-by-misland">Load a dataset produced by MISLAND</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#productivity">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#land-cover">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#soil-organic-carbon">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#load-a-custom-input-dataset">Load a custom input dataset</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Productivity</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Land cover</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Soil organic carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="load_data.html#load-a-custom-input-dataset">Load a custom input dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id1">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id2">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id5">Soil organic carbon</a></li>
 </ul>
 </li>
 </ul>
@@ -355,7 +350,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Load Custom Data</li>
+      <li>View and download results</li>
     
     
 
@@ -367,111 +362,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="load-custom-data">
-<h1>Load Custom Data<a class="headerlink" href="#load-custom-data" title="Permalink to this headline">¶</a></h1>
-<img alt="../_images/plugin_toolbar_loaddata.png" class="align-center" src="../_images/plugin_toolbar_loaddata.png" />
-<p>The “Load data” function allows the user to load data into QGIS and
-MISLAND for analysis.</p>
-<p>There are two options, to load results of MISLAND analysis or to load
-custom datasets which will be used to compute the indicators.</p>
-<img alt="../_images/custom_load.png" class="align-center" src="../_images/custom_load.png" />
-<div class="section" id="load-a-dataset-produced-by-misland">
-<h2>Load a dataset produced by MISLAND<a class="headerlink" href="#load-a-dataset-produced-by-misland" title="Permalink to this headline">¶</a></h2>
-<p>This option lets you load already downloaded results from MISLAND. eg Productivity, Land Cover, Soil Organic Carbon,
-Forest Fires, Soil Quality Index, Vegetation Quality Index, Climate Quality Index, Management Quality Index, etc.</p>
-<div class="section" id="productivity">
-<h3>Productivity<a class="headerlink" href="#productivity" title="Permalink to this headline">¶</a></h3>
-<p>Use this function to load into the QGIS map pre-computed productivity indicators which had been
-processed to identify land degradation.</p>
-<p>Navigate to the folder where you stored the downloaded file and select it. The downloaded file is an 8 band raster,
-with each band representing the three subindicators (trajectory, performance and state) plus other information which may
-help you interpret the trends identified. The layers to be loaded into the QGIS maps are the ones highlighted in gray. By default: trajectory
-(degradation and slope), performance and state. If you want to load the other layers, simply select them and click OK.</p>
-<img alt="../_images/loaddata_trendsearth_productivity.png" class="align-center" src="../_images/loaddata_trendsearth_productivity.png" />
-<p>The layers will be loaded in the QGIS map with its corresponding symbology.</p>
-<img alt="../_images/loaddata_trendsearth_productivity_loaded.png" class="align-center" src="../_images/loaddata_trendsearth_productivity_loaded.png" />
-</div>
-<div class="section" id="land-cover">
-<h3>Land cover<a class="headerlink" href="#land-cover" title="Permalink to this headline">¶</a></h3>
-<p>This option lets you load pre-computed land cover indicators which had been
-processed to identify land degradation.</p>
-<p>Navigate to the folder where you stored the downloaded file and select it. The downloaded file is a multi band raster. The number
-of bands will depend on the period of analysis selected and the data source used. If the default ESA CCI land cover was used, for example,
-annual land cover maps will be downloaded.</p>
-<p>The bands in the stack represent: initial and final land cover (annual if available) both in the original classification scheme and using
-the UNCCD 7 class land cover table, land cover transitions and land cover degradation as
-identified by this subindicator. If you want to load the other layers not selected by default, simply select them and click OK.</p>
-<img alt="../_images/loaddata_trendsearth_landcover.png" class="align-center" src="../_images/loaddata_trendsearth_landcover.png" />
-<p>The layers will be loaded in the QGIS map with its corresponding symbology.</p>
-<img alt="../_images/loaddata_trendsearth_landcover_loaded.png" class="align-center" src="../_images/loaddata_trendsearth_landcover_loaded.png" />
-</div>
-<div class="section" id="soil-organic-carbon">
-<h3>Soil organic carbon<a class="headerlink" href="#soil-organic-carbon" title="Permalink to this headline">¶</a></h3>
-<p>This option lets you load pre-computed soil organic carbon indicators which had been
-processed to identify land degradation.</p>
-<p>Navigate to the folder where you stored the downloaded file and select it. The downloaded file is a multi band raster. The number
-of bands will depend on the period of analysis selected and the data source used. If the default ESA CCI land cover was used, for example,
-annual soil organic carbon maps will be downloaded.</p>
-<p>The bands in the stack represent: initial and final soil organic carbon stocks (annual soc if annual land data is available),
-initial and final land cover maps using the UNCCD 7 class land cover classification,and degradation as identified by this
-subindicator. The units of the degradation layer are “% change”, if changes are larger than 10% for the period, they will be
-considered as improvement or degradation depending on the sign of the change. If you want to load the other layers not
-selected by default, simply select them and click OK.</p>
-<img alt="../_images/loaddata_trendsearth_soc.png" class="align-center" src="../_images/loaddata_trendsearth_soc.png" />
-<p>The layers will be loaded in the QGIS map with its corresponding symbology.</p>
-<img alt="../_images/loaddata_trendsearth_soc_loaded.png" class="align-center" src="../_images/loaddata_trendsearth_soc_loaded.png" />
-</div>
-<div class="section" id="sdg-15-3-1-indicator">
-<h3>SDG 15.3.1 indicator<a class="headerlink" href="#sdg-15-3-1-indicator" title="Permalink to this headline">¶</a></h3>
-<p>This option lets you load pre-computed productivity subindicator (the integration of trajectory,
-performance and state) as well as the final SDG 15.3.1 (the integration of productivity,
-land cover and soil organic carbon)</p>
-<p>Navigate to the folder where you stored the downloaded file and select it. The downloaded file is an 2 band raster, the first one
-containing information on the SDG and the second on the 5 classes productivity subindicator.</p>
-<img alt="../_images/loaddata_trendsearth_sdg.png" class="align-center" src="../_images/loaddata_trendsearth_sdg.png" />
-<p>The layers will be loaded in the QGIS map with its corresponding symbology.</p>
-<img alt="../_images/loaddata_trendsearth_sdg_loaded.png" class="align-center" src="../_images/loaddata_trendsearth_sdg_loaded.png" />
-</div>
-</div>
-<div class="section" id="load-a-custom-input-dataset">
-<h2>Load a custom input dataset<a class="headerlink" href="#load-a-custom-input-dataset" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3>Productivity<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Use this option to load productivity datasets which have already been generated outside of MISLAND.</p>
-<p>Productivity classes in the input data must be coded as follows:</p>
-<p>1: Declining
-2: Early signs of decline
-3: Stable but stressed
-4: Stable
-5: Increasing
-0 or -32768: No data</p>
-<img alt="../_images/loaddata_landproductivity.png" class="align-center" src="../_images/loaddata_landproductivity.png" />
-</div>
-<div class="section" id="id2">
-<h3>Land cover<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>Use this option to load land cover datasets which will then be used for land
-cover change analysis and/or soil organic carbon change analysis.</p>
-<img alt="../_images/loaddata_landcover.png" class="align-center" src="../_images/loaddata_landcover.png" />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you’ll be using the <a class="reference external" href="https://www.eea.europa.eu/publications/COR0-landcover">CORINE land cover data</a> , you can use
-<a class="reference external" href="https://s3.amazonaws.com/trends.earth/sharing/Corine_Land_Cover_to_UNCCD_TrendsEarth_Definition.json">this definition file</a>
-to pre-load a suggested aggregation of the land cover classes in Corine to convert them to the 7 UNCCD land cover classes.</p>
-</div>
-</div>
-<div class="section" id="id3">
-<h3>Soil organic carbon<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>Processing of custom soil organic carbon data can be handled using this
-tool.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This tool assumes that the units of the raster layer to be imported
-are <strong>Metrics Tons of organic carbon per hectare</strong>. If your layer is in
-different units, please make the necessary conversions before using it in
-MISLAND.</p>
-</div>
-</div>
-</div>
+  <div class="section" id="view-and-download-results">
+<h1>View and download results<a class="headerlink" href="#view-and-download-results" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/plugin_toolbar_tasks.png" class="align-center" src="../_images/plugin_toolbar_tasks.png" />
+<p>Once you have submitted a calculation using MISLAND, it is sent to
+Google Earth Engine to run the calculations in the cloud. To view the Google
+Earth Engine (GEE) tasks you have running, and to download your results, select
+the cloud with the arrow facing down icon highlighted above. This will open up the <cite>Download results
+from Earth Engine</cite> dialog box.</p>
+<p>Click <cite>Refresh List</cite> to show all the tasks you have submitted and their status.</p>
+<p>Users can view their current and previous tasks here. the table shows the
+task name provided by the user, which analysis is running (job), the start time
+and end time of when the task was started and completed and whether or not the
+task was successful. The Details page outlines the different options the user
+chose for each task.</p>
+<img alt="../_images/download_results.png" class="align-center" src="../_images/download_results.png" />
+<p>To download results to the computer once a task has finished, click on the task
+you are interested in downloading results for, then click <cite>Download results</cite>.
+In the window that appears, choose the location in which to save the download.
+Note that some downloads might consist of multiple files - all of these files
+need to be kept together if the results are moved to a different location on
+the computer (or saved to a USB stick).</p>
+<img alt="../_images/image0361.png" class="align-center" src="../_images/image0361.png" />
 </div>
 
 
@@ -480,8 +392,8 @@ MISLAND.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="Download_data.html" class="btn btn-neutral float-right" title="Download data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="gee_tasks.html" class="btn btn-neutral float-left" title="View and download results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="load_data.html" class="btn btn-neutral float-right" title="Load data tool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Plot_data.html" class="btn btn-neutral float-left" title="Plot data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

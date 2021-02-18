@@ -1,0 +1,853 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Calculate SDG 15.3.1 &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Compute Vegatation Indices" href="Calculate_vegetation.html" />
+    <link rel="prev" title="Registration and settings" href="Registration.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: black" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Monitoring Integrated Service for Land Degradation
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/general_information.html">General Infortmation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#get-in-touch-with-the-team">Get in touch with the team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#aknowledgement">Aknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#linces">Linces</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/data.html">Data sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#ndvi">NDVI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-moisture">Soil moisture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#precipitation">Precipitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#evapotranspiration">Evapotranspiration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#land-cover">Land cover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-carbon">Soil carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#agroecological-zones">Agroecological Zones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-quality">Soil Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#climate">Climate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#administrative-boundaries">Administrative Boundaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Layers.html">Dataset coding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#sdg-15-3-1-indicator">SDG 15.3.1 Indicator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#productivity">Productivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-trajectory-trend">Productivity trajectory (trend)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-trajectory-significance">Productivity trajectory (significance)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-degradation">Productivity performance (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-ratio">Productivity performance (ratio)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-units">Productivity performance (units)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-degradation">Productivity state (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-classes">Productivity state classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-ndvi-mean">Productivity state NDVI mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#sdg-15-3-1-productivity-indicator">SDG 15.3.1 productivity indicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-productivity-dynamics">Land productivity dynamics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#land-cover">Land cover</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-degradation">Land cover (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-7-class">Land cover (7 class)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-esa-classes">Land cover (ESA classes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-transitions">Land cover (transitions)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#soil-organic-carbon">Soil organic carbon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#soil-organic-carbon-degradation">Soil organic carbon (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#id3">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#population">Population</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#delta-normalized-burnt-ratio">Delta Normalized Burnt Ratio</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Background</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html">Land Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Background/LD_indicators.html#land-degradation-indicators">Land Degradation Indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#sdg15-3-1-indicator">SDG15.3.1 Indicator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#sdg-15-3-1-sub-indicators">SDG 15.3.1 Sub-indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#combining-productivity-indicators">Combining Productivity Indicators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#vegetation-loss-gain-hotspots">Vegetation Loss/Gain hotspots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#forest-change">Forest Change</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-gain-loss">Forest Gain/Loss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-fires">Forest Fires</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Web Service Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Service_Guide.html">Serivice Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#misland-service-tour">MISLAND Service Tour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#registration-and-log-in">Registration and Log in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#calculate-indicators">Calculate Indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Service/Service_Guide.html#compute-sdg-15-3-1-sub-indicators">compute SDG 15.3.1 Sub-indicators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#vegetation-loss-gain-indicators">Vegetation Loss/Gain indicators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#forest-change">Forest Change</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#forest-fires">Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#exporting-outputs">Exporting Outputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#export-map">Export Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#export-chart">Export Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#download-data">Download data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Qgis Plugin Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="plugin_development.html">Plugin Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugin_development.html#modifying-the-qgis-plugin-code">Modifying the QGIS Plugin code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#downloading-the-misland-code">Downloading the MISLAND code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#installing-dependencies">Installing dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="plugin_development.html#python">Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plugin_development.html#python-dependencies">Python dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plugin_development.html#pyqt">PyQt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#changing-the-version-of-the-plugin">Changing the version of the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#testing-changes-to-the-plugin">Testing changes to the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#syncing-and-deploying-changes-to-the-binaries">Syncing and deploying changes to the binaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#building-a-plugin-zip-file">Building a plugin ZIP file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#deploying-the-development-version-zip-file">Deploying the development version ZIP file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plugin_development.html#modifying-the-earth-engine-processing-code">Modifying the Earth Engine processing code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#setting-up-dependencies">Setting up dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="plugin_development.html#trends-earth-cli">trends.earth-CLI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plugin_development.html#docker">docker</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#testing-an-earth-engine-script-locally">Testing an Earth Engine script locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#deploying-a-gee-script-to-api-trends-earth">Deploying a GEE script to api.trends.earth</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="before_installing.html">Before installing the toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="before_installing.html#download-qgis">Download QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="before_installing.html#install-qgis">Install QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing the toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#installing-the-development-version-recommended">Installing the development version (recommended)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Registration.html">Registration and settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Registration.html#registration">Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Registration.html#updating-your-user">Updating your user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Registration.html#forgot-password">Forgot password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Registration.html#advanced-settings">Advanced settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calculate SDG 15.3.1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-indicators-with-simplified-tool">Calculate indicators with simplified tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-productivity">Calculate productivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-trajectory">Productivity Trajectory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-performance">Productivity Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-state">Productivity State</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-land-cover">Calculate land cover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-soil-carbon">Calculate soil carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compute-sdg-indicator-15-3-1">Compute SDG Indicator 15.3.1</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_vegetation.html">Compute Vegatation Indices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_forest.html">Calculate Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_forest.html#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_forest.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_forest.html#step-1-compute-forest-change-and-total-carbon">Step 1: Compute Forest Change and Total Carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_forest.html#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_medalus.html">Calculate Desertification (MEDALUS)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_medalus.html#compute-mediterrenean-desertification-and-land-use-medalus">Compute Mediterrenean Desertification and Land Use (MEDALUS)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#soil-quality-index-sqi">1. Soil Quality Index (SQI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Calculate_medalus.html#a-using-default-data-computed-on-google-earth-engine">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Calculate_medalus.html#b-using-custom-data-computed-locally-on-device">b. Using Custom data (Computed locally on device)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#vegetation-quality-index-vqi">2. Vegetation Quality Index (VQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#climate-quality-index-cqi">3. Climate Quality Index (CQI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Calculate_medalus.html#id1">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Calculate_medalus.html#id2">b. Using Custom data (Computed locally on device)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#management-quality-index-mqi">4. Management Quality Index (MQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#environmentally-sensitive-area-esa-index-combined-desertification-layer">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gee_tasks.html">View and download results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="load_data.html">Load data tool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="load_data.html#load-a-dataset-produced-by-misland">Load a dataset produced by MISLAND</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#productivity">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#land-cover">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#soil-organic-carbon">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="load_data.html#load-a-custom-input-dataset">Load a custom input dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id1">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id2">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id5">Soil organic carbon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization tools</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Monitoring Integrated Service for Land Degradation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Calculate SDG 15.3.1</li>
+    
+    
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="calculate-sdg-15-3-1">
+<h1><a class="toc-backref" href="#id3">Calculate SDG 15.3.1</a><a class="headerlink" href="#calculate-sdg-15-3-1" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/plugin_toolbar_calculate.png" class="align-center" src="../_images/plugin_toolbar_calculate.png" />
+<p>Sustainable Development Goal 15.3 intends to combat desertification, restore
+degraded land and soil, including land affected by desertification, drought and
+floods, and strive to achieve a land degradation-neutral world by 2030. In
+order to assess the progress to this goal, the agreed-upon indicator for SDG
+15.3 (proportion of land area degraded) is a combination of three
+sub-indicators: change in land productivity, change in land cover and change
+in soil organic carbon.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#calculate-sdg-15-3-1" id="id3">Calculate SDG 15.3.1</a></p>
+<ul>
+<li><p><a class="reference internal" href="#calculate-indicators-with-simplified-tool" id="id4">Calculate indicators with simplified tool</a></p></li>
+<li><p><a class="reference internal" href="#calculate-productivity" id="id5">Calculate productivity</a></p>
+<ul>
+<li><p><a class="reference internal" href="#productivity-trajectory" id="id6">Productivity Trajectory</a></p></li>
+<li><p><a class="reference internal" href="#productivity-performance" id="id7">Productivity Performance</a></p></li>
+<li><p><a class="reference internal" href="#productivity-state" id="id8">Productivity State</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#calculate-land-cover" id="id9">Calculate land cover</a></p></li>
+<li><p><a class="reference internal" href="#calculate-soil-carbon" id="id10">Calculate soil carbon</a></p></li>
+<li><p><a class="reference internal" href="#compute-sdg-indicator-15-3-1" id="id11">Compute SDG Indicator 15.3.1</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>To select the methods and datasets to calculate these indicators, indicators
+click on the calculator icon highlighted above. This will open up the
+“Calculate Indicators” dialog box.</p>
+<img alt="../_images/LDindicator.png" class="align-center" src="../_images/LDindicator.png" />
+<p>Select the Land degradation indicator (SDG indicator 15.3.1) to open the window for this analysis.</p>
+<img alt="../_images/SDG15.png" class="align-center" src="../_images/SDG15.png" />
+<p>There are several options for calculating the SDG 15.3.1 Indicator.
+MISLAND supports calculating the indicator using the same process as was
+used by the UNCCD for the default data provided to countries for the 2018
+reporting process. The tool also supports customizing this data, or even
+replacing individual datasets with national-level or other global datasets.</p>
+<ul class="simple">
+<li><p>To calculate all three SDG 15.3.1 indicators in one step, using default
+settings for most of the indicators, click “Calculate all three indicators in
+one step”.</p></li>
+<li><p>To calculate one of the three SDG 15.3.1 indicators, using customized
+settings, or national-level data, click “Productivity”, “Land cover”, or
+“Soil organic carbon”.</p></li>
+<li><p>To calculate a summary table showing statistics on each of the three
+indicators, click “Calculate final SDG 15.3.1 indicator and summary table”.
+Note that you must first compute the indicators using one of the above
+options.</p></li>
+<li><p>To calculate a summary table showing statistics on each of the three
+indicators for multiple sub-divisions, click “Calculate area summaries of a raster on sub-units”.
+Note that you must first compute the indicators using one of the above
+options.</p></li>
+</ul>
+<p>There are three different indicators that are combined to create the SDG 15.3.1
+indicator</p>
+<ul class="simple">
+<li><p>Productivity: measures the trajectory, performance and state of primary
+productivity</p></li>
+<li><p>Land cover: calculates land cover change relative to a baseline period, enter
+a transition matrix indicating which transitions indicate degradation,
+stability or improvement.</p></li>
+<li><p>Soil carbon: compute changes in soil organic carbon as a consequence of
+changes in land cover.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-15-3-1</span> section of this manual for a detailed
+explanation of how each of these sub-indicators is computed in
+MISLAND</p>
+</div>
+<p>There are two ways to calculate the indicators: 1) using a simplified tool that
+will calculate all three indicators at once, but with limited options for
+customization, or 2) using individual tools for each indicator that offer
+complete control over how they are calculated.</p>
+<div class="section" id="calculate-indicators-with-simplified-tool">
+<h2><a class="toc-backref" href="#id4">Calculate indicators with simplified tool</a><a class="headerlink" href="#calculate-indicators-with-simplified-tool" title="Permalink to this headline">¶</a></h2>
+<p>This tool allows users to calculate all three sub-indicators in one step.
+Select the “Calculate all three sub-indicators in one step” button.</p>
+<ol class="arabic simple">
+<li><p>Select the parameters for Setup. The Period is the Initial and Final year
+for the analysis and select one of the two Land Productivity datasets.
+Select Next.</p></li>
+</ol>
+<img alt="../_images/image022.png" class="align-center" src="../_images/image022.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Land Cover dataset. The first option is the default ESA dataset.</p></li>
+</ol>
+<img alt="../_images/image023.png" class="align-center" src="../_images/image023.png" />
+<ol class="arabic simple" start="3">
+<li><p>Select Edit definition to change the aggregation from the ESA Land Cover
+dataset into 7 classes.</p></li>
+</ol>
+<img alt="../_images/image024.png" class="align-center" src="../_images/image024.png" />
+<p>The second option allows users to upload a custom land cover dataset. This
+requires two datasets to compare change over time. Select Next.</p>
+<img alt="../_images/image025.png" class="align-center" src="../_images/image025.png" />
+<ol class="arabic simple" start="4">
+<li><p>The user can now define the effects of land cover change and how it is
+classified as degrading or improving.</p></li>
+</ol>
+<img alt="../_images/image026.png" class="align-center" src="../_images/image026.png" />
+<ol class="arabic simple" start="5">
+<li><p>Select an area to run the analysis or upload a shapefile boundary</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The provided boundaries are from <a class="reference external" href="http://www.naturalearthdata.com">Natural Earth</a>, and are in the <a class="reference external" href="https://creativecommons.org/publicdomain">public domain</a>. The boundaries and names
+used, and the designations used, in MISLAND do not imply official
+endorsement or acceptance by Conservation International Foundation, or by
+its partner organizations and contributors.</p>
+<p>If using MISLAND for official purposes, it is recommended that users
+choose an official boundary provided by the designated office of their
+country.</p>
+</div>
+<img alt="../_images/image027.png" class="align-center" src="../_images/image027.png" />
+<ol class="arabic simple" start="6">
+<li><p>Name the task and make notes for future reference</p></li>
+<li><p>Click on “Calculate” to submit your task to Google Earth Engine</p></li>
+</ol>
+<img alt="../_images/image028.png" class="align-center" src="../_images/image028.png" />
+</div>
+<div class="section" id="calculate-productivity">
+<h2><a class="toc-backref" href="#id5">Calculate productivity</a><a class="headerlink" href="#calculate-productivity" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-productivity</span> background information in this
+manual for a detailed explanation of how productivity is computed.</p>
+</div>
+<p>Productivity measures the trajectory, performance and state of primary
+productivity using either 8km AVHRR, 250m MODIS or 30m LANDSAT 7 (under development) datasets. The user can select
+one or multiple indicators to calculate, the NDVI dataset, name the tasks and
+enter in explanatory notes for their intended reporting area.</p>
+<div class="section" id="productivity-trajectory">
+<h3><a class="toc-backref" href="#id6">Productivity Trajectory</a><a class="headerlink" href="#productivity-trajectory" title="Permalink to this headline">¶</a></h3>
+<p>Trajectory assesses the rate of change of productivity over time. To calculate
+trajectory:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-productivity-trajectory</span> section in this
+manual for a detailed explanation of this indicator is computed.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Select an indicator to calculate</p></li>
+<li><p>Select NDVI dataset to use and select Next</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The valid date range is set by the NDVI dataset selected within the first
+tab: AVHRR dates compare 1982-2015 and MODIS 2001-2016.</p>
+</div>
+<img alt="../_images/image029.png" class="align-center" src="../_images/image029.png" />
+<ol class="arabic simple" start="3">
+<li><p>In the tab “Advanced”, select the method to be used to compute the
+productivity trajectory analysis. The options are:</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-productivity-climate-correction</span> information
+in this manual for a more detailed explanation of each of these
+calculations.</p>
+</div>
+<ul class="simple">
+<li><p><strong>NDVI trend</strong>: This dataset shows the trend in annually integrated NDVI time
+series (2001-2015) using MODIS (250m) dataset (MOD13Q1) or AVHRR (8km;
+GIMMS3g.v1). The normalized difference vegetation index (NDVI) is the ratio
+of the difference between near-infrared band (NIR) and the red band (RED) and
+the sum of these two bands (Rouse et al., 1974; Deering 1978) and reviewed in
+Tucker (1979).</p></li>
+<li><p><strong>RUE</strong>: is defined as the ratio between net primary production (NPP), in
+this case annual integrals of NDVI, and rainfall. It has been increasingly
+used to analyze the variability of vegetation production in arid and
+semi-arid biomes, where rainfall is a major limiting factor for plant growth</p></li>
+<li><p><strong>RESTREND</strong>: this method attempts to adjust the NDVI signals from the effect
+of particular climatic drivers, such as rainfall or soil moisture, using a
+pixel-by-pixel linear regression on the NDVI time series and the climate
+signal. The linear model and the climatic data is used then to predict NDVI,
+and to compute the residuals between the observed and climate-predicted NDVI
+annual integrals. The NDVI residual trend is finally plotted to spatially
+represent overall trends in primary productivity independent of climate.</p></li>
+<li><p><strong>WUE</strong>: is defined as the ratio between net primary production (NPP), in
+this case annual integrals of NDVI, and evapotranspiration.</p></li>
+</ul>
+<img alt="../_images/image030.png" class="align-center" src="../_images/image030.png" />
+</div>
+<div class="section" id="productivity-performance">
+<h3><a class="toc-backref" href="#id7">Productivity Performance</a><a class="headerlink" href="#productivity-performance" title="Permalink to this headline">¶</a></h3>
+<p>Performance is a comparison of how productivity in an area compares to
+productivity in similar areas at the same point in time. To calculate
+performance:</p>
+<ol class="arabic simple">
+<li><p>Select the start and end year of the period of analysis  for comparison.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-productivity-performance</span> section in this
+manual for a detailed explanation of this indicator is computed.</p>
+</div>
+</div>
+<div class="section" id="productivity-state">
+<h3><a class="toc-backref" href="#id8">Productivity State</a><a class="headerlink" href="#productivity-state" title="Permalink to this headline">¶</a></h3>
+<p>State performs a comparison of how current productivity in an area compares to
+past productivity. To calculate state:</p>
+<ol class="arabic simple">
+<li><p>Define the baseline and comparison periods for the computation of the State
+sub-indicator.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-productivity-state</span> section in this manual for
+a detailed explanation of this indicator is computed.</p>
+</div>
+<p>The next step is to define the study area on which to perform the analysis. The
+tool allows selecting the area of interest in one of two ways:</p>
+<ol class="arabic simple">
+<li><p>Selects first (i.e. country) and/or second (i.e. province or state)
+administrative boundary from a drop-down menu.</p></li>
+<li><p>The user can provide a shapefile, KML, or geojson defining an area of
+interest. Once this is done, Select Next.</p></li>
+</ol>
+<img alt="../_images/image031.png" class="align-center" src="../_images/image031.png" />
+<ol class="arabic simple" start="3">
+<li><p>The next step is to write a Task name and some notes to indicate which
+options were selected for the analysis.</p></li>
+</ol>
+<img alt="../_images/image032.png" class="align-center" src="../_images/image032.png" />
+<ol class="arabic simple" start="4">
+<li><p>When all the parameters have been defined, click “Calculate”, and the task
+will be submitted to Google Earth Engine for computing. When the task is
+completed (processing time will vary depending on server usage, but for most
+countries it takes only a few minutes most of the time), you’ll receive an
+email notifying the successful completion.</p></li>
+<li><p>When the Google Earth Engine task has completed and you received the email,
+click “Refresh List” and the status will show FINISHED. Click on the task
+and select “Download results” at the bottom of the window. A pop up window
+will open for you to select where to save the layer and to assign it a name.
+Then click “Save”. The layer will be saved on your computer and
+automatically loaded into yoour current QGIS project.</p></li>
+</ol>
+<img alt="../_images/output_productivity.png" class="align-center" src="../_images/output_productivity.png" />
+</div>
+</div>
+<div class="section" id="calculate-land-cover">
+<h2><a class="toc-backref" href="#id9">Calculate land cover</a><a class="headerlink" href="#calculate-land-cover" title="Permalink to this headline">¶</a></h2>
+<p>Changes in land cover is one of the indicators used to track potential land
+degradation which need to be reported to the UNCCD and to track progress
+towards SDG 15.3.1. While some land cover transitions indicate, in most cases,
+processes of land degradation, the interpretation of those transitions are for
+the most part context specific. For that reason, this indicator requires the
+input of the user to identify which changes in land cover will be considered as
+degradation, improvement or no change in terms of degradation. The toolbox
+allows users to calculate land cover change relative to a baseline period,
+enter a transition matrix indicating which transitions indicate degradation,
+stability or improvement.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-land-cover</span> background information in this
+manual for a detailed explanation of how land cover change is computed.</p>
+</div>
+<p>To calculate the land cover change indicator:</p>
+<ol class="arabic simple">
+<li><p>Click on the Calculate Indicators button from the toolbox bar, then select
+Land cover.</p></li>
+</ol>
+<img alt="../_images/image033.png" class="align-center" src="../_images/image033.png" />
+<ol class="arabic simple" start="2">
+<li><p>Within the “Land Cover Setup tab” the user selects the baseline and target years</p></li>
+</ol>
+<img alt="../_images/image034.png" class="align-center" src="../_images/image034.png" />
+<ol class="arabic simple" start="3">
+<li><p>The land cover aggregation can be customized using the ‘Edit definition’
+button. The user can define their own aggregation of land cover classes from
+the 37 ESA land cover classes to the 7 UNCCD categories.</p>
+<ol class="upperalpha simple">
+<li><p>Select the dial button for the “Custom” option and select “Create new
+definition”</p></li>
+<li><p>Edit the aggregation suitable for the area of interest</p></li>
+<li><p>Select “Save definition” and select Next</p></li>
+</ol>
+</li>
+</ol>
+<img alt="../_images/image035.png" class="align-center" src="../_images/image035.png" />
+<ol class="arabic" start="4">
+<li><p>Within the “Define Degradation tab” user define the meaning of each land
+cover transition in terms of degradation. The options are: stable (0),
+degradation (-) or improvement (+). For example, the default for cropland to
+cropland is 0 because the land cover stays the same and is therefore stable.
+The default for forest to cropland is -1 because forest is likely cut to
+clear way for agriculture and would be considered deforestation. The user is
+encouraged to thoroughly evaluate the meaning of each transition based on
+their knowledge of the study area, since this matrix will have an important
+effect on the land degradation identified by this subindicator.</p>
+<p>Users can keep the default values or create unique transition values of
+their own.</p>
+</li>
+</ol>
+<img alt="../_images/image036.png" class="align-center" src="../_images/image036.png" />
+<ol class="arabic simple" start="5">
+<li><p>The next step is to define the study area on which to perform the analysis.
+The toolbox allows this task to be completed in one of two ways:</p>
+<ol class="upperalpha simple">
+<li><p>The user selects first (i.e. country) and second (i.e. province or state)
+administrative boundary from a drop-down menu.</p></li>
+<li><p>The user can upload a shapefile with an area of interest.</p></li>
+</ol>
+</li>
+</ol>
+<img alt="../_images/image037.png" class="align-center" src="../_images/image037.png" />
+<ol class="arabic simple" start="6">
+<li><p>The next step is to add the task name and relevant notes for the analysis.</p></li>
+</ol>
+<img alt="../_images/image038.png" class="align-center" src="../_images/image038.png" />
+<ol class="arabic simple" start="7">
+<li><p>When all the parameters have been defined, click “Calculate”, and the task
+will be submitted to Google Earth Engine for computing. When the task is
+completed (processing time will vary depending on server usage, but for most
+countries it takes only a few minutes most of the time), you’ll receive an
+email notifying the successful completion.</p></li>
+<li><p>When the Google Earth Engine task has completed and you received the email,
+click “Refresh List” and the status will show FINISHED. Click on the task
+and select “Download results” at the bottom of the window. A pop up window
+will open for you to select where to save the layer and to assign it a name.
+Then click “Save”. The layer will be saved on your computer and
+automatically loaded into yoour current QGIS project.</p></li>
+</ol>
+<img alt="../_images/output_landcover.png" class="align-center" src="../_images/output_landcover.png" />
+</div>
+<div class="section" id="calculate-soil-carbon">
+<h2><a class="toc-backref" href="#id10">Calculate soil carbon</a><a class="headerlink" href="#calculate-soil-carbon" title="Permalink to this headline">¶</a></h2>
+<p>Soil Organic Carbon is calculated as a proxy for carbon stocks. It is measured
+using soil data and changes in land cover.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-soc</span> background information in this manual for
+a detailed explanation of how soil organic carbon change is computed.</p>
+</div>
+<p>To calculate degradation in soil organic carbon:</p>
+<img alt="../_images/image039.png" class="align-center" src="../_images/image039.png" />
+<ol class="arabic simple">
+<li><p>Select Soil organic carbon button under Calculate Indicators</p></li>
+</ol>
+<img alt="../_images/image040.png" class="align-center" src="../_images/image040.png" />
+<ol class="arabic simple" start="2">
+<li><p>The Land Cover Setup tab allows the user to define the period for analysis
+with the baseline and target year. Users can select the Edit definition
+button to change the land cover aggregation method or upload a datasets.</p></li>
+</ol>
+<img alt="../_images/image041.png" class="align-center" src="../_images/image041.png" />
+<ol class="arabic simple" start="3">
+<li><p>The “Advanced” tab allows users to specify the Climate regime.</p></li>
+</ol>
+<img alt="../_images/image042.png" class="align-center" src="../_images/image042.png" />
+<ol class="arabic simple" start="4">
+<li><p>Users can select an area or upload a polygon shapefile for analysis</p></li>
+</ol>
+<img alt="../_images/image043.png" class="align-center" src="../_images/image043.png" />
+<ol class="arabic simple" start="6">
+<li><p>The next step is to add the task name and relevant notes for the analysis.</p></li>
+<li><p>When all the parameters have been defined, click “Calculate”, and the task
+will be submitted to Google Earth Engine for computing. When the task is
+completed (processing time will vary depending on server usage, but for most
+countries it takes only a few minutes most of the time), you’ll receive an
+email notifying the successful completion.</p></li>
+<li><p>When the Google Earth Engine task has completed and you received the email,
+click “Refresh List” and the status will show FINISHED. Click on the task
+and select “Download results” at the bottom of the window. A pop up window
+will open for you to select where to save the layer and to assign it a name.
+Then click “Save”. The layer will be saved on your computer and
+automatically loaded into your current QGIS project.</p></li>
+</ol>
+<img alt="../_images/output_soc.png" class="align-center" src="../_images/output_soc.png" />
+</div>
+<div class="section" id="compute-sdg-indicator-15-3-1">
+<h2><a class="toc-backref" href="#id11">Compute SDG Indicator 15.3.1</a><a class="headerlink" href="#compute-sdg-indicator-15-3-1" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-15-3-1-combining-indicators</span> section of this
+manual for a detailed explanation of how the sub-indicators are combined to
+calculate the final SDG 15.3.1 indicator.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Once you have computed the three sub-indicators (productivity, land cover
+and soil organic carbon), and they are loaded into the QGIS project. Click
+on the Calculate icon (<a href="#id1"><span class="problematic" id="id2">|iconCalculator|</span></a>). This will open up the “Calculate
+Indicator” dialog box. This time click on Step 2 “Calculate final SDG 15.3.1
+indicator and summary table”.</p></li>
+<li><p>The input window will open already populated with the correct sub-indicators
+(that if you have them loaded to the QGIS map)</p></li>
+</ol>
+<img alt="../_images/sdg_input.png" class="align-center" src="../_images/sdg_input.png" />
+<ol class="arabic simple" start="3">
+<li><p>Select the name and location where to save the output raster layer and the
+excel file with the areas computed.</p></li>
+</ol>
+<img alt="../_images/sdg_output.png" class="align-center" src="../_images/sdg_output.png" />
+<ol class="arabic simple" start="4">
+<li><p>Define the area of analysis. In this example, the country boundary.</p></li>
+</ol>
+<img alt="../_images/sdg_area.png" class="align-center" src="../_images/sdg_area.png" />
+<ol class="arabic simple" start="5">
+<li><p>Give a name to the task and click “Calculate”</p></li>
+</ol>
+<img alt="../_images/sdg_options.png" class="align-center" src="../_images/sdg_options.png" />
+<ol class="arabic simple" start="6">
+<li><p>This calculation is run on your computer, so depending on the size of the
+area and the computing power of your computer, it could take a few minutes.
+When completed, the final SDG indicator will be loaded into the QGIS map and
+the Excel file with the areas will be saved in the folder you selected. when
+done, a message will pop up.</p></li>
+</ol>
+<img alt="../_images/sdg_done.png" class="align-center" src="../_images/sdg_done.png" />
+<ol class="arabic simple" start="7">
+<li><p>Click OK and two layers will be loaded to your map: the <strong>5 classes
+productivity</strong> and the <strong>SDG 15.3.1</strong> indicators.</p></li>
+</ol>
+<img alt="../_images/sdg_maps.png" class="align-center" src="../_images/sdg_maps.png" />
+<ol class="arabic simple" start="8">
+<li><p>If you navigate to the folder you selected for storing the files, you can
+open the Excel files with the areas computed for each of the sub-indicators
+and the final SDG. NOTE: You may get an error message when opening the file,
+just click ok and the file will open regardless. We are working to fix this
+error.</p></li>
+</ol>
+<img alt="../_images/sdg_excel.png" class="align-center" src="../_images/sdg_excel.png" />
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="Calculate_vegetation.html" class="btn btn-neutral float-right" title="Compute Vegatation Indices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Registration.html" class="btn btn-neutral float-left" title="Registration and settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, LocateIT Kenya Ltd.
+      <span class="lastupdated">
+        Last updated on True.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
