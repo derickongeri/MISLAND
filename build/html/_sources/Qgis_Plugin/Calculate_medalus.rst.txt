@@ -12,7 +12,7 @@ The MEDALUS approach identifies environmentally sensitive areas (ESAs) through t
 Sensitive Area Index (ESAI). This index can be used to obtain an in-depth understanding of the parameters 
 causing the desertification threat at a certain point. This approach is simple, robust, widely applicable, 
 and acceptable to new indicators and parameters and can be adjusted to several level scales. , the method 
-was used for the analysis of the main indicators identified to be driving forces of land degradation. 
+was used for the analysis of the main indicators identified to be driving forces of land degradation.  
 
 .. note::
    Maintain the same area of interest for all computations within MEDALUS.
