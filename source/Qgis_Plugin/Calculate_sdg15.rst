@@ -1,6 +1,15 @@
 Calculate SDG 15.3.1
 =====================
+.. raw:: html
 
+    <div style="border: 1px solid; margin-bottom: 2em; box-shadow: 2px 3px #888888; overflow: hidden; max-width: 100%; height: auto;">
+        <video style="width: 100%; height: 100%;" controls>
+            <source src="https://res.cloudinary.com/acemobile/video/upload/v1613816215/MISLAND/SDG15_3_1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+   
 .. image:: /_static/common/plugin_toolbar_calculate.png
    :align: center
 

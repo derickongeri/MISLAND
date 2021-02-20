@@ -1,9 +1,10 @@
-Calculate Vegetation Degradation
+Calculate Vegetation/Forest Degradation
+=========================================
 
 .. contents::
 
-Compute Vegatation Indices
-____________________________
+Watch the video below for an introduction to Vegetation/ Forest degradation 
+monitoring using MISLAND QGIS Plugin.
 
 .. raw:: html
 
@@ -13,6 +14,9 @@ ____________________________
             Your browser does not support the video tag.
         </video>
     </div>
+
+Compute Vegatation Indices
+____________________________
 
 Land degradation hotspots (LDH) are produced via the analysis of time-series
 vegetation indices data and are used to characterize areas of different sizes, 
@@ -67,31 +71,30 @@ Vegation Indices computed from Landsat 7 ETM+ include:
    .. image:: /_static/documentation/calculate/savi.png
       :align: center
 
-To compute the above vegetation indices, click on the calculator icon . This will open up the 
-“Calculate Indicators” dialog box. 
+Compute Forest Fires
+______________________
 
-.. image:: /_static/common/plugin_toolbar_calculate.png
-   :align: center
+Burnt areas and forest fires are be highlighted and mapped out form remotely sensed **Landsat 8 /Sentinel 2**
+data using the Normalized Burn Ratio (NBR). NBR is designed to highlight burned areas and estimate burn 
+severity. It uses near-infrared (NIR) and shortwave-infrared (SWIR) wavelengths. Before fire events, 
+healthy vegetation has very high NIR reflectance and a low SWIR reflectance. In contrast, recently 
+burned areas show low reflectance in the NIR and high reflectance in the SWIR band. 
 
-Select the "Vegetation Indices Time-Series" to open the window for this analysis.
+The NBR is be calculated for Landsat/Sentinel images before the fire (pre-fire NBR) and after 
+the fire (post-fire NBR). The **difference between the pre-fire NBR and the post-fire NBR** referred 
+to as **delta NBR (dNBR)** is computed to highlight the areas of forest disturbance by fire event. 
 
-.. image:: /_static/documentation/calculate/vegetation_indices.png
-   :align: center
+Classification of the dNBR is be used for burn severity assessment, as areas with higher dNBR 
+values indicate more severe damage whereas areas with negative dNBR values might show increased 
+vegetation productivity. dNBR is classified according to burn severity ranges proposed by 
+the United States Geological Survey(USGS) 
 
-From the list of vegetation indices provided select your desired index and provide a title to your
-plot. Select the area of interest i.e point or polygon, label your task and calculate the index. 
+Compute Forest Change and Total Carbon & Summary
+_________________________________________________
 
-.. image:: /_static/documentation/calculate/vegetation_indices_calc.png
-   :align: center
+The quantification of the forest gain/loss hotspots will be based on pre-existing high-resolution 
+global maps derived from Hansen Global Forest change dataset that can be accessed using Google 
+Earth Engine API. The maps are produced from time-series analysis of Landsat images characterizing 
+forest extent and change over time.
 
-To view your final plot go to "Download results from Earth Engine" and refresh the list, then select
-the task and download the results. This will plot a graph of your index over time.
 
-.. image:: /_static/documentation/calculate/vegetation_indices_task.png
-   :align: center
-
-.. image:: /_static/documentation/calculate/vegetation_indices_plot.png
-   :align: center
-
-.. toctree::
-   :maxdepth: 3

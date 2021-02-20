@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Download data &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
+  <title>Calculate Vegetation/Forest Degradation &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
   
 
   
@@ -39,8 +39,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Visualization tools" href="visualization.html" />
-    <link rel="prev" title="Load Custom Data" href="load_data.html" /> 
+    <link rel="prev" title="Calculate SDG 15.3.1" href="sdg_15_training.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -191,7 +190,7 @@
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Qgis Plugin Guide</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="plugin_development.html">Plugin Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="plugin_development.html#modifying-the-qgis-plugin-code">Modifying the QGIS Plugin code</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="plugin_development.html#downloading-the-misland-code">Downloading the MISLAND code</a></li>
@@ -305,16 +304,16 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Download data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization tools</a></li>
 </ul>
 <p class="caption"><span class="caption-text">QGIS Plugin Training Material</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="sdg_15_training.html">Calculate SDG 15.3.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vegetation_degradation_training.html">Calculate Vegetation/Forest Degradation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-vegatation-indices">Compute Vegatation Indices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-forest-fires">Compute Forest Fires</a></li>
-<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calculate Vegetation/Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#compute-vegatation-indices">Compute Vegatation Indices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a></li>
 </ul>
 </li>
 </ul>
@@ -365,7 +364,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Download data</li>
+      <li>Calculate Vegetation/Forest Degradation</li>
     
     
 
@@ -377,18 +376,92 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="download-data">
-<h1>Download data<a class="headerlink" href="#download-data" title="Permalink to this headline">¶</a></h1>
-<img alt="../_images/plugin_toolbar_download.png" class="align-center" src="../_images/plugin_toolbar_download.png" />
-<p>To download data, select the download icon highlighted above. This will open up the
-“Download Data” dialog box:</p>
-<p>If you would like to work with the original raw data used in LDMS,
-you can select select an area of interest and download the desired data for
-further analysis.</p>
-<img alt="../_images/download_data.png" class="align-center" src="../_images/download_data.png" />
-<p>The table below describes all the data available through the toolbox.
-It specifies data sources, resolutions, coverage and the different indicators
-for which each data set is used.</p>
+  <div class="section" id="calculate-vegetation-forest-degradation">
+<h1><a class="toc-backref" href="#id1">Calculate Vegetation/Forest Degradation</a><a class="headerlink" href="#calculate-vegetation-forest-degradation" title="Permalink to this headline">¶</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#calculate-vegetation-forest-degradation" id="id1">Calculate Vegetation/Forest Degradation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#compute-vegatation-indices" id="id2">Compute Vegatation Indices</a></p></li>
+<li><p><a class="reference internal" href="#compute-forest-fires" id="id3">Compute Forest Fires</a></p></li>
+<li><p><a class="reference internal" href="#compute-forest-change-and-total-carbon-summary" id="id4">Compute Forest Change and Total Carbon &amp; Summary</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Watch the video below for an introduction to Vegetation/ Forest degradation
+monitoring using MISLAND QGIS Plugin.</p>
+<div style="border: 1px solid; margin-bottom: 2em; box-shadow: 2px 3px #888888; overflow: hidden; max-width: 100%; height: auto;">
+    <video style="width: 100%; height: 100%;" controls>
+        <source src="https://res.cloudinary.com/acemobile/video/upload/v1613818158/MISLAND/Vegetation_degradation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div><div class="section" id="compute-vegatation-indices">
+<h2><a class="toc-backref" href="#id2">Compute Vegatation Indices</a><a class="headerlink" href="#compute-vegatation-indices" title="Permalink to this headline">¶</a></h2>
+<p>Land degradation hotspots (LDH) are produced via the analysis of time-series
+vegetation indices data and are used to characterize areas of different sizes,
+where the vegetation cover and the soil types are severely degraded. Vegetation
+loss/gain hotspots will be calculated based on time series observation of selected
+suit of vegetation indices depending on the climatic zones and terrain morphology
+of the North African countries</p>
+<p>Vegation Indices computed from Landsat 7 ETM+ include:</p>
+<ol class="arabic">
+<li><p><strong>NDVI (humid, sub-humid and semi-arid zones)</strong></p>
+<p>DVI is preferable for global vegetation monitoring since it helps to compensate for
+changes in lighting conditions, surface slope, exposure, and other external factors.
+NDVI is calculated in accordance with the formula:</p>
+<img alt="../_images/ndvi.png" class="align-center" src="../_images/ndvi.png" />
+<p>NIR – reflection in the near-infrared spectrum
+RED – reflection in the red range of the spectrum</p>
+<p>According to this formula, the density of vegetation (NDVI) at a certain point of the
+image is equal to the difference in the intensities of reflected light in the red and
+infrared range divided by the sum of these intensities.</p>
+<p>This index defines values ​​from -1.0 to 1.0, basically representing greens, where negative
+values ​​are mainly formed from clouds, water and snow, and values ​​close to zero are
+primarily formed from rocks and bare soil. Very small values ​​(0.1 or less) of the NDVI
+function correspond to empty areas of rocks, sand or snow. Moderate values ​​(from 0.2 to 0.3)
+represent shrubs and meadows, while large values ​​(from 0.6 to 0.8) indicate temperate and
+tropical forests.</p>
+</li>
+<li><p><strong>MSAVI2 (arid and stepic zones)</strong></p>
+<p>MSAVI2 is soil adjusted vegetation indices that seek to address some of the limitation of
+NDVI when applied to areas with a high degree of exposed soil surface.It eliminates the need
+to find the soil line from a feature-space plot or even explicitly specify the soil brightness
+correction factor:</p>
+<img alt="../_images/msavi2.png" class="align-center" src="../_images/msavi2.png" />
+</li>
+<li><p><strong>SAVI (desert areas)</strong></p>
+<p>SAVI is used to correct Normalized Difference Vegetation Index (NDVI) for the influence of
+soil brightness in areas where vegetative cover is low. Landsat Surface Reflectance-derived
+SAVI is calculated as a ratio between the R and NIR values with a soil brightness correction
+factor (L) defined as 0.5 to accommodate most land cover types.</p>
+<img alt="../_images/savi.png" class="align-center" src="../_images/savi.png" />
+</li>
+</ol>
+</div>
+<div class="section" id="compute-forest-fires">
+<h2><a class="toc-backref" href="#id3">Compute Forest Fires</a><a class="headerlink" href="#compute-forest-fires" title="Permalink to this headline">¶</a></h2>
+<p>Burnt areas and forest fires are be highlighted and mapped out form remotely sensed <strong>Landsat 8 /Sentinel 2</strong>
+data using the Normalized Burn Ratio (NBR). NBR is designed to highlight burned areas and estimate burn
+severity. It uses near-infrared (NIR) and shortwave-infrared (SWIR) wavelengths. Before fire events,
+healthy vegetation has very high NIR reflectance and a low SWIR reflectance. In contrast, recently
+burned areas show low reflectance in the NIR and high reflectance in the SWIR band.</p>
+<p>The NBR is be calculated for Landsat/Sentinel images before the fire (pre-fire NBR) and after
+the fire (post-fire NBR). The <strong>difference between the pre-fire NBR and the post-fire NBR</strong> referred
+to as <strong>delta NBR (dNBR)</strong> is computed to highlight the areas of forest disturbance by fire event.</p>
+<p>Classification of the dNBR is be used for burn severity assessment, as areas with higher dNBR
+values indicate more severe damage whereas areas with negative dNBR values might show increased
+vegetation productivity. dNBR is classified according to burn severity ranges proposed by
+the United States Geological Survey(USGS)</p>
+</div>
+<div class="section" id="compute-forest-change-and-total-carbon-summary">
+<h2><a class="toc-backref" href="#id4">Compute Forest Change and Total Carbon &amp; Summary</a><a class="headerlink" href="#compute-forest-change-and-total-carbon-summary" title="Permalink to this headline">¶</a></h2>
+<p>The quantification of the forest gain/loss hotspots will be based on pre-existing high-resolution
+global maps derived from Hansen Global Forest change dataset that can be accessed using Google
+Earth Engine API. The maps are produced from time-series analysis of Landsat images characterizing
+forest extent and change over time.</p>
+</div>
 </div>
 
 
@@ -397,8 +470,7 @@ for which each data set is used.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="visualization.html" class="btn btn-neutral float-right" title="Visualization tools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="load_data.html" class="btn btn-neutral float-left" title="Load Custom Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sdg_15_training.html" class="btn btn-neutral float-left" title="Calculate SDG 15.3.1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
