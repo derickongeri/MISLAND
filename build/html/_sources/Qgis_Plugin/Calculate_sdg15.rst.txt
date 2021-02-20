@@ -72,11 +72,6 @@ indicator
 - Soil carbon: compute changes in soil organic carbon as a consequence of 
   changes in land cover.
 
-.. note::
-    Refer to the :ref:`indicator-15-3-1` section of this manual for a detailed 
-    explanation of how each of these sub-indicators is computed in 
-    MISLAND
-
 There are two ways to calculate the indicators: 1) using a simplified tool that 
 will calculate all three indicators at once, but with limited options for 
 customization, or 2) using individual tools for each indicator that offer 
@@ -146,10 +141,6 @@ requires two datasets to compare change over time. Select Next.
 Calculate productivity
 ______________________
 
-.. note::
-    Refer to the :ref:`indicator-productivity` background information in this 
-    manual for a detailed explanation of how productivity is computed.
-
 Productivity measures the trajectory, performance and state of primary 
 productivity using either 8km AVHRR, 250m MODIS or 30m LANDSAT 7 (under development) datasets. The user can select 
 one or multiple indicators to calculate, the NDVI dataset, name the tasks and 
@@ -160,10 +151,6 @@ Productivity Trajectory
 
 Trajectory assesses the rate of change of productivity over time. To calculate 
 trajectory:
-
-.. note::
-    Refer to the :ref:`indicator-productivity-trajectory` section in this 
-    manual for a detailed explanation of this indicator is computed.
 
 1) Select an indicator to calculate
 
@@ -178,11 +165,6 @@ trajectory:
 
 3) In the tab "Advanced", select the method to be used to compute the 
    productivity trajectory analysis. The options are:
-
-.. note::
-    Refer to the :ref:`indicator-productivity-climate-correction` information 
-    in this manual for a more detailed explanation of each of these 
-    calculations.
 
 * **NDVI trend**: This dataset shows the trend in annually integrated NDVI time 
   series (2001-2015) using MODIS (250m) dataset (MOD13Q1) or AVHRR (8km; 
@@ -220,10 +202,6 @@ performance:
 
 1) Select the start and end year of the period of analysis  for comparison. 
 
-.. note::
-    Refer to the :ref:`indicator-productivity-performance` section in this 
-    manual for a detailed explanation of this indicator is computed.
-
 Productivity State
 ~~~~~~~~~~~~~~~~~~
 State performs a comparison of how current productivity in an area compares to 
@@ -231,10 +209,6 @@ past productivity. To calculate state:
 
 1) Define the baseline and comparison periods for the computation of the State 
    sub-indicator.
-
-.. note::
-    Refer to the :ref:`indicator-productivity-state` section in this manual for 
-    a detailed explanation of this indicator is computed.
 
 The next step is to define the study area on which to perform the analysis. The 
 tool allows selecting the area of interest in one of two ways:
@@ -284,10 +258,6 @@ degradation, improvement or no change in terms of degradation. The toolbox
 allows users to calculate land cover change relative to a baseline period, 
 enter a transition matrix indicating which transitions indicate degradation, 
 stability or improvement.
-
-.. note::
-    Refer to the :ref:`indicator-land-cover` background information in this 
-    manual for a detailed explanation of how land cover change is computed.
 
 To calculate the land cover change indicator:
 
@@ -371,10 +341,6 @@ _____________________
 Soil Organic Carbon is calculated as a proxy for carbon stocks. It is measured 
 using soil data and changes in land cover.
 
-.. note::
-    Refer to the :ref:`indicator-soc` background information in this manual for 
-    a detailed explanation of how soil organic carbon change is computed.
-
 To calculate degradation in soil organic carbon:
 
 .. image:: /_static/documentation/calculate/image039.png
@@ -423,14 +389,9 @@ To calculate degradation in soil organic carbon:
 Compute SDG Indicator 15.3.1
 ____________________________
 
-.. note::
-    Refer to the :ref:`indicator-15-3-1-combining-indicators` section of this 
-    manual for a detailed explanation of how the sub-indicators are combined to 
-    calculate the final SDG 15.3.1 indicator.
-
 1. Once you have computed the three sub-indicators (productivity, land cover 
    and soil organic carbon), and they are loaded into the QGIS project. Click 
-   on the Calculate icon (|iconCalculator|). This will open up the "Calculate 
+   on the Calculate icon. This will open up the "Calculate 
    Indicator" dialog box. This time click on Step 2 "Calculate final SDG 15.3.1 
    indicator and summary table".
 

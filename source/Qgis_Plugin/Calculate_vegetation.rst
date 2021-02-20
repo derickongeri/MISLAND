@@ -1,6 +1,5 @@
 Calculate Vegetation Degradation
-
-.. contents::
+=================================
 
 Compute Vegatation Indices
 ____________________________
