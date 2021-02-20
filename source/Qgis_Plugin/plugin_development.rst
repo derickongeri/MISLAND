@@ -27,6 +27,8 @@ Further details are below on how to contribute to MISLAND by working on
 the plugin code, by modifying the processing code, or by contributing to 
 translating the website and plugin.
 
+.. contents::
+
 Modifying the QGIS Plugin code
 ______________________________
 

@@ -17,6 +17,9 @@ was used for the analysis of the main indicators identified to be driving forces
 .. note::
    Maintain the same area of interest for all computations within MEDALUS.
 
+.. contents::
+
+
 1. Soil Quality Index (SQI)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

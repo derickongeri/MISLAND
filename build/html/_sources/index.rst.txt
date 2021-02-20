@@ -62,6 +62,12 @@ The core-service provides land degradation indicators for six North African Coun
    Qgis_Plugin/Download_data
    Qgis_Plugin/visualization
 
+.. toctree::
+   :maxdepth: 3
+   :caption: QGIS Plugin Training Material
+
+   Qgis_Plugin/sdg_15_training
+   Qgis_Plugin/vegetation_degradation_training
 
 ==================
 Indices and tables

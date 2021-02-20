@@ -289,7 +289,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="gee_tasks.html">View and download results</a></li>
-<li class="toctree-l1"><a class="reference internal" href="load_data.html">Load data tool</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="load_data.html">Load Custom Data</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="load_data.html#load-a-dataset-produced-by-misland">Load a dataset produced by MISLAND</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="load_data.html#productivity">Productivity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="load_data.html#land-cover">Land cover</a></li>
@@ -300,13 +300,23 @@
 <li class="toctree-l2"><a class="reference internal" href="load_data.html#load-a-custom-input-dataset">Load a custom input dataset</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="load_data.html#id1">Productivity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="load_data.html#id2">Land cover</a></li>
-<li class="toctree-l3"><a class="reference internal" href="load_data.html#id5">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id3">Soil organic carbon</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">QGIS Plugin Training Material</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdg_15_training.html">Calculate SDG 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vegetation_degradation_training.html">Calculate Vegetation/Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-vegatation-indices">Compute Vegatation Indices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -368,9 +378,20 @@
            <div itemprop="articleBody">
             
   <p>Calculate Vegetation Degradation</p>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#compute-vegatation-indices" id="id1">Compute Vegatation Indices</a></p></li>
+</ul>
+</div>
 <div class="section" id="compute-vegatation-indices">
-<h1>Compute Vegatation Indices<a class="headerlink" href="#compute-vegatation-indices" title="Permalink to this headline">¶</a></h1>
-<p>Land degradation hotspots (LDH) are produced via the analysis of time-series
+<h1><a class="toc-backref" href="#id1">Compute Vegatation Indices</a><a class="headerlink" href="#compute-vegatation-indices" title="Permalink to this headline">¶</a></h1>
+<div style="border: 1px solid; margin-bottom: 2em; box-shadow: 2px 3px #888888; overflow: hidden; max-width: 100%; height: auto;">
+    <video style="width: 100%; height: 100%;" controls>
+        <source src="https://res.cloudinary.com/acemobile/video/upload/v1613818158/MISLAND/Vegetation_degradation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div><p>Land degradation hotspots (LDH) are produced via the analysis of time-series
 vegetation indices data and are used to characterize areas of different sizes,
 where the vegetation cover and the soil types are severely degraded. Vegetation
 loss/gain hotspots will be calculated based on time series observation of selected

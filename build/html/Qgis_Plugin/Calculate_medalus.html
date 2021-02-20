@@ -308,6 +308,16 @@
 <li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization tools</a></li>
 </ul>
+<p class="caption"><span class="caption-text">QGIS Plugin Training Material</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdg_15_training.html">Calculate SDG 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vegetation_degradation_training.html">Calculate Vegetation/Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-vegatation-indices">Compute Vegatation Indices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a></li>
+</ul>
+</li>
+</ul>
 
             
           
@@ -368,9 +378,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="calculate-desertification-medalus">
-<h1>Calculate Desertification (MEDALUS)<a class="headerlink" href="#calculate-desertification-medalus" title="Permalink to this headline">¶</a></h1>
+<h1><a class="toc-backref" href="#id3">Calculate Desertification (MEDALUS)</a><a class="headerlink" href="#calculate-desertification-medalus" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="compute-mediterrenean-desertification-and-land-use-medalus">
-<h2>Compute Mediterrenean Desertification and Land Use (MEDALUS)<a class="headerlink" href="#compute-mediterrenean-desertification-and-land-use-medalus" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">Compute Mediterrenean Desertification and Land Use (MEDALUS)</a><a class="headerlink" href="#compute-mediterrenean-desertification-and-land-use-medalus" title="Permalink to this headline">¶</a></h2>
 <p>The Mediterranean Desertification and Land Use (MEDALUS) is the name of a project supported
 by Europe to assess, model and understand the desertification phenomena that increasingly
 affect the Mediterranean area. It provides a satisfied result about land degradation vulnerability.</p>
@@ -383,8 +393,36 @@ was used for the analysis of the main indicators identified to be driving forces
 <p class="admonition-title">Note</p>
 <p>Maintain the same area of interest for all computations within MEDALUS.</p>
 </div>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#calculate-desertification-medalus" id="id3">Calculate Desertification (MEDALUS)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#compute-mediterrenean-desertification-and-land-use-medalus" id="id4">Compute Mediterrenean Desertification and Land Use (MEDALUS)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#soil-quality-index-sqi" id="id5">1. Soil Quality Index (SQI)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#a-using-default-data-computed-on-google-earth-engine" id="id6">a. Using default data (Computed on Google Earth Engine)</a></p></li>
+<li><p><a class="reference internal" href="#b-using-custom-data-computed-locally-on-device" id="id7">b. Using Custom data (Computed locally on device)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#vegetation-quality-index-vqi" id="id8">2. Vegetation Quality Index (VQI)</a></p></li>
+<li><p><a class="reference internal" href="#climate-quality-index-cqi" id="id9">3. Climate Quality Index (CQI)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id10">a. Using default data (Computed on Google Earth Engine)</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id11">b. Using Custom data (Computed locally on device)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#management-quality-index-mqi" id="id12">4. Management Quality Index (MQI)</a></p></li>
+<li><p><a class="reference internal" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer" id="id13">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="soil-quality-index-sqi">
-<h3>1. Soil Quality Index (SQI)<a class="headerlink" href="#soil-quality-index-sqi" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id5">1. Soil Quality Index (SQI)</a><a class="headerlink" href="#soil-quality-index-sqi" title="Permalink to this headline">¶</a></h3>
 <p>Soil is a crucial factor in evaluating the Environmental Sensitivity of an ecosystem, especially in the arid,
 semi-arid and dry sub-humid zones. Soil properties related to desertification and degradation phenomena affect two principal parameters:
 (i) water storage and retention capacity;
@@ -439,7 +477,7 @@ semi-arid and dry sub-humid zones. Soil properties related to desertification an
 </ol>
 </div></blockquote>
 <div class="section" id="a-using-default-data-computed-on-google-earth-engine">
-<h4>a. Using default data (Computed on Google Earth Engine)<a class="headerlink" href="#a-using-default-data-computed-on-google-earth-engine" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id6">a. Using default data (Computed on Google Earth Engine)</a><a class="headerlink" href="#a-using-default-data-computed-on-google-earth-engine" title="Permalink to this headline">¶</a></h4>
 <p>Inorder to compute Soil Quality Index using default data use the following steps.</p>
 <p>First open the calculate indicators toolbox and select MEDALUS then select the Soil Quality Index
 option as shown.</p>
@@ -452,7 +490,7 @@ will reclassify soil depth values according to the definition selected.</p>
 <p>Proceed to select an area of interest and run the computation.</p>
 </div>
 <div class="section" id="b-using-custom-data-computed-locally-on-device">
-<h4>b. Using Custom data (Computed locally on device)<a class="headerlink" href="#b-using-custom-data-computed-locally-on-device" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id7">b. Using Custom data (Computed locally on device)</a><a class="headerlink" href="#b-using-custom-data-computed-locally-on-device" title="Permalink to this headline">¶</a></h4>
 <p>This step requires the data to be available locally. First Input soil depth (cm) then Select Custom soil
 quality datasets instead of default and import sqi datasets as below.</p>
 <img alt="../_images/sqi_custom.png" class="align-center" src="../_images/sqi_custom.png" />
@@ -466,7 +504,7 @@ output file.</p>
 </div>
 </div>
 <div class="section" id="vegetation-quality-index-vqi">
-<h3>2. Vegetation Quality Index (VQI)<a class="headerlink" href="#vegetation-quality-index-vqi" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">2. Vegetation Quality Index (VQI)</a><a class="headerlink" href="#vegetation-quality-index-vqi" title="Permalink to this headline">¶</a></h3>
 <p>The Vegetation Quality index is derived as the geometric mean of the characteristics of the vegetation. Fire Hazard layers (RI),
 Fire Resistance (FR), drought (RS), vegetation erosion protection (PE) and cover plant (CV) according to the
 following formula:</p>
@@ -514,7 +552,7 @@ land cover classes based on definition provided.</p>
 <p>For Plant cover, select a start and end date. Proceed to select an area of interest and run the computation.</p>
 </div>
 <div class="section" id="climate-quality-index-cqi">
-<h3>3. Climate Quality Index (CQI)<a class="headerlink" href="#climate-quality-index-cqi" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id9">3. Climate Quality Index (CQI)</a><a class="headerlink" href="#climate-quality-index-cqi" title="Permalink to this headline">¶</a></h3>
 <p>Climate quality is assessed on the basis of how it influences water availability to the plants. The climate quality index, according to the MEDALUS approach, is obtained by cross-referencing the three layers of
 information namely precipitation and aridity index using the following equation:</p>
 <p><strong>CQI = (precipitation x aridity index) ^ 1/2</strong></p>
@@ -550,12 +588,12 @@ information namely precipitation and aridity index using the following equation:
 </ol>
 </div></blockquote>
 <div class="section" id="id1">
-<h4>a. Using default data (Computed on Google Earth Engine)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id10">a. Using default data (Computed on Google Earth Engine)</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>Select a year of study between 1979-2020. Proceed to select and area of interest and run the computation.</p>
 <img alt="../_images/cqi_toolbox.png" class="align-center" src="../_images/cqi_toolbox.png" />
 </div>
 <div class="section" id="id2">
-<h4>b. Using Custom data (Computed locally on device)<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id11">b. Using Custom data (Computed locally on device)</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p>This step requires the data to be available locally. Load both a potential evapotranspiration and precipitation dataset to the
 plugin as shown below.</p>
 <img alt="../_images/cqi_toolbox_custom.png" class="align-center" src="../_images/cqi_toolbox_custom.png" />
@@ -564,7 +602,7 @@ output file.</p>
 </div>
 </div>
 <div class="section" id="management-quality-index-mqi">
-<h3>4. Management Quality Index (MQI)<a class="headerlink" href="#management-quality-index-mqi" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12">4. Management Quality Index (MQI)</a><a class="headerlink" href="#management-quality-index-mqi" title="Permalink to this headline">¶</a></h3>
 <p>The Management quality index, according to the MEDALUS approach, is obtained by cross-referencing the two layers of information
 namely Land-Use intensity (LU) and Population Density (PD) using the following equation:</p>
 <p><strong>MQI = (LU X PD)^1/2</strong></p>
@@ -601,7 +639,7 @@ based on definition provided.</p>
 output file.</p>
 </div>
 <div class="section" id="environmentally-sensitive-area-esa-index-combined-desertification-layer">
-<h3>Environmentally sensitive area (ESA) Index (Combined Desertification Layer)<a class="headerlink" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><a class="headerlink" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer" title="Permalink to this headline">¶</a></h3>
 <p>The environmentally sensitive area (ESA) index (ESAI) is computed according to the original procedure as a geometric
 mean of the four quality values recorded at each location (i.e., in each elementary pixel; Equation 2):</p>
 <p><strong>ESAI = (SQI x VQI x CQI x MQI) ^ 1/4</strong></p>
