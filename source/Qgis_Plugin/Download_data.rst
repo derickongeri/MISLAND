@@ -1,5 +1,5 @@
-Download data
-=============
+Download raw data
+==================
 
 .. raw:: html
 
