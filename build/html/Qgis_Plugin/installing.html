@@ -151,14 +151,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html">Land Degradation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Background/LD_indicators.html#land-degradation-indicators">Land Degradation Indicators</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#sdg15-3-1-indicator">SDG15.3.1 Indicator</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#sdg-15-3-1-sub-indicators">SDG 15.3.1 Sub-indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#sdg-15-3-1-sub-indicators">SDG 15.3.1 Sub-indicators</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#productivity">Productivity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#landcover">Landcover</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#carbon-stocks">Carbon-stocks</a></li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#combining-productivity-indicators">Combining Productivity Indicators</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#vegetation-loss-gain-hotspots">Vegetation Loss/Gain hotspots</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#forest-change">Forest Change</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-gain-loss">Forest Gain/Loss</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-fires">Forest Fires</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-fires">Forest Fires</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -173,7 +180,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#registration-and-log-in">Registration and Log in</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#calculate-indicators">Calculate Indicators</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Service/Service_Guide.html#compute-sdg-15-3-1-sub-indicators">compute SDG 15.3.1 Sub-indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Service/Service_Guide.html#compute-sdg-15-3-1-sub-indicators">compute SDG 15.3.1 Sub-indicators</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../Service/Service_Guide.html#land-productivity">Land Productivity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Service/Service_Guide.html#landcover-change">Landcover Change</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Service/Service_Guide.html#carbon-stocks">Carbon Stocks</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#vegetation-loss-gain-indicators">Vegetation Loss/Gain indicators</a></li>
@@ -228,7 +240,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installing the toolbox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installing-the-development-version-recommended">Installing the development version (recommended)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-the-development-version">Installing the development version</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Registration.html">Registration and settings</a><ul>
@@ -253,7 +265,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Calculate_vegetation.html">Compute Vegatation Indices</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="Calculate_vegetation.html">Calculate Vegetation Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_vegetation.html#compute-vegatation-indices">Compute Vegatation Indices</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Calculate_forest.html">Calculate Forest Degradation</a><ul>
@@ -379,10 +394,15 @@
             
   <div class="section" id="installing-the-toolbox">
 <h1>Installing the toolbox<a class="headerlink" href="#installing-the-toolbox" title="Permalink to this headline">¶</a></h1>
-<p>There are different ways to install LDMS, depending on whether you want
+<div style="border: 1px solid; margin-bottom: 2em; box-shadow: 2px 3px #888888; overflow: hidden; max-width: 100%; height: auto;">
+    <video style="width: 100%; height: 100%;" controls>
+        <source src="https://res.cloudinary.com/acemobile/video/upload/v1613919381/MISLAND/installation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div><p>There are different ways to install MISLAND, depending on whether you want
 to install the stable version (recommended) or the development version.</p>
-<div class="section" id="installing-the-development-version-recommended">
-<h2>Installing the development version (recommended)<a class="headerlink" href="#installing-the-development-version-recommended" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installing-the-development-version">
+<h2>Installing the development version<a class="headerlink" href="#installing-the-development-version" title="Permalink to this headline">¶</a></h2>
 <p>To install from within QGIS, first launch QGIS, and then go to <cite>Plugins</cite> in the
 menu bar at the top of the program and select <cite>Manage and install plugins</cite>.</p>
 <img alt="../_images/plugin_menu.png" class="align-center" src="../_images/plugin_menu.png" />

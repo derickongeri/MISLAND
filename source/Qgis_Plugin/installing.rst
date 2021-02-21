@@ -1,11 +1,21 @@
 Installing the toolbox
 =============================
 
-There are different ways to install LDMS, depending on whether you want 
+.. raw:: html
+
+    <div style="border: 1px solid; margin-bottom: 2em; box-shadow: 2px 3px #888888; overflow: hidden; max-width: 100%; height: auto;">
+        <video style="width: 100%; height: 100%;" controls>
+            <source src="https://res.cloudinary.com/acemobile/video/upload/v1613919381/MISLAND/installation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>  
+
+There are different ways to install MISLAND, depending on whether you want 
 to install the stable version (recommended) or the development version.
 
-Installing the development version (recommended)
-------------------------------------------------
+Installing the development version
+---------------------------------------
+
 To install from within QGIS, first launch QGIS, and then go to `Plugins` in the 
 menu bar at the top of the program and select `Manage and install plugins`. 
 
