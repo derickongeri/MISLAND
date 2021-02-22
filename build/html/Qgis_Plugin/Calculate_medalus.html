@@ -240,7 +240,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="installing.html">Installing the toolbox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installing.html#installing-the-development-version-recommended">Installing the development version (recommended)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#installing-the-development-version">Installing the development version</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Registration.html">Registration and settings</a><ul>
@@ -283,22 +283,24 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Calculate Desertification (MEDALUS)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#compute-mediterrenean-desertification-and-land-use-medalus">Compute Mediterrenean Desertification and Land Use (MEDALUS)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#soil-quality-index-sqi">1. Soil Quality Index (SQI)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#a-using-default-data-computed-on-google-earth-engine">a. Using default data (Computed on Google Earth Engine)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#b-using-custom-data-computed-locally-on-device">b. Using Custom data (Computed locally on device)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#soil-quality-index-sqi">1. Soil Quality Index (SQI)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-using-default-data-computed-on-google-earth-engine">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#b-using-custom-data-computed-locally-on-device">b. Using Custom data (Computed locally on device)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#raw-data-download">Raw Data Download</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#extracting-soil-drainage-soil-texture-and-rock-fragment-layers-from-hwsd-data">Extracting Soil Drainage, Soil Texture and Rock Fragment Layers from HWSD DATA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#compute-soil-quality-index">Compute Soil Quality Index</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#vegetation-quality-index-vqi">2. Vegetation Quality Index (VQI)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#climate-quality-index-cqi">3. Climate Quality Index (CQI)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">a. Using default data (Computed on Google Earth Engine)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">b. Using Custom data (Computed locally on device)</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#management-quality-index-mqi">4. Management Quality Index (MQI)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="#vegetation-quality-index-vqi">2. Vegetation Quality Index (VQI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#climate-quality-index-cqi">3. Climate Quality Index (CQI)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">b. Using Custom data (Computed locally on device)</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#management-quality-index-mqi">4. Management Quality Index (MQI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -320,7 +322,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download raw data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization tools</a></li>
 </ul>
 <p class="caption"><span class="caption-text">QGIS Plugin Training Material</span></p>
@@ -394,8 +396,6 @@
             
   <div class="section" id="calculate-desertification-medalus">
 <h1><a class="toc-backref" href="#id3">Calculate Desertification (MEDALUS)</a><a class="headerlink" href="#calculate-desertification-medalus" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="compute-mediterrenean-desertification-and-land-use-medalus">
-<h2><a class="toc-backref" href="#id4">Compute Mediterrenean Desertification and Land Use (MEDALUS)</a><a class="headerlink" href="#compute-mediterrenean-desertification-and-land-use-medalus" title="Permalink to this headline">¶</a></h2>
 <p>The Mediterranean Desertification and Land Use (MEDALUS) is the name of a project supported
 by Europe to assess, model and understand the desertification phenomena that increasingly
 affect the Mediterranean area. It provides a satisfied result about land degradation vulnerability.</p>
@@ -413,31 +413,33 @@ was used for the analysis of the main indicators identified to be driving forces
 <ul class="simple">
 <li><p><a class="reference internal" href="#calculate-desertification-medalus" id="id3">Calculate Desertification (MEDALUS)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#compute-mediterrenean-desertification-and-land-use-medalus" id="id4">Compute Mediterrenean Desertification and Land Use (MEDALUS)</a></p>
+<li><p><a class="reference internal" href="#soil-quality-index-sqi" id="id4">1. Soil Quality Index (SQI)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#soil-quality-index-sqi" id="id5">1. Soil Quality Index (SQI)</a></p>
+<li><p><a class="reference internal" href="#a-using-default-data-computed-on-google-earth-engine" id="id5">a. Using default data (Computed on Google Earth Engine)</a></p></li>
+<li><p><a class="reference internal" href="#b-using-custom-data-computed-locally-on-device" id="id6">b. Using Custom data (Computed locally on device)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#a-using-default-data-computed-on-google-earth-engine" id="id6">a. Using default data (Computed on Google Earth Engine)</a></p></li>
-<li><p><a class="reference internal" href="#b-using-custom-data-computed-locally-on-device" id="id7">b. Using Custom data (Computed locally on device)</a></p></li>
+<li><p><a class="reference internal" href="#raw-data-download" id="id7">Raw Data Download</a></p></li>
+<li><p><a class="reference internal" href="#extracting-soil-drainage-soil-texture-and-rock-fragment-layers-from-hwsd-data" id="id8">Extracting Soil Drainage, Soil Texture and Rock Fragment Layers from HWSD DATA</a></p></li>
+<li><p><a class="reference internal" href="#compute-soil-quality-index" id="id9">Compute Soil Quality Index</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#vegetation-quality-index-vqi" id="id8">2. Vegetation Quality Index (VQI)</a></p></li>
-<li><p><a class="reference internal" href="#climate-quality-index-cqi" id="id9">3. Climate Quality Index (CQI)</a></p>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#vegetation-quality-index-vqi" id="id10">2. Vegetation Quality Index (VQI)</a></p></li>
+<li><p><a class="reference internal" href="#climate-quality-index-cqi" id="id11">3. Climate Quality Index (CQI)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id1" id="id10">a. Using default data (Computed on Google Earth Engine)</a></p></li>
-<li><p><a class="reference internal" href="#id2" id="id11">b. Using Custom data (Computed locally on device)</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id12">a. Using default data (Computed on Google Earth Engine)</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id13">b. Using Custom data (Computed locally on device)</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#management-quality-index-mqi" id="id12">4. Management Quality Index (MQI)</a></p></li>
-<li><p><a class="reference internal" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer" id="id13">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a></p></li>
-</ul>
-</li>
+<li><p><a class="reference internal" href="#management-quality-index-mqi" id="id14">4. Management Quality Index (MQI)</a></p></li>
+<li><p><a class="reference internal" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer" id="id15">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="soil-quality-index-sqi">
-<h3><a class="toc-backref" href="#id5">1. Soil Quality Index (SQI)</a><a class="headerlink" href="#soil-quality-index-sqi" title="Permalink to this headline">¶</a></h3>
+<h2><a class="toc-backref" href="#id4">1. Soil Quality Index (SQI)</a><a class="headerlink" href="#soil-quality-index-sqi" title="Permalink to this headline">¶</a></h2>
 <p>Soil is a crucial factor in evaluating the Environmental Sensitivity of an ecosystem, especially in the arid,
 semi-arid and dry sub-humid zones. Soil properties related to desertification and degradation phenomena affect two principal parameters:
 (i) water storage and retention capacity;
@@ -492,7 +494,7 @@ semi-arid and dry sub-humid zones. Soil properties related to desertification an
 </ol>
 </div></blockquote>
 <div class="section" id="a-using-default-data-computed-on-google-earth-engine">
-<h4><a class="toc-backref" href="#id6">a. Using default data (Computed on Google Earth Engine)</a><a class="headerlink" href="#a-using-default-data-computed-on-google-earth-engine" title="Permalink to this headline">¶</a></h4>
+<h3><a class="toc-backref" href="#id5">a. Using default data (Computed on Google Earth Engine)</a><a class="headerlink" href="#a-using-default-data-computed-on-google-earth-engine" title="Permalink to this headline">¶</a></h3>
 <p>Inorder to compute Soil Quality Index using default data use the following steps.</p>
 <p>First open the calculate indicators toolbox and select MEDALUS then select the Soil Quality Index
 option as shown.</p>
@@ -505,8 +507,115 @@ will reclassify soil depth values according to the definition selected.</p>
 <p>Proceed to select an area of interest and run the computation.</p>
 </div>
 <div class="section" id="b-using-custom-data-computed-locally-on-device">
-<h4><a class="toc-backref" href="#id7">b. Using Custom data (Computed locally on device)</a><a class="headerlink" href="#b-using-custom-data-computed-locally-on-device" title="Permalink to this headline">¶</a></h4>
-<p>This step requires the data to be available locally. First Input soil depth (cm) then Select Custom soil
+<h3><a class="toc-backref" href="#id6">b. Using Custom data (Computed locally on device)</a><a class="headerlink" href="#b-using-custom-data-computed-locally-on-device" title="Permalink to this headline">¶</a></h3>
+<p>This step requires the data to be available locally.</p>
+<div class="section" id="raw-data-download">
+<h4><a class="toc-backref" href="#id7">Raw Data Download</a><a class="headerlink" href="#raw-data-download" title="Permalink to this headline">¶</a></h4>
+<p>Inorder to prepare local data, <a class="reference download external" download="" href="https://webarchive.iiasa.ac.at/Research/LUC/External-World-soil-database/HTML/HWSD_Data.html?sb=4"><code class="xref download docutils literal notranslate"><span class="pre">Harmonized</span> <span class="pre">World</span> <span class="pre">Soil</span> <span class="pre">Database</span></code></a></p>
+</div>
+<div class="section" id="extracting-soil-drainage-soil-texture-and-rock-fragment-layers-from-hwsd-data">
+<h4><a class="toc-backref" href="#id8">Extracting Soil Drainage, Soil Texture and Rock Fragment Layers from HWSD DATA</a><a class="headerlink" href="#extracting-soil-drainage-soil-texture-and-rock-fragment-layers-from-hwsd-data" title="Permalink to this headline">¶</a></h4>
+<p>To extract the drainage, texture and soil group variables from the HWSD data follow these
+simple steps:</p>
+<ol class="arabic">
+<li><p>Open the HWSD data table on Microsoft Access. The variable to be extracted are D DRAINAGE(code),
+D USDA TEX CLASS(code), and T GRAVEL. To initiate the extraction, create a query design in the ‘show table’
+dialogue that pops up select HWSD DATA, D DRAINAGE and D USDA TEX CLASS tables.</p>
+<img alt="../_images/sqi1.png" class="align-center" src="../_images/sqi1.png" />
+<p>In the ‘show table’ dialogue that pops up select HWSD DATA, D DRAINAGE and D USDA TEX CLASS tables</p>
+<img alt="../_images/sqi2.png" class="align-center" src="../_images/sqi2.png" />
+</li>
+<li><p>From the HWSD DATA select the MU GLOBAL and T GRAVEL variables. From the D DRAINAGE and D USDA TEX CLASS tables
+select the CODE variable. The resulting query design should have the Fields row populated with the selected variables for
+their respective table on the Table row</p>
+<img alt="../_images/sqi3.png" class="align-center" src="../_images/sqi3.png" />
+</li>
+<li><p>Click run and the resulting table should have 4 columns populated with data from the
+selected variables</p>
+<img alt="../_images/sqi4.png" class="align-center" src="../_images/sqi4.png" />
+<img alt="../_images/sqi5.png" class="align-center" src="../_images/sqi5.png" />
+</li>
+<li><p>Export the table to MS Excel under the ’External Data’ tab as shown below. On the
+dialogue that pops up, give the export table an appropriate name and select ’Excel 97 -
+Excel 2003 Workbook’ as the export file format</p>
+<img alt="../_images/sqi6.png" class="align-center" src="../_images/sqi6.png" />
+<img alt="../_images/sqi7.png" class="align-center" src="../_images/sqi7.png" />
+</li>
+<li><p>In MS Excel, open the just exported sheet and in separate sheets copy the MU Global field
+alongside the 3 variables of interest (Drainage, Gravel, Texture class); Paste the variables
+separately as shown below to facilitate joining them to the raster dataset in
+Q-GIS software.</p>
+<img alt="../_images/sqi8.png" class="align-center" src="../_images/sqi8.png" />
+<img alt="../_images/sqi9.png" class="align-center" src="../_images/sqi9.png" />
+</li>
+<li><p>For each of the newly created sheets, copy the tables in MS Excel and paste to MS Access</p>
+<img alt="../_images/sqi10.png" class="align-center" src="../_images/sqi10.png" />
+<img alt="../_images/sqi11.png" class="align-center" src="../_images/sqi11.png" />
+</li>
+<li><p>Under the Export data tab, select the Export to text file option as shown below.</p>
+<img alt="../_images/sqi12.png" class="align-center" src="../_images/sqi12.png" />
+</li>
+<li><p>On the Export text wizard that pops us set the export text as delimited text by checking
+the Delimited options then click next.</p>
+<img alt="../_images/sqi13.png" class="align-center" src="../_images/sqi13.png" />
+</li>
+</ol>
+<p>9. On the Export text wizard that pops us set the export text as delimited text by checking
+the Delimited options fig. 2.15 then click next.</p>
+<blockquote>
+<div><img alt="../_images/sqi14.png" class="align-center" src="../_images/sqi14.png" />
+<p>Click on next to finish the export. Repeat steps 6 to 9 for all the other remaining variables
+and save the text files. The text files are used to assign pixel values to the HWSD.bil raster in Q-GIS.</p>
+</div></blockquote>
+<ol class="arabic simple" start="10">
+<li><p>Open the HWSD.bil raster file on Qgis together with the vector data for the OSS North Africa States in Q-GIS</p></li>
+</ol>
+<blockquote>
+<div><img alt="../_images/sqi15.png" class="align-center" src="../_images/sqi15.png" />
+</div></blockquote>
+<ol class="arabic simple" start="11">
+<li><p>Under the raster tab on the Q-GIS menu bar navigate to ‘Extraction’ &gt; ‘Extract by Mask Layer’</p></li>
+</ol>
+<blockquote>
+<div><img alt="../_images/sqi16.png" class="align-center" src="../_images/sqi16.png" />
+</div></blockquote>
+<ol class="arabic simple" start="12">
+<li><p>In the Clip Raster by Mask Layer dialogue box, select hwsd raster as the input layer and</p></li>
+</ol>
+<blockquote>
+<div><p>the Vector layer as your Mask Layer. Save the output with the desired name to your desired location.</p>
+<img alt="../_images/sqi17.png" class="align-center" src="../_images/sqi17.png" />
+<p>The clipped raster should is as shown below:</p>
+<img alt="../_images/sqi18.png" class="align-center" src="../_images/sqi18.png" />
+</div></blockquote>
+<ol class="arabic simple" start="13">
+<li><p>On the Q-GIS Menu bar, click on Processing and select the toolbox (or use keyboard shortcut Ctrl+Alt+T) to</p></li>
+</ol>
+<blockquote>
+<div><p>open the processing toolbox.</p>
+<img alt="../_images/sqi19.png" class="align-center" src="../_images/sqi19.png" />
+</div></blockquote>
+<ol class="arabic simple" start="14">
+<li><p>On the processing toolbox, search for the GRASS-GIS r.recode tool</p></li>
+</ol>
+<blockquote>
+<div><img alt="../_images/sqi20.png" class="align-center" src="../_images/sqi20.png" />
+</div></blockquote>
+<ol class="arabic simple" start="15">
+<li><p>On the r.recode dialogue, select the clipped HWSD data as the input layer and the .txt</p></li>
+</ol>
+<blockquote>
+<div><p>file previously prepared as the file containing the recode rules(for this example we will use the rock fragment).
+Save the output to your desired location and click run.</p>
+<img alt="../_images/sqi21.png" class="align-center" src="../_images/sqi21.png" />
+<p>Using the HWSD cliped raster as input layer, repeat the step 14 and 15 with the appropriate recoding rules to extract
+the remaining variables and save the outputs for the other datasets.</p>
+<img alt="../_images/sqi22.png" class="align-center" src="../_images/sqi22.png" />
+</div></blockquote>
+</div>
+<div class="section" id="compute-soil-quality-index">
+<h4><a class="toc-backref" href="#id9">Compute Soil Quality Index</a><a class="headerlink" href="#compute-soil-quality-index" title="Permalink to this headline">¶</a></h4>
+<p>First Input soil depth (cm) then Select Custom soil
 quality datasets instead of default and import sqi datasets as below.</p>
 <img alt="../_images/sqi_custom.png" class="align-center" src="../_images/sqi_custom.png" />
 <p>Select import and select a raster or vector dataset of interest. Select the band number for the
@@ -518,8 +627,9 @@ output file.</p>
 <img alt="../_images/sqi_aggregation.png" class="align-center" src="../_images/sqi_aggregation.png" />
 </div>
 </div>
+</div>
 <div class="section" id="vegetation-quality-index-vqi">
-<h3><a class="toc-backref" href="#id8">2. Vegetation Quality Index (VQI)</a><a class="headerlink" href="#vegetation-quality-index-vqi" title="Permalink to this headline">¶</a></h3>
+<h2><a class="toc-backref" href="#id10">2. Vegetation Quality Index (VQI)</a><a class="headerlink" href="#vegetation-quality-index-vqi" title="Permalink to this headline">¶</a></h2>
 <p>The Vegetation Quality index is derived as the geometric mean of the characteristics of the vegetation. Fire Hazard layers (RI),
 Fire Resistance (FR), drought (RS), vegetation erosion protection (PE) and cover plant (CV) according to the
 following formula:</p>
@@ -567,7 +677,7 @@ land cover classes based on definition provided.</p>
 <p>For Plant cover, select a start and end date. Proceed to select an area of interest and run the computation.</p>
 </div>
 <div class="section" id="climate-quality-index-cqi">
-<h3><a class="toc-backref" href="#id9">3. Climate Quality Index (CQI)</a><a class="headerlink" href="#climate-quality-index-cqi" title="Permalink to this headline">¶</a></h3>
+<h2><a class="toc-backref" href="#id11">3. Climate Quality Index (CQI)</a><a class="headerlink" href="#climate-quality-index-cqi" title="Permalink to this headline">¶</a></h2>
 <p>Climate quality is assessed on the basis of how it influences water availability to the plants. The climate quality index, according to the MEDALUS approach, is obtained by cross-referencing the three layers of
 information namely precipitation and aridity index using the following equation:</p>
 <p><strong>CQI = (precipitation x aridity index) ^ 1/2</strong></p>
@@ -603,12 +713,12 @@ information namely precipitation and aridity index using the following equation:
 </ol>
 </div></blockquote>
 <div class="section" id="id1">
-<h4><a class="toc-backref" href="#id10">a. Using default data (Computed on Google Earth Engine)</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h3><a class="toc-backref" href="#id12">a. Using default data (Computed on Google Earth Engine)</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Select a year of study between 1979-2020. Proceed to select and area of interest and run the computation.</p>
 <img alt="../_images/cqi_toolbox.png" class="align-center" src="../_images/cqi_toolbox.png" />
 </div>
 <div class="section" id="id2">
-<h4><a class="toc-backref" href="#id11">b. Using Custom data (Computed locally on device)</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<h3><a class="toc-backref" href="#id13">b. Using Custom data (Computed locally on device)</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>This step requires the data to be available locally. Load both a potential evapotranspiration and precipitation dataset to the
 plugin as shown below.</p>
 <img alt="../_images/cqi_toolbox_custom.png" class="align-center" src="../_images/cqi_toolbox_custom.png" />
@@ -617,7 +727,7 @@ output file.</p>
 </div>
 </div>
 <div class="section" id="management-quality-index-mqi">
-<h3><a class="toc-backref" href="#id12">4. Management Quality Index (MQI)</a><a class="headerlink" href="#management-quality-index-mqi" title="Permalink to this headline">¶</a></h3>
+<h2><a class="toc-backref" href="#id14">4. Management Quality Index (MQI)</a><a class="headerlink" href="#management-quality-index-mqi" title="Permalink to this headline">¶</a></h2>
 <p>The Management quality index, according to the MEDALUS approach, is obtained by cross-referencing the two layers of information
 namely Land-Use intensity (LU) and Population Density (PD) using the following equation:</p>
 <p><strong>MQI = (LU X PD)^1/2</strong></p>
@@ -654,7 +764,7 @@ based on definition provided.</p>
 output file.</p>
 </div>
 <div class="section" id="environmentally-sensitive-area-esa-index-combined-desertification-layer">
-<h3><a class="toc-backref" href="#id13">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><a class="headerlink" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer" title="Permalink to this headline">¶</a></h3>
+<h2><a class="toc-backref" href="#id15">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><a class="headerlink" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer" title="Permalink to this headline">¶</a></h2>
 <p>The environmentally sensitive area (ESA) index (ESAI) is computed according to the original procedure as a geometric
 mean of the four quality values recorded at each location (i.e., in each elementary pixel; Equation 2):</p>
 <p><strong>ESAI = (SQI x VQI x CQI x MQI) ^ 1/4</strong></p>
@@ -669,7 +779,6 @@ select a destination for your output file.</p>
 </div>
 <img alt="../_images/esai_toolbox.png" class="align-center" src="../_images/esai_toolbox.png" />
 <div class="toctree-wrapper compound">
-</div>
 </div>
 </div>
 </div>
