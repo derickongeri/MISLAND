@@ -1,9 +1,6 @@
 Calculate Desertification (MEDALUS)
 ====================================
 
-Compute Mediterrenean Desertification and Land Use (MEDALUS)
-_____________________________________________________________
-
 The Mediterranean Desertification and Land Use (MEDALUS) is the name of a project supported 
 by Europe to assess, model and understand the desertification phenomena that increasingly 
 affect the Mediterranean area. It provides a satisfied result about land degradation vulnerability. 
@@ -21,7 +18,7 @@ was used for the analysis of the main indicators identified to be driving forces
 
 
 1. Soil Quality Index (SQI)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+_____________________________
 
 Soil is a crucial factor in evaluating the Environmental Sensitivity of an ecosystem, especially in the arid, 
 semi-arid and dry sub-humid zones. Soil properties related to desertification and degradation phenomena affect two principal parameters:
@@ -57,7 +54,7 @@ Soil Quality Index can be calculated in two ways:
    b. Using Custom data (Computed locally on device)
 
 a. Using default data (Computed on Google Earth Engine)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Inorder to compute Soil Quality Index using default data use the following steps.
 
@@ -82,9 +79,147 @@ will reclassify soil depth values according to the definition selected.
 Proceed to select an area of interest and run the computation.
 
 b. Using Custom data (Computed locally on device)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This step requires the data to be available locally. First Input soil depth (cm) then Select Custom soil 
+This step requires the data to be available locally.
+
+Raw Data Download
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Inorder to prepare local data, :download:`Harmonized World Soil Database <https://webarchive.iiasa.ac.at/Research/LUC/External-World-soil-database/HTML/HWSD_Data.html?sb=4>`
+
+Extracting Soil Drainage, Soil Texture and Rock Fragment Layers from HWSD DATA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To extract the drainage, texture and soil group variables from the HWSD data follow these
+simple steps:
+
+1. Open the HWSD data table on Microsoft Access. The variable to be extracted are D DRAINAGE(code), 
+   D USDA TEX CLASS(code), and T GRAVEL. To initiate the extraction, create a query design in the 'show table' 
+   dialogue that pops up select HWSD DATA, D DRAINAGE and D USDA TEX CLASS tables.
+
+   .. image:: /_static/documentation/calculate/sqi1.png
+      :align: center
+
+   In the 'show table' dialogue that pops up select HWSD DATA, D DRAINAGE and D USDA TEX CLASS tables
+
+   .. image:: /_static/documentation/calculate/sqi2.png
+      :align: center
+
+2. From the HWSD DATA select the MU GLOBAL and T GRAVEL variables. From the D DRAINAGE and D USDA TEX CLASS tables 
+   select the CODE variable. The resulting query design should have the Fields row populated with the selected variables for 
+   their respective table on the Table row
+
+   .. image:: /_static/documentation/calculate/sqi3.png
+      :align: center
+
+3. Click run and the resulting table should have 4 columns populated with data from the
+   selected variables 
+
+   .. image:: /_static/documentation/calculate/sqi4.png
+      :align: center
+
+   .. image:: /_static/documentation/calculate/sqi5.png
+      :align: center
+
+4. Export the table to MS Excel under the ’External Data’ tab as shown below. On the
+   dialogue that pops up, give the export table an appropriate name and select ’Excel 97 -
+   Excel 2003 Workbook’ as the export file format
+
+   .. image:: /_static/documentation/calculate/sqi6.png
+      :align: center
+
+   .. image:: /_static/documentation/calculate/sqi7.png
+      :align: center
+
+5. In MS Excel, open the just exported sheet and in separate sheets copy the MU Global field
+   alongside the 3 variables of interest (Drainage, Gravel, Texture class); Paste the variables
+   separately as shown below to facilitate joining them to the raster dataset in
+   Q-GIS software.
+
+   .. image:: /_static/documentation/calculate/sqi8.png
+      :align: center
+
+   .. image:: /_static/documentation/calculate/sqi9.png
+      :align: center
+
+6. For each of the newly created sheets, copy the tables in MS Excel and paste to MS Access
+
+   .. image:: /_static/documentation/calculate/sqi10.png
+      :align: center
+
+   .. image:: /_static/documentation/calculate/sqi11.png
+      :align: center
+
+7. Under the Export data tab, select the Export to text file option as shown below.
+
+   .. image:: /_static/documentation/calculate/sqi12.png
+      :align: center
+
+8. On the Export text wizard that pops us set the export text as delimited text by checking 
+   the Delimited options then click next.
+
+   .. image:: /_static/documentation/calculate/sqi13.png
+      :align: center
+
+9. On the Export text wizard that pops us set the export text as delimited text by checking
+the Delimited options fig. 2.15 then click next.
+
+   .. image:: /_static/documentation/calculate/sqi14.png
+      :align: center
+
+   Click on next to finish the export. Repeat steps 6 to 9 for all the other remaining variables
+   and save the text files. The text files are used to assign pixel values to the HWSD.bil raster in Q-GIS.
+
+10. Open the HWSD.bil raster file on Qgis together with the vector data for the OSS North Africa States in Q-GIS
+   
+   .. image:: /_static/documentation/calculate/sqi15.png
+      :align: center
+
+11. Under the raster tab on the Q-GIS menu bar navigate to 'Extraction' > 'Extract by Mask Layer'
+
+   .. image:: /_static/documentation/calculate/sqi16.png
+      :align: center
+
+12. In the Clip Raster by Mask Layer dialogue box, select hwsd raster as the input layer and 
+   the Vector layer as your Mask Layer. Save the output with the desired name to your desired location.
+
+   .. image:: /_static/documentation/calculate/sqi17.png
+      :align: center
+
+   The clipped raster should is as shown below:
+
+   .. image:: /_static/documentation/calculate/sqi18.png
+      :align: center
+
+13. On the Q-GIS Menu bar, click on Processing and select the toolbox (or use keyboard shortcut Ctrl+Alt+T) to 
+   open the processing toolbox.
+
+   .. image:: /_static/documentation/calculate/sqi19.png
+      :align: center
+
+14. On the processing toolbox, search for the GRASS-GIS r.recode tool
+
+   .. image:: /_static/documentation/calculate/sqi20.png
+      :align: center
+
+15. On the r.recode dialogue, select the clipped HWSD data as the input layer and the .txt 
+   file previously prepared as the file containing the recode rules(for this example we will use the rock fragment). 
+   Save the output to your desired location and click run.
+
+   .. image:: /_static/documentation/calculate/sqi21.png
+      :align: center
+
+   Using the HWSD cliped raster as input layer, repeat the step 14 and 15 with the appropriate recoding rules to extract 
+   the remaining variables and save the outputs for the other datasets.
+
+   .. image:: /_static/documentation/calculate/sqi22.png
+      :align: center
+
+Compute Soil Quality Index
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+First Input soil depth (cm) then Select Custom soil 
 quality datasets instead of default and import sqi datasets as below. 
 
 .. image:: /_static/documentation/calculate/sqi_custom.png
@@ -105,7 +240,8 @@ output file.
 
 
 2. Vegetation Quality Index (VQI)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+_____________________________________________________________
+
 The Vegetation Quality index is derived as the geometric mean of the characteristics of the vegetation. Fire Hazard layers (RI), 
 Fire Resistance (FR), drought (RS), vegetation erosion protection (PE) and cover plant (CV) according to the 
 following formula: 
@@ -144,7 +280,7 @@ For Plant cover, select a start and end date. Proceed to select an area of inter
 
 
 3. Climate Quality Index (CQI)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+_____________________________________________________________
 
 Climate quality is assessed on the basis of how it influences water availability to the plants. The climate quality index, according to the MEDALUS approach, is obtained by cross-referencing the three layers of 
 information namely precipitation and aridity index using the following equation: 
@@ -167,7 +303,7 @@ Climate Quality Index can be calculated in two ways:
    b. Using Custom data (Computed locally on device)
 
 a. Using default data (Computed on Google Earth Engine)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Select a year of study between 1979-2020. Proceed to select and area of interest and run the computation.
 
@@ -175,7 +311,7 @@ Select a year of study between 1979-2020. Proceed to select and area of interest
    :align: center
 
 b. Using Custom data (Computed locally on device)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This step requires the data to be available locally. Load both a potential evapotranspiration and precipitation dataset to the 
 plugin as shown below.
@@ -187,7 +323,7 @@ Proceed to select an area of interest and run the computation. You will be requi
 output file.
 
 4. Management Quality Index (MQI)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+_____________________________________________________________
 
 The Management quality index, according to the MEDALUS approach, is obtained by cross-referencing the two layers of information 
 namely Land-Use intensity (LU) and Population Density (PD) using the following equation: 
@@ -218,7 +354,8 @@ Proceed to select an area of interest and run the computation. You will be requi
 output file.
 
 Environmentally sensitive area (ESA) Index (Combined Desertification Layer)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+_________________________________________________________________________________
+
 The environmentally sensitive area (ESA) index (ESAI) is computed according to the original procedure as a geometric 
 mean of the four quality values recorded at each location (i.e., in each elementary pixel; Equation 2):
 
