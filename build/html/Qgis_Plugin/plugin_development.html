@@ -1,0 +1,863 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Plugin Development &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Before installing the toolbox" href="before_installing.html" />
+    <link rel="prev" title="Serivice Guide" href="../Service/Service_Guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: black" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Monitoring Integrated Service for Land Degradation
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/general_information.html">General Infortmation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#get-in-touch-with-the-team">Get in touch with the team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#aknowledgement">Aknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#linces">Linces</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/data.html">Data sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#ndvi">NDVI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-moisture">Soil moisture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#precipitation">Precipitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#evapotranspiration">Evapotranspiration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#land-cover">Land cover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-carbon">Soil carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#agroecological-zones">Agroecological Zones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-quality">Soil Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#climate">Climate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#administrative-boundaries">Administrative Boundaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Layers.html">Dataset coding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#sdg-15-3-1-indicator">SDG 15.3.1 Indicator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#productivity">Productivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-trajectory-trend">Productivity trajectory (trend)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-trajectory-significance">Productivity trajectory (significance)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-degradation">Productivity performance (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-ratio">Productivity performance (ratio)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-units">Productivity performance (units)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-degradation">Productivity state (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-classes">Productivity state classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-ndvi-mean">Productivity state NDVI mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#sdg-15-3-1-productivity-indicator">SDG 15.3.1 productivity indicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-productivity-dynamics">Land productivity dynamics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#land-cover">Land cover</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-degradation">Land cover (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-7-class">Land cover (7 class)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-esa-classes">Land cover (ESA classes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-transitions">Land cover (transitions)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#soil-organic-carbon">Soil organic carbon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#soil-organic-carbon-degradation">Soil organic carbon (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#id3">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#population">Population</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#delta-normalized-burnt-ratio">Delta Normalized Burnt Ratio</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Background</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html">Land Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Background/LD_indicators.html#land-degradation-indicators">Land Degradation Indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#sdg15-3-1-indicator">SDG15.3.1 Indicator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#sdg-15-3-1-sub-indicators">SDG 15.3.1 Sub-indicators</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#productivity">Productivity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#landcover">Landcover</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#carbon-stocks">Carbon-stocks</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#combining-productivity-indicators">Combining Productivity Indicators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#vegetation-loss-gain-hotspots">Vegetation Loss/Gain hotspots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#forest-change">Forest Change</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-gain-loss">Forest Gain/Loss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-fires">Forest Fires</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Web Service Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Service_Guide.html">Serivice Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#misland-service-tour">MISLAND Service Tour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#registration-and-log-in">Registration and Log in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#calculate-indicators">Calculate Indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Service/Service_Guide.html#compute-sdg-15-3-1-sub-indicators">compute SDG 15.3.1 Sub-indicators</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../Service/Service_Guide.html#land-productivity">Land Productivity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Service/Service_Guide.html#landcover-change">Landcover Change</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Service/Service_Guide.html#carbon-stocks">Carbon Stocks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#vegetation-loss-gain-indicators">Vegetation Loss/Gain indicators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#forest-change">Forest Change</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#forest-fires">Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#exporting-outputs">Exporting Outputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#export-map">Export Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#export-chart">Export Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#download-data">Download data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Qgis Plugin Guide</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Plugin Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#modifying-the-qgis-plugin-code">Modifying the QGIS Plugin code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#downloading-the-misland-code">Downloading the MISLAND code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-dependencies">Installing dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#python">Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python-dependencies">Python dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyqt">PyQt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-the-version-of-the-plugin">Changing the version of the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing-changes-to-the-plugin">Testing changes to the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#syncing-and-deploying-changes-to-the-binaries">Syncing and deploying changes to the binaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-a-plugin-zip-file">Building a plugin ZIP file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deploying-the-development-version-zip-file">Deploying the development version ZIP file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#modifying-the-earth-engine-processing-code">Modifying the Earth Engine processing code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-dependencies">Setting up dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#trends-earth-cli">trends.earth-CLI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#docker">docker</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#testing-an-earth-engine-script-locally">Testing an Earth Engine script locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deploying-a-gee-script-to-api-trends-earth">Deploying a GEE script to api.trends.earth</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="before_installing.html">Before installing the toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="before_installing.html#download-qgis">Download QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="before_installing.html#install-qgis">Install QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing the toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#installing-the-development-version">Installing the development version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Registration.html">Registration and settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Registration.html#registration">Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Registration.html#updating-your-user">Updating your user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Registration.html#forgot-password">Forgot password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Registration.html#advanced-settings">Advanced settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_sdg15.html">Calculate SDG 15.3.1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#calculate-indicators-with-simplified-tool">Calculate indicators with simplified tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#calculate-productivity">Calculate productivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_sdg15.html#productivity-trajectory">Productivity Trajectory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_sdg15.html#productivity-performance">Productivity Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_sdg15.html#productivity-state">Productivity State</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#calculate-land-cover">Calculate land cover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#calculate-soil-carbon">Calculate soil carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#compute-sdg-indicator-15-3-1">Compute SDG Indicator 15.3.1</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_vegetation.html">Calculate Vegetation Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_vegetation.html#compute-vegatation-indices">Compute Vegatation Indices</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_forest.html">Calculate Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_forest.html#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_forest.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_forest.html#step-1-compute-forest-change-and-total-carbon">Step 1: Compute Forest Change and Total Carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_forest.html#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_medalus.html">Calculate Desertification (MEDALUS)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_medalus.html#compute-mediterrenean-desertification-and-land-use-medalus">Compute Mediterrenean Desertification and Land Use (MEDALUS)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#soil-quality-index-sqi">1. Soil Quality Index (SQI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Calculate_medalus.html#a-using-default-data-computed-on-google-earth-engine">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Calculate_medalus.html#b-using-custom-data-computed-locally-on-device">b. Using Custom data (Computed locally on device)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#vegetation-quality-index-vqi">2. Vegetation Quality Index (VQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#climate-quality-index-cqi">3. Climate Quality Index (CQI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Calculate_medalus.html#id1">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Calculate_medalus.html#id2">b. Using Custom data (Computed locally on device)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#management-quality-index-mqi">4. Management Quality Index (MQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#environmentally-sensitive-area-esa-index-combined-desertification-layer">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gee_tasks.html">View and download results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="load_data.html">Load Custom Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="load_data.html#load-a-dataset-produced-by-misland">Load a dataset produced by MISLAND</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#productivity">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#land-cover">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#soil-organic-carbon">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="load_data.html#load-a-custom-input-dataset">Load a custom input dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id1">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id2">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id3">Soil organic carbon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download raw data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">QGIS Plugin Training Material</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdg_15_training.html">Calculate SDG 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vegetation_degradation_training.html">Calculate Vegetation/Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-vegatation-indices">Compute Vegatation Indices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Monitoring Integrated Service for Land Degradation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Plugin Development</li>
+    
+    
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plugin-development">
+<h1><a class="toc-backref" href="#id5">Plugin Development</a><a class="headerlink" href="#plugin-development" title="Permalink to this headline">¶</a></h1>
+<p>MISLAND is free and open-source software, licensed under the <a class="reference external" href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html">GNU
+General Public License, version 2.0 or later</a>.</p>
+<p>There are a number of components to the MISLAND tool. The first is a
+QGIS plugin supporting calculation of indicators, access to raw data,
+reporting, and production of print maps . The code for the plugin, and further
+instructions on installing it if you want to modify the code, are in
+<a class="reference external" href="https://github.com/LocateIT/trends.earth">MISLAND</a>
+GitHub repository.</p>
+<p>The MISLAND QGIS plugin is supported by a number of different Python
+scripts that allow calculation of the various indicators on Google Earth Engine
+(GEE). These scripts sit in the “gee” sub-folder of that GitHub repository. The
+GEE scripts are supported by the <cite>landdegradation</cite> Python module, which
+includes code for processing inputs and outputs for the plugin, as well as
+other common functions supporting calculation of NDVI integrals, statistical
+significance, and other shared code. The code for this module is available in
+the <a class="reference external" href="https://github.com/ConservationInternational/landdegradation">landdegradation</a> repository on
+GitHub.</p>
+<p>Further details are below on how to contribute to MISLAND by working on
+the plugin code, by modifying the processing code, or by contributing to
+translating the website and plugin.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#plugin-development" id="id5">Plugin Development</a></p>
+<ul>
+<li><p><a class="reference internal" href="#modifying-the-qgis-plugin-code" id="id6">Modifying the QGIS Plugin code</a></p>
+<ul>
+<li><p><a class="reference internal" href="#downloading-the-misland-code" id="id7">Downloading the MISLAND code</a></p></li>
+<li><p><a class="reference internal" href="#installing-dependencies" id="id8">Installing dependencies</a></p>
+<ul>
+<li><p><a class="reference internal" href="#python" id="id9">Python</a></p></li>
+<li><p><a class="reference internal" href="#python-dependencies" id="id10">Python dependencies</a></p></li>
+<li><p><a class="reference internal" href="#pyqt" id="id11">PyQt</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#changing-the-version-of-the-plugin" id="id12">Changing the version of the plugin</a></p></li>
+<li><p><a class="reference internal" href="#testing-changes-to-the-plugin" id="id13">Testing changes to the plugin</a></p></li>
+<li><p><a class="reference internal" href="#syncing-and-deploying-changes-to-the-binaries" id="id14">Syncing and deploying changes to the binaries</a></p></li>
+<li><p><a class="reference internal" href="#building-a-plugin-zip-file" id="id15">Building a plugin ZIP file</a></p></li>
+<li><p><a class="reference internal" href="#deploying-the-development-version-zip-file" id="id16">Deploying the development version ZIP file</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#modifying-the-earth-engine-processing-code" id="id17">Modifying the Earth Engine processing code</a></p>
+<ul>
+<li><p><a class="reference internal" href="#setting-up-dependencies" id="id18">Setting up dependencies</a></p>
+<ul>
+<li><p><a class="reference internal" href="#trends-earth-cli" id="id19">trends.earth-CLI</a></p></li>
+<li><p><a class="reference internal" href="#docker" id="id20">docker</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#testing-an-earth-engine-script-locally" id="id21">Testing an Earth Engine script locally</a></p></li>
+<li><p><a class="reference internal" href="#deploying-a-gee-script-to-api-trends-earth" id="id22">Deploying a GEE script to api.trends.earth</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="modifying-the-qgis-plugin-code">
+<h2><a class="toc-backref" href="#id6">Modifying the QGIS Plugin code</a><a class="headerlink" href="#modifying-the-qgis-plugin-code" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="downloading-the-misland-code">
+<h3><a class="toc-backref" href="#id7">Downloading the MISLAND code</a><a class="headerlink" href="#downloading-the-misland-code" title="Permalink to this headline">¶</a></h3>
+<p>The MISLAND code for both the plugin and the Google Earth Engine scripts
+that support it are located on GitHub in the <a class="reference external" href="https://github.com/LocateIT/trends.earth">MISLAND</a> repository. Clone
+this repository to a convenient place on your machine in order to ensure you
+have the latest version of the code.</p>
+<p>There are a number of different branches of the MISLAND repository that
+are under active development. While the plugin does not yet officially support
+QGIS3, however the majority of development is occurring on the “master” branch,
+which is aimed at QGIS3. The “qgis2” branch is the older version of the plugin,
+and supports QGIS2 version 2.18+.</p>
+<p>The first time you download the MISLAND code, you will also need to clone
+the “schemas” submodule that is located within it, under “LDMP\schemas”. If
+you are using TortoiseGit on Windows, you can right-click anywhere within the
+MISLAND folder and choose “TortoiseGit” and then “Submodule Update…”.
+Clicking ok in the window that comes up will checkout the schemas submodule. If
+you prefer, you can also do this from the command line by running the below two
+commands in shell:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">submodule</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span>
+</pre></div>
+</div>
+<p>Once you are done you should see files within the “LDMP\schemas” folder within
+the MISLAND folder.</p>
+</div>
+<div class="section" id="installing-dependencies">
+<h3><a class="toc-backref" href="#id8">Installing dependencies</a><a class="headerlink" href="#installing-dependencies" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="python">
+<h4><a class="toc-backref" href="#id9">Python</a><a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h4>
+<p>The plugin is coded in Python. In addition to being used to run the plugin
+through QGIS, Python is also used to support managing the plugin (changing the
+version, installing development versions, etc.). Though Python is included with
+QGIS, you will also need a local version of Python that you can setup with the
+software needed to manage the plugin. The easiest way to manage multiple
+versions of Python is through the <a class="reference external" href="https://www.anaconda.com">Anaconda distribution</a>. For work developing the plugin, Python
+3 is required. To download Python 3.7 (recommended) though Anaconda,
+<a class="reference external" href="https://www.anaconda.com/distribution/#download-section">see this page</a>.</p>
+</div>
+<div class="section" id="python-dependencies">
+<h4><a class="toc-backref" href="#id10">Python dependencies</a><a class="headerlink" href="#python-dependencies" title="Permalink to this headline">¶</a></h4>
+<p>In order to work with the MISLAND code, you need to have Invoke
+installed on your machine, as well as a number of other packages that are used
+for managing the documentation, translations, etc. These packages are all
+listed in the “dev” requirements file for MISLAND, so they can be
+installed by navigating in a command prompt to the root of the MISLAND
+code folder and typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">-</span><span class="n">dev</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using Anaconda, you will first want to activate a Python 3.7
+virtual environment before running the above command (and any of the other
+invoke commands listed on the page). One way to do this is by starting an
+“Anaconda prompt”, by <a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/getting-started/#write-a-python-program-using-anaconda-prompt-or-terminal">following the instructions on this Anaconda page</a>.</p>
+</div>
+</div>
+<div class="section" id="pyqt">
+<h4><a class="toc-backref" href="#id11">PyQt</a><a class="headerlink" href="#pyqt" title="Permalink to this headline">¶</a></h4>
+<p>PyQt5 is the graphics toolkit used by QGIS3. To compile the user interface for
+MISLAND for QGIS3 you need to install PyQt5. This package can be installed
+from pip using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">PyQt5</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PyQt4 is the graphics toolkit used by QGIS2. The best source for this
+package on Windows is from the set of packages maintained by Christoph
+Gohlke at UC Irvine. To download PyQt4, select <a class="reference external" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyqt4">the appropriate package
+from this page</a>.
+Choose the appropriate file for the version of Python you are using. For
+example, if you are using Python 2.7, choose the version with “cp27” in the
+filename. If you are using Python 3.7, choose the version with “cp37” in
+the filename. Choose “amd64” for 64-bit python, and “win32” for 32-bit
+python.</p>
+<p>After downloading from the above link, use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install it. For example,
+for the 64-bit wheel for Python 3.7, you would run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">PyQt4</span><span class="o">-</span><span class="mf">4.11</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">cp37</span><span class="o">-</span><span class="n">cp37m</span><span class="o">-</span><span class="n">win_amd64</span><span class="o">.</span><span class="n">whl</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="changing-the-version-of-the-plugin">
+<h3><a class="toc-backref" href="#id12">Changing the version of the plugin</a><a class="headerlink" href="#changing-the-version-of-the-plugin" title="Permalink to this headline">¶</a></h3>
+<p>The convention for MISLAND is that version numbers ending in an odd number
+(for example 0.65) are development versions, while versions ending in an even
+number (for example (0.66) are release versions. Development versions of the
+plugin are never released via the QGIS repository, so they are never seen by
+normal users of the plugin. Odd-numbered development versions are used by the
+MISLAND development team while testing new features prior to their public
+release.</p>
+<p>If you wish to make changes to the code and have downloaded a public release of
+the plugin (one ending in an even number), the first step is to update the
+version of the plugin to the next sequential odd number. So, for example, if
+you downloaded version 0.66 of the plugin, you would need to update the version
+to be 0.67 before you started making your changes. There are several places in
+the code where the version is mentioned (as well as within every GEE script) so
+there is an invoke task to assist with changing the version. To change the
+version to be 0.67, you would run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="nb">set</span><span class="o">-</span><span class="n">version</span> <span class="o">-</span><span class="n">v</span> <span class="mf">0.67</span>
+</pre></div>
+</div>
+<p>Running the above command will update the version number every place it is
+referenced in the code. To avoid confusion, never change the version to one
+that has already been released - always INCREASE the value of the version tag
+to the next odd number.</p>
+</div>
+<div class="section" id="testing-changes-to-the-plugin">
+<h3><a class="toc-backref" href="#id13">Testing changes to the plugin</a><a class="headerlink" href="#testing-changes-to-the-plugin" title="Permalink to this headline">¶</a></h3>
+<p>After making changes to the plugin code, you will need to test them to ensure
+the plugin behaves as expected, and to ensure no bugs or errors come up. The
+plugin should go through extensive testing before it is released to the QGIS
+repository (where it can be accessed by other users) to ensure that any changes
+to the code do not break the plugin.</p>
+<p>To test any changes that you have made to the plugin within QGIS, you will need
+to install it locally. There are invoke tasks that assist with this process.
+The first step prior to installing the plugin is ensuring that you have setup
+the plugin with all of the dependencies that it needs in order to run from
+within QGIS. To do this, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">plugin</span><span class="o">-</span><span class="n">setup</span>
+</pre></div>
+</div>
+<p>The above task only needs to be run immediately after downloading the
+MISLAND code, or if any changes are made to the dependencies for the
+plugin. By default <code class="docutils literal notranslate"><span class="pre">plugin-setup</span></code> will re-use any cached files on your
+machine. To start from scratch, add the <code class="docutils literal notranslate"><span class="pre">-c</span></code> (clean) flag to the above
+command.</p>
+<p>After running <code class="docutils literal notranslate"><span class="pre">plugin-setup</span></code>, you are ready to install the plugin to the QGIS
+plugins folder on your machine. To do this, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">plugin</span><span class="o">-</span><span class="n">install</span>
+</pre></div>
+</div>
+<p>After running the above command, you will need to either 1) restart QGIS, or 2)
+use the <a class="reference external" href="https://plugins.qgis.org/plugins/plugin_reloader/">plugin reloader</a>
+to reload the MISLAND plugin in order to see the effects of the changes
+you have made.</p>
+<p>By default <code class="docutils literal notranslate"><span class="pre">plugin-install</span></code> will overwrite any existing plugin files on your
+machine, but leave in place any data (administrative boundaries, etc.) that the
+plugin might have downloaded. To start from scratch, add the <code class="docutils literal notranslate"><span class="pre">-c</span></code> (clean)
+flag to the above command. You may need to close QGIS in order to successfully
+perform a clean install of the plugin using the <code class="docutils literal notranslate"><span class="pre">-c</span></code> flag.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default plugin-install assumes you want to install the plugin to be used
+in QGIS3. To install the plugin for use in QGIS3, add the flag <code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">2</span></code> to
+the <code class="docutils literal notranslate"><span class="pre">plugin-install</span></code> command. Remember the plugin may or may not be
+entirely functional on QGIS3 - the plugin was originally designed for QGIS2
+and is still being tested on QGIS3.</p>
+</div>
+</div>
+<div class="section" id="syncing-and-deploying-changes-to-the-binaries">
+<h3><a class="toc-backref" href="#id14">Syncing and deploying changes to the binaries</a><a class="headerlink" href="#syncing-and-deploying-changes-to-the-binaries" title="Permalink to this headline">¶</a></h3>
+<p>To speed the computations in MISLAND, some of the tools allow making use
+of pre-compiled binaries that have been compiled using <a class="reference external" href="https://numba.pydata.org">numba</a>. Numba is an open source compiler that can compile
+Python and NumPy code, making it faster than when it is run as ordinary Python.
+To avoid users of MISLAND needing to download Numba and all of its
+dependencies, the MISLAND team makes pre-compiled binaries available for
+download if users choose to install them.</p>
+<p>To generate pre-compiled binaries for the OS, bitness (32/64 bit) and Python
+version you are running on your machine, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">binaries</span><span class="o">-</span><span class="nb">compile</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need a C++ compiler for the above command to work. On
+Windows, see <a class="reference external" href="https://wiki.python.org/moin/WindowsCompilers#Which_Microsoft_Visual_C.2B-.2B-_compiler_to_use_with_a_specific_Python_version_.3F">this github page</a>
+for details on how to
+install the Microsoft Visual C++ compiler needed for you Python version. On
+MacOS, you will most likely need to install Xcode. On Linux, install the
+appropriate version of GCC.</p>
+</div>
+<p>To make binaries publicly available, they are distributed through an Amazon Web
+services S3 bucket. To upload the binaries generated with the above command to
+the bucket, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">binaries</span><span class="o">-</span><span class="n">sync</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The above command will fail if you do not have keys allowing write
+access to the <code class="docutils literal notranslate"><span class="pre">MISLAND</span></code> bucket on S3.</p>
+</div>
+<p>The above command will sync each individual binary file to S3. However, users
+of the toolbox download the binaries as a single zipfile tied to the version of
+the plugin that they are using. To generate that zipfile so that it can be
+accessed by MISLAND users, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">binaries</span><span class="o">-</span><span class="n">deploy</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The above command will fail if you do not have keys allowing write
+access to the <code class="docutils literal notranslate"><span class="pre">MISLAND</span></code> bucket on S3.</p>
+</div>
+</div>
+<div class="section" id="building-a-plugin-zip-file">
+<h3><a class="toc-backref" href="#id15">Building a plugin ZIP file</a><a class="headerlink" href="#building-a-plugin-zip-file" title="Permalink to this headline">¶</a></h3>
+<p>There are several invoke tasks to help with building a ZIP file to deploy the
+plugin to the QGIS repository, or to share the development version of the
+plugin with others. To package the plugin and all of its dependencies into a
+ZIP file that can be installed following, run:</p>
+<blockquote>
+<div><p>invoke zipfile-build</p>
+</div></blockquote>
+<p>This command will create a folder named <code class="docutils literal notranslate"><span class="pre">build</span></code> at the root of the
+MISLAND code folder, and in that folder it will create a file called
+<code class="docutils literal notranslate"><span class="pre">LDMP.zip</span></code>. This file can be shared with others, who can use it to manually
+install MISLAND.</p>
+<p>This can be useful if there is a need to share the latest features with someone
+before they are available in the publicly released version of the plugin.</p>
+</div>
+<div class="section" id="deploying-the-development-version-zip-file">
+<h3><a class="toc-backref" href="#id16">Deploying the development version ZIP file</a><a class="headerlink" href="#deploying-the-development-version-zip-file" title="Permalink to this headline">¶</a></h3>
+<p>The MISLAND GitHub page gives a link a ZIP file that allows users who may
+not be developers to access the development version of MISLAND. To create
+a ZIP file and make it available on that page (the ZIP file is stored on S3),
+run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">zipfile</span><span class="o">-</span><span class="n">deploy</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The above command will fail if you do not have keys allowing write
+access to the <code class="docutils literal notranslate"><span class="pre">misland</span></code> bucket on S3.</p>
+</div>
+</div>
+</div>
+<div class="section" id="modifying-the-earth-engine-processing-code">
+<h2><a class="toc-backref" href="#id17">Modifying the Earth Engine processing code</a><a class="headerlink" href="#modifying-the-earth-engine-processing-code" title="Permalink to this headline">¶</a></h2>
+<p>The Google Earth Engine (GEE) processing scripts used by MISLAND are all
+stored in the “gee” folder under the main MISLAND folder. For these script
+to be accessible to users of the MISLAND QGIS plugin, they have to be
+deployed to the api.trends.earth serviceThe below
+describes how to test and deploy GEE scripts to be used with MISLAND.</p>
+<div class="section" id="setting-up-dependencies">
+<h3><a class="toc-backref" href="#id18">Setting up dependencies</a><a class="headerlink" href="#setting-up-dependencies" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="trends-earth-cli">
+<h4><a class="toc-backref" href="#id19">trends.earth-CLI</a><a class="headerlink" href="#trends-earth-cli" title="Permalink to this headline">¶</a></h4>
+<p>The “trends.earth-CLI” Python package is required in order to work with the
+api.trends.earth server. This package is located on GitHub in the
+<a class="reference external" href="https://github.com/LocateIT/trends.earth-CLI">trends.earth-CLI</a>
+repository.</p>
+<p>The first step is to clone this repository onto your machine. We recommend that
+you clone the repository into the same folder where you the trends.earth code.
+For example, if you had a “Code” folder on your machine, clone both the
+<a class="reference external" href="https://github.com/LocateIT/trends.earth">trends.earth</a> repository (the
+code for the QGIS plugin and associated GEE scripts) and also the
+<a class="reference external" href="https://github.com/LocateIT/trends.earth-CLI">trends.earth-CLI</a> repository
+into that same folder.</p>
+<p>When you setup your system as recommended above, trends.earth-CLI will work
+with the invoke tasks used to manage MISLAND without any modifications.
+If, however, you download trends.earth-CLI into a different folder, then you
+will need to add a file named “invoke.yaml” file into the root of the
+MISLAND repository, and in that file tell MISLAND where to locate the
+trends.earth-CLI code. This YAML file should look something like the below (if
+you downloaded the code on Windows into a folder called
+“C:/Users/grace/Code/trends.earth-CLI/tecli”):</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">gee</span><span class="p">:</span>
+    <span class="nt">tecli</span><span class="p">:</span> <span class="s">&quot;C:/Users/grace/Code/trends.earth-CLI/tecli&quot;</span>
+</pre></div>
+</div>
+<p>Again, you <strong>do not</strong> need to add this .yaml file if you setup your system as
+recommended above.</p>
+</div>
+<div class="section" id="docker">
+<h4><a class="toc-backref" href="#id20">docker</a><a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h4>
+<p>The trends.earth-CLI package requires <a class="reference external" href="http://www.docker.com">docker</a> in
+order to function. <a class="reference external" href="https://docs.docker.com/docker-for-windows/install/">Follow these instructions to install docker on Windows</a>, and <a class="reference external" href="https://docs.docker.com/docker-for-mac/install/">these
+instructions to install docker on Mac OS</a>. If you are running
+Linux, <a class="reference external" href="https://docs.docker.com/install">follow the instructions on this page</a> that are appropriate for the Linux
+distribution you are using.</p>
+</div>
+</div>
+<div class="section" id="testing-an-earth-engine-script-locally">
+<h3><a class="toc-backref" href="#id21">Testing an Earth Engine script locally</a><a class="headerlink" href="#testing-an-earth-engine-script-locally" title="Permalink to this headline">¶</a></h3>
+<p>After installing the trends.earth-CLI package, you will need to setup a
+.tecli.yml file with an access token to a GEE service account in order to test
+scripts on GEE. To setup the GEE service account for tecli, first obtain the
+key for your service account in JSON format (from the google cloud console),
+then and encode it in base64. Provide that base64 encoded key to tecli with the
+following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">tecli</span><span class="o">-</span><span class="n">config</span> <span class="nb">set</span> <span class="n">EE_SERVICE_ACCOUNT_JSON</span> <span class="n">key</span>
+</pre></div>
+</div>
+<p>where “key” is the base64 encoded JSON format service account key.</p>
+<p>While converting a script specifying code to be run on GEE from JavaScript to
+Python, or when making modifications to that code, it can be useful to test the
+script locally, without deploying it to the api.trends.earth server. To do
+this, use the <code class="docutils literal notranslate"><span class="pre">run</span></code> invoke task. For example, to test the “land_cover”
+script, go to the root directory of the code, and, in a command
+prompt, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">tecli</span><span class="o">-</span><span class="n">run</span> <span class="n">land_cover</span>
+</pre></div>
+</div>
+<p>This will use the trends.earth-CLI package to build and run a docker container
+that will attempt to run the “land_cover” script. If there are any syntax
+errors in the script, these will show up when the container is run. Before
+submitting a new script to api.trends.earth, always make sure that <code class="docutils literal notranslate"><span class="pre">invoke</span>
+<span class="pre">tecli-run</span></code> is able to run the script without any errors.</p>
+<p>When using <code class="docutils literal notranslate"><span class="pre">invoke</span> <span class="pre">tecli-run</span></code> you may get an error saying:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Invalid JWT: Token must be a short-lived token <span class="o">(</span><span class="m">60</span> minutes<span class="o">)</span> and in a
+reasonable timeframe. Check your iat and exp values and use a clock with
+skew to account <span class="k">for</span> clock differences between systems.
+</pre></div>
+</div>
+<p>This error can be caused if the clock on the docker container gets out of sync
+with the system clock. Restarting docker should fix this error.</p>
+</div>
+<div class="section" id="deploying-a-gee-script-to-api-trends-earth">
+<h3><a class="toc-backref" href="#id22">Deploying a GEE script to api.trends.earth</a><a class="headerlink" href="#deploying-a-gee-script-to-api-trends-earth" title="Permalink to this headline">¶</a></h3>
+<p>When you have finished testing a GEE script and would like it to be accessible
+using the QGIS plugin (and by other users of MISLAND), you can deploy it
+to the api.trends.earth server. The first step in the process is logging in to
+the api.trends.earth server. To login, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">tecli</span><span class="o">-</span><span class="n">login</span>
+</pre></div>
+</div>
+<p>You will be asked for a username and password. These are the same as the
+username and password that you use to login to the MISLAND server from the
+QGIS plugin. <strong>If you are not an administrator, you will be able to login, but
+the below command will fail</strong>. To upload a script (for example, the
+“land_cover” script) to the server, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">tecli</span><span class="o">-</span><span class="n">publish</span> <span class="o">-</span><span class="n">s</span> <span class="n">land_cover</span>
+</pre></div>
+</div>
+<p>If this script already exists on the server, you will be asked if you want to
+overwrite the existing script. Be very careful uploading scripts with
+even-numbered versions, as these are publicly available scripts, and any errors
+that you make will affect anyone using the plugin. Whenever you are testing be
+sure to use development version numbers (odd version numbers).</p>
+<p>After publishing a script to the server, you can use the <cite>tecli-info</cite> task to
+check the status of the script (to know whether it deployed successfully -
+though note building the script may take a few minutes). To check the status,
+of a deployed script, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">tecli</span><span class="o">-</span><span class="n">publish</span> <span class="o">-</span><span class="n">s</span> <span class="n">land_cover</span>
+</pre></div>
+</div>
+<p>If you are making a new release of the plugin, and want to upload ALL of the
+GEE scripts at once (this is necessary whenever the plugin version number
+changes), run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">tecli</span><span class="o">-</span><span class="n">publish</span>
+</pre></div>
+</div>
+<p>Again - never run the above on a publicly released version of the plugin unless
+you are intending to overwrite all the publicly available scripts used by the
+plugin.</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="before_installing.html" class="btn btn-neutral float-right" title="Before installing the toolbox" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../Service/Service_Guide.html" class="btn btn-neutral float-left" title="Serivice Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, LocateIT Kenya Ltd.
+      <span class="lastupdated">
+        Last updated on True.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('.'))
 
 project = 'Monitoring Integrated Service for Land Degradation'
 copyright = '2020, LocateIT Kenya Ltd'
-author = 'Derick ONGERI, Grace Amondi'
+author = 'Derick ONGERI, Grace AMONDI'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'
@@ -71,7 +71,7 @@ html_theme_options = {
     # Toc options
     'collapse_navigation': False,
     'sticky_navigation': True,
-    'navigation_depth': 4,
+    'navigation_depth': 5,
     'includehidden': False,
     'titles_only': False
 	}
