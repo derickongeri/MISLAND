@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Registration and settings &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -36,7 +39,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Calculate indicators" href="Calculate_indicators.html" />
+    <link rel="next" title="Calculate SDG 15.3.1" href="Calculate_sdg15.html" />
     <link rel="prev" title="Installing the toolbox" href="installing.html" /> 
 </head>
 
@@ -51,7 +54,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Monitoring Integrated Service for Land Degradation
+            <a href="../index.html" class="icon icon-home"> Monitoring Integrated Service for Land Degradation
           
 
           
@@ -148,14 +151,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html">Land Degradation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Background/LD_indicators.html#land-degradation-indicators">Land Degradation Indicators</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#sdg15-3-1-indicator">SDG15.3.1 Indicator</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#sdg-15-3-1-sub-indicators">SDG 15.3.1 Sub-indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#sdg-15-3-1-sub-indicators">SDG 15.3.1 Sub-indicators</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#productivity">Productivity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#landcover">Landcover</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#carbon-stocks">Carbon-stocks</a></li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#combining-productivity-indicators">Combining Productivity Indicators</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#vegetation-loss-gain-hotspots">Vegetation Loss/Gain hotspots</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#forest-change">Forest Change</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-gain-loss">Forest Gain/Loss</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-fires">Forest Fires</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-fires">Forest Fires</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -170,7 +180,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#registration-and-log-in">Registration and Log in</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#calculate-indicators">Calculate Indicators</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Service/Service_Guide.html#compute-sdg-15-3-1-sub-indicators">compute SDG 15.3.1 Sub-indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Service/Service_Guide.html#compute-sdg-15-3-1-sub-indicators">compute SDG 15.3.1 Sub-indicators</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../Service/Service_Guide.html#land-productivity">Land Productivity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Service/Service_Guide.html#landcover-change">Landcover Change</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Service/Service_Guide.html#carbon-stocks">Carbon Stocks</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#vegetation-loss-gain-indicators">Vegetation Loss/Gain indicators</a></li>
@@ -189,13 +204,43 @@
 </ul>
 <p class="caption"><span class="caption-text">Qgis Plugin Guide</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="plugin_development.html">Plugin Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugin_development.html#modifying-the-qgis-plugin-code">Modifying the QGIS Plugin code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#downloading-the-misland-code">Downloading the MISLAND code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#installing-dependencies">Installing dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="plugin_development.html#python">Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plugin_development.html#python-dependencies">Python dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plugin_development.html#pyqt">PyQt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#changing-the-version-of-the-plugin">Changing the version of the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#testing-changes-to-the-plugin">Testing changes to the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#syncing-and-deploying-changes-to-the-binaries">Syncing and deploying changes to the binaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#building-a-plugin-zip-file">Building a plugin ZIP file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#deploying-the-development-version-zip-file">Deploying the development version ZIP file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plugin_development.html#modifying-the-earth-engine-processing-code">Modifying the Earth Engine processing code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#setting-up-dependencies">Setting up dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="plugin_development.html#trends-earth-cli">trends.earth-CLI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plugin_development.html#docker">docker</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#testing-an-earth-engine-script-locally">Testing an Earth Engine script locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin_development.html#deploying-a-gee-script-to-api-trends-earth">Deploying a GEE script to api.trends.earth</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="before_installing.html">Before installing the toolbox</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="before_installing.html#download-qgis">Download QGIS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="before_installing.html#install-qgis">Install QGIS</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="installing.html">Installing the toolbox</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installing.html#installing-the-development-version-recommended">Installing the development version (recommended)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#installing-the-development-version">Installing the development version</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Registration and settings</a><ul>
@@ -205,31 +250,88 @@
 <li class="toctree-l2"><a class="reference internal" href="#advanced-settings">Advanced settings</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Calculate_indicators.html">Calculate indicators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Calculate_indicators.html#calculate-indicators-with-simplified-tool">Calculate indicators with simplified tool</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Calculate_indicators.html#calculate-productivity">Calculate productivity</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Calculate_indicators.html#productivity-trajectory">Productivity Trajectory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Calculate_indicators.html#productivity-performance">Productivity Performance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Calculate_indicators.html#productivity-state">Productivity State</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_sdg15.html">Calculate SDG 15.3.1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#calculate-indicators-with-simplified-tool">Calculate indicators with simplified tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#calculate-productivity">Calculate productivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_sdg15.html#productivity-trajectory">Productivity Trajectory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_sdg15.html#productivity-performance">Productivity Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_sdg15.html#productivity-state">Productivity State</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Calculate_indicators.html#calculate-land-cover">Calculate land cover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Calculate_indicators.html#calculate-soil-carbon">Calculate soil carbon</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Calculate_indicators.html#compute-sdg-indicator-15-3-1">Compute SDG Indicator 15.3.1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Calculate_indicators.html#compute-vegatation-indices">Compute Vegatation Indices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Calculate_indicators.html#compute-forest-fires">Compute Forest Fires</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Calculate_indicators.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Calculate_indicators.html#step-1-compute-forest-change-and-total-carbon">Step 1: Compute Forest Change and Total Carbon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Calculate_indicators.html#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#calculate-land-cover">Calculate land cover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#calculate-soil-carbon">Calculate soil carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_sdg15.html#compute-sdg-indicator-15-3-1">Compute SDG Indicator 15.3.1</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_vegetation.html">Calculate Vegetation Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_vegetation.html#compute-vegatation-indices">Compute Vegatation Indices</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Plot_data.html">Plot data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_forest.html">Calculate Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_forest.html#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_forest.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_forest.html#step-1-compute-forest-change-and-total-carbon">Step 1: Compute Forest Change and Total Carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_forest.html#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_medalus.html">Calculate Desertification (MEDALUS)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_medalus.html#compute-mediterrenean-desertification-and-land-use-medalus">Compute Mediterrenean Desertification and Land Use (MEDALUS)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#soil-quality-index-sqi">1. Soil Quality Index (SQI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Calculate_medalus.html#a-using-default-data-computed-on-google-earth-engine">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Calculate_medalus.html#b-using-custom-data-computed-locally-on-device">b. Using Custom data (Computed locally on device)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#vegetation-quality-index-vqi">2. Vegetation Quality Index (VQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#climate-quality-index-cqi">3. Climate Quality Index (CQI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Calculate_medalus.html#id1">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Calculate_medalus.html#id2">b. Using Custom data (Computed locally on device)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#management-quality-index-mqi">4. Management Quality Index (MQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_medalus.html#environmentally-sensitive-area-esa-index-combined-desertification-layer">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gee_tasks.html">View and download results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="load_data.html">Load Custom Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="load_data.html#load-a-dataset-produced-by-misland">Load a dataset produced by MISLAND</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#productivity">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#land-cover">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#soil-organic-carbon">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="load_data.html#load-a-custom-input-dataset">Load a custom input dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id1">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id2">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="load_data.html#id3">Soil organic carbon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download raw data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">QGIS Plugin Training Material</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sdg_15_training.html">Calculate SDG 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vegetation_degradation_training.html">Calculate Vegetation/Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-vegatation-indices">Compute Vegatation Indices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vegetation_degradation_training.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -270,6 +372,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -290,7 +394,12 @@
             
   <div class="section" id="registration-and-settings">
 <h1>Registration and settings<a class="headerlink" href="#registration-and-settings" title="Permalink to this headline">¶</a></h1>
-<img alt="../_images/plugin_toolbar_settings.png" class="align-center" src="../_images/plugin_toolbar_settings.png" />
+<div style="border: 1px solid; margin-bottom: 2em; box-shadow: 2px 3px #888888; overflow: hidden; max-width: 100%; height: auto;">
+    <video style="width: 100%; height: 100%;" controls>
+        <source src="https://res.cloudinary.com/acemobile/video/upload/v1613919214/MISLAND/registration.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div><img alt="../_images/plugin_toolbar_settings.png" class="align-center" src="../_images/plugin_toolbar_settings.png" />
 <div class="section" id="registration">
 <span id="id1"></span><h2>Registration<a class="headerlink" href="#registration" title="Permalink to this headline">¶</a></h2>
 <p>The toolbox is free to use, but you must register an email address prior to
@@ -307,7 +416,7 @@ organization and country(within North Africa region) of residence and select “
 password. Once you receive this email, click on “Step 2: Enter login”. This
 will bring up a dialog asking for your email and password. Enter the password
 you received from <a class="reference external" href="mailto:info&#37;&#52;&#48;promiseevnts&#46;co">info<span>&#64;</span>promiseevnts<span>&#46;</span>co</a>.ke(for testing) and click “Ok”:</p>
-<img alt="../_images/login1.png" class="align-center" src="../_images/login1.png" />
+<img alt="../_images/login.png" class="align-center" src="../_images/login.png" />
 <p>You will see a message indicating you have successfully been logged in:</p>
 <img alt="../_images/login_success.png" class="align-center" src="../_images/login_success.png" />
 </div>
@@ -322,7 +431,7 @@ function is only useful if you already have another existing LDMS
 account you want to switch to. To register a new user, see <a class="reference internal" href="#registration"><span class="std std-ref">Registration</span></a>.
 To change your user, enter the email and password you wish to change to and
 click “Ok”:</p>
-<img alt="../_images/login1.png" class="align-center" src="../_images/login1.png" />
+<img alt="../_images/login.png" class="align-center" src="../_images/login.png" />
 <p>If you want to update your profile, click on “Update profile”. Update your
 information in the box that appears and click “Save”:</p>
 <p>To delete your user, click “Delete user”. A warning message will appear. Click
@@ -350,23 +459,16 @@ cannot find it within your inbox. The email will come from <a class="reference e
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="Calculate_indicators.html" class="btn btn-neutral float-right" title="Calculate indicators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="installing.html" class="btn btn-neutral float-left" title="Installing the toolbox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="Calculate_sdg15.html" class="btn btn-neutral float-right" title="Calculate SDG 15.3.1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="installing.html" class="btn btn-neutral float-left" title="Installing the toolbox" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, LocateIT Kenya Ltd
+        &#169; Copyright 2020, LocateIT Kenya Ltd.
       <span class="lastupdated">
         Last updated on True.
       </span>
@@ -376,14 +478,13 @@ cannot find it within your inbox. The email will come from <a class="reference e
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

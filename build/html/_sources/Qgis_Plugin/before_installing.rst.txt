@@ -7,7 +7,7 @@ Before installing the toolbox, QGIS version |qgisMinVersion| or higher
 needs to be installed on your computer.
 
 Download QGIS
--------------
+--------------
 
 To install the plugin, first install QGIS 3.10.3+ following the below steps:
 
