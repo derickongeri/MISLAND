@@ -34,16 +34,24 @@ The core-service provides land degradation indicators for six North African Coun
    /Introduction/Layers
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
    :caption: Background
 
    Background/LD_indicators
+   Background/SDG_indicators
+   Background/Forest_Change
 
 .. toctree::
    :maxdepth: 3
    :caption: Web Service Guide
 
    Service/Service_Guide
+   Service/Calculate_SDG
+   Service/Calculate_vegetationloss
+   Service/Calculate_Forestloss
+   Service/Calculate_Medalus
+   Service/Download_results
+   Service/Download_data
 
 .. toctree::
    :maxdepth: 3

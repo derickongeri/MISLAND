@@ -1,6 +1,6 @@
-===================
+
 SDG15.3.1 Indicator
-===================
+=======================
 
 As part of the Sustainable development Goals(SDGs), SDG 15 is to: “Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forest, combat desertification, and halt and reverse land degradation and halt biodiversity loss”
 
@@ -24,12 +24,12 @@ The basic land degradation indicators include three main sub-indicators of the S
 
     SDG 15.3.1 Indicators
 
--------------------------
+
 SDG 15.3.1 Sub-indicators
--------------------------
+__________________________
 
 Productivity
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 Land productivity is the biological productive capacity of the land (i.e. the ability to produce food, fibre and fuel that sustain life). For easy interpretation the annual mean vegetation indices values at the pixel level will be used to assess three measures of change (trajectory, state and performance) as summarized in the figure below and explained in the subsequent sub-sections:
 
 .. figure:: ../_static/Images/sdgmethodology.png
@@ -129,7 +129,7 @@ maps can also be used. The indicator is computed as follows:
     Sammary methodology for computing land cover change
 
 Carbon-stocks
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 The third sub-indicator for monitoring land degradation as part of the SDG 
 process quantifies changes in soil organic carbon (SOC) over the reporting 
 period. Changes in SOC are particularly difficult to assess for several 
@@ -180,7 +180,7 @@ Tropical Montane (f = 0.64).
    :align: center
 
 Combining Productivity Indicators
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+__________________________________
 
 The three productivity sub-indicators are then combined as indicated in the 
 tables below. For SDG 15.3.1 reporting, the 3-class indicator is required, but 
@@ -195,4 +195,4 @@ the area.
 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 4
