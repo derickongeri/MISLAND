@@ -32,6 +32,7 @@ The core-service provides land degradation indicators for six North African Coun
    /Introduction/general_information
    /Introduction/data
    /Introduction/Layers
+   /Introduction/faq
 
 .. toctree::
    :maxdepth: 4
@@ -39,7 +40,8 @@ The core-service provides land degradation indicators for six North African Coun
 
    Background/LD_indicators
    Background/SDG_indicators
-   Background/Forest_Change
+   Background/vegetationloss
+   Background/Forest_change
 
 .. toctree::
    :maxdepth: 3
