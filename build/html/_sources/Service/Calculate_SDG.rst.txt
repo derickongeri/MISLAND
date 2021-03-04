@@ -1,6 +1,6 @@
-Calculate SDG 15.3.1 indicators
-================================
-compute SDG 15.3.1 Sub-indicators
+SDG 15.3.1 indicator
+=====================
+Compute SDG 15.3.1 Sub-indicators
 ___________________________________
 In additin to computing the SDG 15.3.1 indicator, users of the OSS NORTH-AFRICA STATES LDMS can compute and visualize the SDG 15.3.1 sub-indicators i.e Land productivity, Landcover change, and changes in carbon stock as discussed below:
 

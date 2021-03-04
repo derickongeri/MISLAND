@@ -5,7 +5,7 @@ This page lists some Frequently Asked Questions (FAQs) for the MISLAND-North Afr
 tool.
 
 Installation of MISLAND-North Africa
-____________________________
+___________________________________________
 
 
 What version of Quantum GIS (QGIS) do I need for the toolbox?
@@ -226,3 +226,6 @@ of requiring users to have enough local computing capacity to run analyses
 locally. The technical team intends to build the offline version of the toolbox 
 and provide countries with data relevant for reporting at the national level 
 within the pilot project countries. 
+
+.. toctree::
+   :maxdepth: 3
