@@ -49,7 +49,7 @@ which is aimed at QGIS3. The "qgis2" branch is the older version of the plugin,
 and supports QGIS2 version 2.18+.
 
 The first time you download the MISLAND code, you will also need to clone 
-the "schemas" submodule that is located within it, under "LDMP\\schemas". If 
+the "schemas" submodule that is located within it, under "MISLAND\\schemas". If 
 you are using TortoiseGit on Windows, you can right-click anywhere within the 
 MISLAND folder and choose "TortoiseGit" and then "Submodule Update...". 
 Clicking ok in the window that comes up will checkout the schemas submodule. If 
@@ -59,7 +59,7 @@ commands in shell::
    git submodule init
    git submodule update
 
-Once you are done you should see files within the "LDMP\\schemas" folder within 
+Once you are done you should see files within the "MISLAND\\schemas" folder within 
 the MISLAND folder.
 
 Installing dependencies
