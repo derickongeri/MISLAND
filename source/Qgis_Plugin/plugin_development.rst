@@ -27,6 +27,15 @@ Further details are below on how to contribute to MISLAND by working on
 the plugin code, by modifying the processing code, or by contributing to 
 translating the website and plugin.
 
+.. raw:: html
+
+   <div style="border: 1px solid; margin-bottom: 2em; box-shadow: 2px 3px #888888; overflow: hidden; max-width: 100%; height: auto;">
+       <video style="width: 100%; height: 100%;" controls>
+           <source src="https://res.cloudinary.com/acemobile/video/upload/v1616943369/MISLAND/plugin_development.mp4" type="video/mp4">
+           Your browser does not support the video tag.
+       </video>
+   </div> 
+
 .. contents::
 
 Modifying the QGIS Plugin code
