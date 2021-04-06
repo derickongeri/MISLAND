@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('.'))
 
 project = 'Monitoring Integrated Service for Land Degradation'
 copyright = '2020, LocateIT Kenya Ltd'
-author = 'Derick ONGERI, Grace AMONDI'
+author = 'LocateIT Kenya Limited'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'
