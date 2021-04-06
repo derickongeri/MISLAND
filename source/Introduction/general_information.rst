@@ -36,8 +36,8 @@ Special appreciation to the Trends.Earth. Conservation International. Available 
 The project also acknowledges the contribution of national and regional stakeholders; Algerian Space Agency(ASAL), ASAL (Algeria), DRC (Egypt), LCRSSS (Libya), CRTS (Morocco), AL-Aasriya University of Nouakchott (Mauritania) and CNCT (Tunisia) for the national level and CRTEAN and CRASTE-LF for the regional level
 
 
-Linces
-------
+License
+--------
 MISLAND-North Africa is free and open-source. It is licensed under the GNU General Public License, version 2.0 or later.
 
 This site and the products of MISLAND-North Africa are made available under the terms of the Creative Commons Attribution 4.0 International License (CC BY 4.0). The boundaries and names used, and the designations used, in MISLAND-North Africa do not imply official endorsement or acceptance by OSS, or its partner organizations and contributors.
