@@ -23,7 +23,7 @@ The core-service provides land degradation indicators for six North African Coun
 
    You can download the `PDF Version of this doucument`_ here.
 
-   .. _PDF Version of this doucument: https://locateit-oss-ldms.readthedocs.io/_/downloads/en/latest/pdf/
+   .. _PDF Version of this doucument: https://misland.readthedocs.io/_/downloads/en/master/pdf/
 
 .. toctree::
    :maxdepth: 3
