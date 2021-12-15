@@ -1,0 +1,676 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Calculate Indicators &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: black" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Monitoring Integrated Service for Land Degradation
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/general_information.html">General Infortmation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#get-in-touch-with-the-team">Get in touch with the team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#aknowledgement">Aknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#linces">Linces</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/data.html">Data sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#ndvi">NDVI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-moisture">Soil moisture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#precipitation">Precipitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#evapotranspiration">Evapotranspiration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#land-cover">Land cover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-carbon">Soil carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#agroecological-zones">Agroecological Zones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-quality">Soil Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#climate">Climate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#administrative-boundaries">Administrative Boundaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Layers.html">Dataset coding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#sdg-15-3-1-indicator">SDG 15.3.1 Indicator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#productivity">Productivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-trajectory-trend">Productivity trajectory (trend)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-trajectory-significance">Productivity trajectory (significance)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-degradation">Productivity performance (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-ratio">Productivity performance (ratio)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-units">Productivity performance (units)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-degradation">Productivity state (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-classes">Productivity state classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-ndvi-mean">Productivity state NDVI mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#sdg-15-3-1-productivity-indicator">SDG 15.3.1 productivity indicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-productivity-dynamics">Land productivity dynamics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#land-cover">Land cover</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-degradation">Land cover (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-7-class">Land cover (7 class)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-esa-classes">Land cover (ESA classes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-transitions">Land cover (transitions)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#soil-organic-carbon">Soil organic carbon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#soil-organic-carbon-degradation">Soil organic carbon (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#id3">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#population">Population</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#delta-normalized-burnt-ratio">Delta Normalized Burnt Ratio</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Background</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html">Land Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Background/LD_indicators.html#land-degradation-indicators">Land Degradation Indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#sdg15-3-1-indicator">SDG15.3.1 Indicator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#sdg-15-3-1-sub-indicators">SDG 15.3.1 Sub-indicators</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#productivity">Productivity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#landcover">Landcover</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#carbon-stocks">Carbon-stocks</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#combining-productivity-indicators">Combining Productivity Indicators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#vegetation-loss-gain-hotspots">Vegetation Loss/Gain hotspots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#forest-change">Forest Change</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-gain-loss">Forest Gain/Loss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-fires">Forest Fires</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Web Service Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Service_Guide.html">Serivice Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Service_Guide.html#misland-service-tour">MISLAND Service Tour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Service_Guide.html#registration-and-log-in">Registration and Log in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Service_Guide.html#calculate-indicators">Calculate Indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Service_Guide.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Service_Guide.html#compute-sdg-15-3-1-sub-indicators">compute SDG 15.3.1 Sub-indicators</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Service_Guide.html#land-productivity">Land Productivity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Service_Guide.html#landcover-change">Landcover Change</a></li>
+<li class="toctree-l5"><a class="reference internal" href="Service_Guide.html#carbon-stocks">Carbon Stocks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Service_Guide.html#vegetation-loss-gain-indicators">Vegetation Loss/Gain indicators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Service_Guide.html#forest-change">Forest Change</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Service_Guide.html#forest-fires">Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Service_Guide.html#exporting-outputs">Exporting Outputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Service_Guide.html#export-map">Export Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Service_Guide.html#export-chart">Export Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Service_Guide.html#download-data">Download data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_vegetationloss.html">Vegetation Loss/Gain indicators</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Calculate_Medalus.html">Calculating Sensitivity to Desertification (MEDALUS)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Calculate_Medalus.html#calculating-individual-quality-indices">Calculating Individual Quality Indices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_Medalus.html#climate-quality-index-cqi">Climate Quality Index(CQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_Medalus.html#soil-quality-index-sqi">Soil Quality Index(SQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_Medalus.html#vegetation-quality-index-vqi">Vegetation Quality Index(VQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Calculate_Medalus.html#management-quality-index-cqi">Management Quality Index(CQI)</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Qgis Plugin Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html">Plugin Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#modifying-the-qgis-plugin-code">Modifying the QGIS Plugin code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#downloading-the-misland-code">Downloading the MISLAND code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#installing-dependencies">Installing dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#python">Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#python-dependencies">Python dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#pyqt">PyQt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#changing-the-version-of-the-plugin">Changing the version of the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#testing-changes-to-the-plugin">Testing changes to the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#syncing-and-deploying-changes-to-the-binaries">Syncing and deploying changes to the binaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#building-a-plugin-zip-file">Building a plugin ZIP file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#deploying-the-development-version-zip-file">Deploying the development version ZIP file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#modifying-the-earth-engine-processing-code">Modifying the Earth Engine processing code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#setting-up-dependencies">Setting up dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#trends-earth-cli">trends.earth-CLI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#docker">docker</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#testing-an-earth-engine-script-locally">Testing an Earth Engine script locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#deploying-a-gee-script-to-api-trends-earth">Deploying a GEE script to api.trends.earth</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/before_installing.html">Before installing the toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/before_installing.html#download-qgis">Download QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/before_installing.html#install-qgis">Install QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/installing.html">Installing the toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/installing.html#installing-the-development-version">Installing the development version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Registration.html">Registration and settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Registration.html#registration">Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Registration.html#updating-your-user">Updating your user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Registration.html#forgot-password">Forgot password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Registration.html#advanced-settings">Advanced settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html">Calculate SDG 15.3.1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#calculate-indicators-with-simplified-tool">Calculate indicators with simplified tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#calculate-productivity">Calculate productivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#productivity-trajectory">Productivity Trajectory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#productivity-performance">Productivity Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#productivity-state">Productivity State</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#calculate-land-cover">Calculate land cover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#calculate-soil-carbon">Calculate soil carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#compute-sdg-indicator-15-3-1">Compute SDG Indicator 15.3.1</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Calculate_vegetation.html">Calculate Vegetation Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_vegetation.html#compute-vegatation-indices">Compute Vegatation Indices</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html">Calculate Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html#step-1-compute-forest-change-and-total-carbon">Step 1: Compute Forest Change and Total Carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html">Calculate Desertification (MEDALUS)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#soil-quality-index-sqi">1. Soil Quality Index (SQI)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#a-using-default-data-computed-on-google-earth-engine">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#b-using-custom-data-computed-locally-on-device">b. Using Custom data (Computed locally on device)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#raw-data-download">Raw Data Download</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#extracting-soil-drainage-soil-texture-and-rock-fragment-layers-from-hwsd-data">Extracting Soil Drainage, Soil Texture and Rock Fragment Layers from HWSD DATA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#compute-soil-quality-index">Compute Soil Quality Index</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#vegetation-quality-index-vqi">2. Vegetation Quality Index (VQI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#climate-quality-index-cqi">3. Climate Quality Index (CQI)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#id1">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#id2">b. Using Custom data (Computed locally on device)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#management-quality-index-mqi">4. Management Quality Index (MQI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#environmentally-sensitive-area-esa-index-combined-desertification-layer">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/gee_tasks.html">View and download results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/load_data.html">Load Custom Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/load_data.html#load-a-dataset-produced-by-misland">Load a dataset produced by MISLAND</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#productivity">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#land-cover">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#soil-organic-carbon">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/load_data.html#load-a-custom-input-dataset">Load a custom input dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#id1">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#id2">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#id3">Soil organic carbon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Download_data.html">Download raw data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/visualization.html">Visualization tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">QGIS Plugin Training Material</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/sdg_15_training.html">Calculate SDG 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/vegetation_degradation_training.html">Calculate Vegetation/Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/vegetation_degradation_training.html#compute-vegatation-indices">Compute Vegatation Indices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/vegetation_degradation_training.html#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/vegetation_degradation_training.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Monitoring Integrated Service for Land Degradation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Calculate Indicators</li>
+    
+    
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="calculate-indicators">
+<h1>Calculate Indicators<a class="headerlink" href="#calculate-indicators" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sdg-15-3-1-indicators">
+<h2>SDG 15.3.1 indicators<a class="headerlink" href="#sdg-15-3-1-indicators" title="Permalink to this headline">¶</a></h2>
+<p>To compute the SDG 15.3.1 indicator on the service platform, follow these simple steps,</p>
+<ol class="arabic simple">
+<li><p>Select the SDG 15.3.1 service, on the listed services menu-bar as shown below</p></li>
+</ol>
+<div class="align-center figure" id="id1">
+<a class="reference internal image-reference" href="../_images/sdg1.png"><img alt="SDG service" src="../_images/sdg1.png" style="width: 790px; height: 90px;" /></a>
+<p class="caption"><span class="caption-text">SDG 15.3.1 indicator</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>On the dialog below the listed services menu, users can either compute the sub-indicators individually, or compute the land degradation from a combination of all the sub-indicators</p></li>
+</ol>
+<div class="align-center figure" id="id2">
+<a class="reference internal image-reference" href="../_images/sdg2.png"><img alt="sub-indicators" src="../_images/sdg2.png" style="width: 202px; height: 220px;" /></a>
+<p class="caption"><span class="caption-text">SDG 15.3.1 sub-indicators</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>To compute SDG 15.3.1 select the Land degradation option on the ‘Select SDG indicator’ dropdown followed by the start and end year periods.</p></li>
+</ol>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/sdg3.png"><img alt="combining all indicators" src="../_images/sdg3.png" style="width: 387px; height: 176px;" /></a>
+</div>
+<p>The map and computed statistics will be displayed on the map panel and summary pannel respectively.</p>
+<div class="align-center figure">
+<a class="reference internal image-reference" href="../_images/sdg4.png"><img alt="combining all indicators" src="../_images/sdg4.png" style="width: 770px; height: 393px;" /></a>
+</div>
+<div class="section" id="compute-sdg-15-3-1-sub-indicators">
+<h3>compute SDG 15.3.1 Sub-indicators<a class="headerlink" href="#compute-sdg-15-3-1-sub-indicators" title="Permalink to this headline">¶</a></h3>
+<p>In additin to computing the SDG 15.3.1 indicator, users of the OSS NORTH-AFRICA STATES LDMS can compute and visualize the SDG 15.3.1 sub-indicators i.e Land productivity, Landcover change, and changes in carbon stock as discussed below:</p>
+<div class="section" id="land-productivity">
+<h4>Land Productivity<a class="headerlink" href="#land-productivity" title="Permalink to this headline">¶</a></h4>
+<p>Land productivity is computed form vegetation indices using three measures of change i.e trajectory, state and performace. To compute land productivity on the service  platform, users can follow these simple steps</p>
+<ol class="arabic simple">
+<li><p>Select SDG 15.3.1 option on the service menu-bar and on the select SDG indicator drop-down below the service menu-bar, choose the ‘Productivity’ option</p></li>
+</ol>
+<div class="align-center figure" id="id3">
+<a class="reference internal image-reference" href="../_images/productivity1.png"><img alt="finding the land productivity tool" src="../_images/productivity1.png" style="width: 287px; height: 218px;" /></a>
+<p class="caption"><span class="caption-text">finding the Land productivity tool</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>On the next drop-down select ‘Land productivity’ option to conpute the Land productivity from all three measures of change: trajectory, state, and performance.</p></li>
+</ol>
+<div class="align-center figure" id="id4">
+<a class="reference internal image-reference" href="../_images/productivity2.png"><img alt="Land_productivity" src="../_images/productivity2.png" style="width: 433px; height: 186px;" /></a>
+<p class="caption"><span class="caption-text">Computing land productivity by combining state, trajectory and performance</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Users may choose to compute either of the three measures of change of vegetation at this point by selecting the desired option form the list of options as shown in the figure above.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>The results of the computations will be displayed on the map panel and summary panel as shown below</p></li>
+</ol>
+<div class="align-center figure" id="id5">
+<a class="reference internal image-reference" href="../_images/productivity3.png"><img alt="Land_productivity_outputs" src="../_images/productivity3.png" style="width: 650px; height: 280px;" /></a>
+<p class="caption"><span class="caption-text">Land productivity output</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="landcover-change">
+<h4>Landcover Change<a class="headerlink" href="#landcover-change" title="Permalink to this headline">¶</a></h4>
+<p>To compute land cover changes, users can follow these simple steps</p>
+<ol class="arabic simple">
+<li><p>Select ‘SDG 15.3.1’ option on the services menu-bar and, under the ‘Select SDG indicator’ dropdown, choose LULC as shown below</p></li>
+</ol>
+<div class="align-center figure" id="id6">
+<a class="reference internal image-reference" href="../_images/lulc1.png"><img alt="Land cover" src="../_images/lulc1.png" style="width: 181px; height: 215px;" /></a>
+<p class="caption"><span class="caption-text">Selecting the Land cover change under SDG 15.3.1 sub-indicators</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>To view the land cover data for a particular year, select ‘Land Cover’ option on the next dropdown menu followed by the year.</p></li>
+</ol>
+<div class="align-center figure" id="id7">
+<a class="reference internal image-reference" href="../_images/lulc2.png"><img alt="Land cover" src="../_images/lulc2.png" style="width: 383px; height: 114px;" /></a>
+<p class="caption"><span class="caption-text">Viewing the Land cover data for a particular year</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>The Land cover map for the chosen year and the summary statistics will be displayed on the map panel and the summary panel as shown below</p>
+<div class="align-center figure" id="id8">
+<a class="reference internal image-reference" href="../_images/lulc3.png"><img alt="Land cover" src="../_images/lulc3.png" style="width: 665px; height: 285px;" /></a>
+<p class="caption"><span class="caption-text">Viewing the Land cover data for a particular year</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>To compute landcover change, selec the ‘Landcover change’ option on the dropdown menu followed by the start and end periods for the base and comparison year.</p></li>
+</ol>
+<div class="align-center figure" id="id9">
+<a class="reference internal image-reference" href="../_images/lulc4.png"><img alt="Land cover" src="../_images/lulc4.png" style="width: 434px; height: 133px;" /></a>
+<p class="caption"><span class="caption-text">Selecting the Landcover change option</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>The results will be displayed on the map panel and the summary statistics panel as shown below</p>
+<div class="align-center figure" id="id10">
+<a class="reference internal image-reference" href="../_images/lulc5.png"><img alt="Land cover" src="../_images/lulc5.png" style="width: 650px; height: 312px;" /></a>
+<p class="caption"><span class="caption-text">Landcover change outputs</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="carbon-stocks">
+<h4>Carbon Stocks<a class="headerlink" href="#carbon-stocks" title="Permalink to this headline">¶</a></h4>
+<p>To compute changes in carbon stocks,</p>
+<ol class="arabic simple">
+<li><p>Select ‘SDG 15.3.1’ option on the services menu-bar and under the ‘Select SDG indicator’ dropdown, choose ‘Carbon Stock Change’ option and select the start year and the end year.</p></li>
+</ol>
+<div class="align-center figure" id="id11">
+<a class="reference internal image-reference" href="../_images/carbonstocks.png"><img alt="carbon stocks" src="../_images/carbonstocks.png" style="width: 439px; height: 179px;" /></a>
+<p class="caption"><span class="caption-text">Selecting the Carbon stock change SDG 15.3.1 sub-indicator</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>The change in carbon stock for the selected area and period will be displayed on the map panel and the summary statistics computed</p>
+<div class="align-center figure" id="id12">
+<a class="reference internal image-reference" href="../_images/carbonstocks2.png"><img alt="Land cover" src="../_images/carbonstocks2.png" style="width: 650px; height: 312px;" /></a>
+<p class="caption"><span class="caption-text">Carbon stock change map and statistics</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="vegetation-loss-gain-indicators">
+<h2>Vegetation Loss/Gain indicators<a class="headerlink" href="#vegetation-loss-gain-indicators" title="Permalink to this headline">¶</a></h2>
+<p>To compute vegetation loss/gain on the service platform,</p>
+<ol class="arabic simple">
+<li><p>On the services menu, select the ‘VEGETATION GAIN/LOSS’ option</p></li>
+</ol>
+<div class="align-center figure" id="id13">
+<a class="reference internal image-reference" href="../_images/vegetation_gain_loss.png"><img alt="Vegetation gain/loss service" src="../_images/vegetation_gain_loss.png" style="width: 790px; height: 45px;" /></a>
+<p class="caption"><span class="caption-text">Finding the forest change service</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>If the selected region is a large area, the user will be prompted to select a smaller region. Select a smaller region on the ‘Select Country’ dialog on the top left conner of the dashboard</p></li>
+</ol>
+<div class="align-center figure" id="id14">
+<a class="reference internal image-reference" href="../_images/vegetation_gain_loss1.png"><img alt="select country" src="../_images/vegetation_gain_loss1.png" style="width: 780px; height: 206px;" /></a>
+<p class="caption"><span class="caption-text">seleting a region to compute vegetation gain/loss</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Selection of a smaller regin optimizes the computation time and ensures that the service does not time-out. If a large area is selected, users will be notifed by a pop up on the top right conner of the site. Computation of large ares is still under development and will be available in later versions of the service.</p>
+</div>
+<div class="align-center figure" id="id15">
+<a class="reference internal image-reference" href="../_images/vegetation_gain_loss2.png"><img alt="warning" src="../_images/vegetation_gain_loss2.png" style="width: 360px; height: 99px;" /></a>
+<p class="caption"><span class="caption-text">Pop-up notification when large area is selected.</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Next, select the start and end period for which the vegetation loss and gain will be computed.</p></li>
+</ol>
+<div class="align-center figure" id="id16">
+<a class="reference internal image-reference" href="../_images/vegetation_gain_loss3.png"><img alt="vegetation gain/loss" src="../_images/vegetation_gain_loss3.png" style="width: 350px; height: 115px;" /></a>
+<p class="caption"><span class="caption-text">Vegetation gain/loss outputs</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+<p>To compute vegetation indices using Landsat derived vegetation indices,</p>
+<ol class="arabic simple">
+<li><p>On the services menu, select the ‘VEGETATION GAIN/LOSS’ option, and under the ‘Source’ dropdown menu, select Landsat option</p></li>
+</ol>
+<div class="align-center figure" id="id17">
+<a class="reference internal image-reference" href="../_images/landsat.png"><img alt="Vegetation gain/loss service" src="../_images/landsat.png" style="width: 400px; height: 187px;" /></a>
+<p class="caption"><span class="caption-text">Selecting the Landsat-derived vegetation index option</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>On the ‘Veg index’ dropdown, select the vegetation index to compute and select the start and end period</p></li>
+</ol>
+<div class="align-center figure" id="id18">
+<a class="reference internal image-reference" href="../_images/vegindex.png"><img alt="select vegetation index" src="../_images/vegindex.png" style="width: 428px; height: 195px;" /></a>
+<p class="caption"><span class="caption-text">Choosing the vegetation index to compute</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+<p>The map and computed statistics will be displayed on the map panel and summary pannel respectively.</p>
+<div class="align-center figure" id="id19">
+<a class="reference internal image-reference" href="../_images/landsat_vegetation_loss.png"><img alt="register" src="../_images/landsat_vegetation_loss.png" style="width: 712px; height: 332px;" /></a>
+<p class="caption"><span class="caption-text">Landsat derived vegetation loss and gain output</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="forest-change">
+<h2>Forest Change<a class="headerlink" href="#forest-change" title="Permalink to this headline">¶</a></h2>
+<p>The current release of the OSS NORTH-AFRICA STATES LDMS uses ESA CCI landcover data to compute yearly changes in forest cover using the forest class and the high resolution Hansen Global forest change dataset to quantify forest loss.</p>
+<p>To compute the change in forest cover from ESA CCI landcover;</p>
+<ol class="arabic simple">
+<li><p>On the services menu, select the FOREST CHANGE option as shown below</p></li>
+</ol>
+<div class="align-center figure" id="id20">
+<a class="reference internal image-reference" href="../_images/forestchange.png"><img alt="register" src="../_images/forestchange.png" style="width: 795px; height: 51px;" /></a>
+<p class="caption"><span class="caption-text">Finding the forest change service</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Selecting the forest change option will open up a dialogue below the service menu-bar. Input the start and end year to compute the forest change.</p></li>
+</ol>
+<div class="align-center figure" id="id21">
+<a class="reference internal image-reference" href="../_images/forestchange2.png"><img alt="register" src="../_images/forestchange2.png" style="width: 600px; height: 80px;" /></a>
+<p class="caption"><span class="caption-text">Selecting the period to compute foret change</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+<p>The map and computed statistics will be displayed on the map panel and summary pannel respectively.</p>
+<div class="align-center figure" id="id22">
+<a class="reference internal image-reference" href="../_images/forestchange3.png"><img alt="register" src="../_images/forestchange3.png" style="width: 600px; height: 300px;" /></a>
+<p class="caption"><span class="caption-text">Foret change outputs</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On the current release of the OSS NORTH-AFRICA STATES LDMS, forest loss from Hansen Global forest change dataset can only be computed for small areas.</p>
+</div>
+<p>To compute forest loss using the Hansen Global forest change dataset;</p>
+<ol class="arabic simple">
+<li><p>On the top left conner of the Map pannel, click on the ‘Draw a Polygon’ tool and draw an area on the map where you wish to compute the forest loss</p></li>
+</ol>
+<div class="align-center figure" id="id23">
+<a class="reference internal image-reference" href="../_images/draw.png"><img alt="draw polygon" src="../_images/draw.png" style="width: 345px; height: 349px;" /></a>
+<p class="caption"><span class="caption-text">Draw a polygon tool</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+<div class="align-center figure" id="id24">
+<a class="reference internal image-reference" href="../_images/drawarea.png"><img alt="draw polygon" src="../_images/drawarea.png" style="width: 345px; height: 349px;" /></a>
+<p class="caption"><span class="caption-text">Draw a polygon tool</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Select FOREST CHANGE on the service menu bar and under the ‘Source dropdown’ options, choose ‘Hansen’ and select the year you wish to compute the forest loss.</p></li>
+</ol>
+<div class="align-center figure" id="id25">
+<a class="reference internal image-reference" href="../_images/Hansen.png"><img alt="Hansen" src="../_images/Hansen.png" style="width: 400px; height: 397px;" /></a>
+<p class="caption"><span class="caption-text">Selecting the Hansen Forest loss data</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</div>
+<p>The map and computed statistics will be displayed on the map panel and summary pannel respectively.</p>
+<div class="align-center figure" id="id26">
+<a class="reference internal image-reference" href="../_images/hansenoutput.png"><img alt="register" src="../_images/hansenoutput.png" style="width: 705px; height: 325px;" /></a>
+<p class="caption"><span class="caption-text">Foret change outputs</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, LocateIT Kenya Ltd
+      <span class="lastupdated">
+        Last updated on True.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

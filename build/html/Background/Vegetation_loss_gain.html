@@ -1,0 +1,466 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Vegetation Loss/Gain hotspots &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: black" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Monitoring Integrated Service for Land Degradation
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/general_information.html">General Infortmation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#get-in-touch-with-the-team">Get in touch with the team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#aknowledgement">Aknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#linces">Linces</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/data.html">Data sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#ndvi">NDVI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-moisture">Soil moisture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#precipitation">Precipitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#evapotranspiration">Evapotranspiration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#land-cover">Land cover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-carbon">Soil carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#agroecological-zones">Agroecological Zones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-quality">Soil Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#climate">Climate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#administrative-boundaries">Administrative Boundaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Layers.html">Dataset coding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#sdg-15-3-1-indicator">SDG 15.3.1 Indicator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#productivity">Productivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-trajectory-trend">Productivity trajectory (trend)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-trajectory-significance">Productivity trajectory (significance)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-degradation">Productivity performance (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-ratio">Productivity performance (ratio)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-units">Productivity performance (units)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-degradation">Productivity state (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-classes">Productivity state classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-ndvi-mean">Productivity state NDVI mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#sdg-15-3-1-productivity-indicator">SDG 15.3.1 productivity indicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-productivity-dynamics">Land productivity dynamics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#land-cover">Land cover</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-degradation">Land cover (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-7-class">Land cover (7 class)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-esa-classes">Land cover (ESA classes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-transitions">Land cover (transitions)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#soil-organic-carbon">Soil organic carbon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#soil-organic-carbon-degradation">Soil organic carbon (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#id3">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#population">Population</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#delta-normalized-burnt-ratio">Delta Normalized Burnt Ratio</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Background</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="LD_indicators.html">Land Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="LD_indicators.html#land-degradation-indicators">Land Degradation Indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="LD_indicators.html#sdg15-3-1-indicator">SDG15.3.1 Indicator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="LD_indicators.html#sdg-15-3-1-sub-indicators">SDG 15.3.1 Sub-indicators</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="LD_indicators.html#productivity">Productivity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LD_indicators.html#landcover">Landcover</a></li>
+<li class="toctree-l5"><a class="reference internal" href="LD_indicators.html#carbon-stocks">Carbon-stocks</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="LD_indicators.html#combining-productivity-indicators">Combining Productivity Indicators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="LD_indicators.html#vegetation-loss-gain-hotspots">Vegetation Loss/Gain hotspots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LD_indicators.html#forest-change">Forest Change</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="LD_indicators.html#forest-gain-loss">Forest Gain/Loss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LD_indicators.html#forest-fires">Forest Fires</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Web Service Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Service_Guide.html">Serivice Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#misland-service-tour">MISLAND Service Tour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#registration-and-log-in">Registration and Log in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#calculate-indicators">Calculate Indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Service/Service_Guide.html#compute-sdg-15-3-1-sub-indicators">compute SDG 15.3.1 Sub-indicators</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../Service/Service_Guide.html#land-productivity">Land Productivity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Service/Service_Guide.html#landcover-change">Landcover Change</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Service/Service_Guide.html#carbon-stocks">Carbon Stocks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#vegetation-loss-gain-indicators">Vegetation Loss/Gain indicators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#forest-change">Forest Change</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#forest-fires">Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#exporting-outputs">Exporting Outputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#export-map">Export Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#export-chart">Export Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#download-data">Download data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_vegetationloss.html">Vegetation Loss/Gain indicators</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_Medalus.html">Calculating Sensitivity to Desertification (MEDALUS)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Calculate_Medalus.html#calculating-individual-quality-indices">Calculating Individual Quality Indices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Calculate_Medalus.html#climate-quality-index-cqi">Climate Quality Index(CQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Calculate_Medalus.html#soil-quality-index-sqi">Soil Quality Index(SQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Calculate_Medalus.html#vegetation-quality-index-vqi">Vegetation Quality Index(VQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Calculate_Medalus.html#management-quality-index-cqi">Management Quality Index(CQI)</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Qgis Plugin Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html">Plugin Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#modifying-the-qgis-plugin-code">Modifying the QGIS Plugin code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#downloading-the-misland-code">Downloading the MISLAND code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#installing-dependencies">Installing dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#python">Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#python-dependencies">Python dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#pyqt">PyQt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#changing-the-version-of-the-plugin">Changing the version of the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#testing-changes-to-the-plugin">Testing changes to the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#syncing-and-deploying-changes-to-the-binaries">Syncing and deploying changes to the binaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#building-a-plugin-zip-file">Building a plugin ZIP file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#deploying-the-development-version-zip-file">Deploying the development version ZIP file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#modifying-the-earth-engine-processing-code">Modifying the Earth Engine processing code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#setting-up-dependencies">Setting up dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#trends-earth-cli">trends.earth-CLI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#docker">docker</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#testing-an-earth-engine-script-locally">Testing an Earth Engine script locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#deploying-a-gee-script-to-api-trends-earth">Deploying a GEE script to api.trends.earth</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/before_installing.html">Before installing the toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/before_installing.html#download-qgis">Download QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/before_installing.html#install-qgis">Install QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/installing.html">Installing the toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/installing.html#installing-the-development-version">Installing the development version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Registration.html">Registration and settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Registration.html#registration">Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Registration.html#updating-your-user">Updating your user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Registration.html#forgot-password">Forgot password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Registration.html#advanced-settings">Advanced settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html">Calculate SDG 15.3.1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#calculate-indicators-with-simplified-tool">Calculate indicators with simplified tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#calculate-productivity">Calculate productivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#productivity-trajectory">Productivity Trajectory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#productivity-performance">Productivity Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#productivity-state">Productivity State</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#calculate-land-cover">Calculate land cover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#calculate-soil-carbon">Calculate soil carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#compute-sdg-indicator-15-3-1">Compute SDG Indicator 15.3.1</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Calculate_vegetation.html">Calculate Vegetation Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_vegetation.html#compute-vegatation-indices">Compute Vegatation Indices</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html">Calculate Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html#step-1-compute-forest-change-and-total-carbon">Step 1: Compute Forest Change and Total Carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html">Calculate Desertification (MEDALUS)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#soil-quality-index-sqi">1. Soil Quality Index (SQI)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#a-using-default-data-computed-on-google-earth-engine">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#b-using-custom-data-computed-locally-on-device">b. Using Custom data (Computed locally on device)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#raw-data-download">Raw Data Download</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#extracting-soil-drainage-soil-texture-and-rock-fragment-layers-from-hwsd-data">Extracting Soil Drainage, Soil Texture and Rock Fragment Layers from HWSD DATA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#compute-soil-quality-index">Compute Soil Quality Index</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#vegetation-quality-index-vqi">2. Vegetation Quality Index (VQI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#climate-quality-index-cqi">3. Climate Quality Index (CQI)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#id1">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#id2">b. Using Custom data (Computed locally on device)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#management-quality-index-mqi">4. Management Quality Index (MQI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#environmentally-sensitive-area-esa-index-combined-desertification-layer">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/gee_tasks.html">View and download results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/load_data.html">Load Custom Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/load_data.html#load-a-dataset-produced-by-misland">Load a dataset produced by MISLAND</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#productivity">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#land-cover">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#soil-organic-carbon">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/load_data.html#load-a-custom-input-dataset">Load a custom input dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#id1">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#id2">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#id3">Soil organic carbon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Download_data.html">Download raw data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/visualization.html">Visualization tools</a></li>
+</ul>
+<p class="caption"><span class="caption-text">QGIS Plugin Training Material</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/sdg_15_training.html">Calculate SDG 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/vegetation_degradation_training.html">Calculate Vegetation/Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/vegetation_degradation_training.html#compute-vegatation-indices">Compute Vegatation Indices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/vegetation_degradation_training.html#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/vegetation_degradation_training.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Monitoring Integrated Service for Land Degradation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Vegetation Loss/Gain hotspots</li>
+    
+    
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="vegetation-loss-gain-hotspots">
+<h1>Vegetation Loss/Gain hotspots<a class="headerlink" href="#vegetation-loss-gain-hotspots" title="Permalink to this headline">¶</a></h1>
+<p>Land degradation hotsports (LDH) are produced via the analysis of time-series vegetation indices data and are used to characterize areas of different sizes, where the vegetation cover and the soil types are severely degraded.</p>
+<p>Vegetation loss/gain hotspots will be calculated based on time series observation of selected suit of vegetation indices depending on the climatic zones and terrain morphology of the North African countries. The selected indices derived from Landsat data are as listed below:</p>
+<blockquote>
+<div><p>-NDVI for humid zones, sub-humid and semi-arid zones
+-MSAVI2 for arid and stepic zones
+-SAVI for desert areas</p>
+</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, LocateIT Kenya Ltd
+      <span class="lastupdated">
+        Last updated on True.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dataset coding &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Frequently asked questions" href="faq.html" />
+    <link rel="prev" title="Data sources" href="data.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: black" >
+            <a href="../index.html" class="icon icon-home"> Monitoring Integrated Service for Land Degradation
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="general_information.html">General Infortmation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="general_information.html#get-in-touch-with-the-team">Get in touch with the team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general_information.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general_information.html#aknowledgement">Aknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general_information.html#linces">Linces</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Data sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="data.html#ndvi">NDVI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#soil-moisture">Soil moisture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#precipitation">Precipitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#evapotranspiration">Evapotranspiration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#land-cover">Land cover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#soil-carbon">Soil carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#agroecological-zones">Agroecological Zones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#soil-quality">Soil Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#climate">Climate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#administrative-boundaries">Administrative Boundaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dataset coding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sdg-15-3-1-indicator">SDG 15.3.1 Indicator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#productivity">Productivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-trajectory-trend">Productivity trajectory (trend)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-trajectory-significance">Productivity trajectory (significance)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-performance-degradation">Productivity performance (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-performance-ratio">Productivity performance (ratio)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-performance-units">Productivity performance (units)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-state-degradation">Productivity state (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-state-classes">Productivity state classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-state-ndvi-mean">Productivity state NDVI mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sdg-15-3-1-productivity-indicator">SDG 15.3.1 productivity indicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#land-productivity-dynamics">Land productivity dynamics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#land-cover">Land cover</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#land-cover-degradation">Land cover (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#land-cover-7-class">Land cover (7 class)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#land-cover-esa-classes">Land cover (ESA classes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#land-cover-transitions">Land cover (transitions)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#soil-organic-carbon">Soil organic carbon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#soil-organic-carbon-degradation">Soil organic carbon (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#population">Population</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delta-normalized-burnt-ratio">Delta Normalized Burnt Ratio</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently asked questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#installation-of-misland-north-africa">Installation of MISLAND-North Africa</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#what-version-of-quantum-gis-qgis-do-i-need-for-the-toolbox">What version of Quantum GIS (QGIS) do I need for the toolbox?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#do-i-need-to-download-a-32-bit-or-64-bit-version-of-qgis">Do I need to download a 32-bit or 64 bit version of QGIS?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#how-do-i-install-the-plugin">How do I install the plugin?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#how-do-i-upgrade-the-plugin">How do I upgrade the plugin?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#how-do-i-uninstall-the-plugin">How do I uninstall the plugin?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#datasets">Datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#when-will-you-update-datasets-for-the-current-year">When will you update datasets for the current year?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#is-there-an-option-to-download-the-original-data">Is there an option to download the original data?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#will-the-toolbox-support-higher-resolution-datasets">Will the toolbox support higher resolution datasets?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#methods">Methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#who-was-the-default-time-period-for-the-analysis-determined">Who was the default time period for the analysis determined?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#productivity">Productivity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="faq.html#how-does-the-result-provided-by-state-differs-from-trajectory">How does the result provided by state differs from trajectory?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#land-cover">Land cover</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="faq.html#currently-the-land-cover-aggregation-is-done-following-the-unccd-guidelines-but-that-classification-does-not-take-into-account-country-level-characteristics-could-it-be-possible-to-allow-the-user-to-define-the-aggregation-criteria">Currently, the land cover aggregation is done following the UNCCD guidelines, but that classification does not take into account country level characteristics. Could it be possible to allow the user to define the aggregation criteria?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="faq.html#how-can-we-isolate-woody-plant-encroachment-within-the-toolbox">How can we isolate woody plant encroachment within the toolbox?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#carbon-stocks">Carbon stocks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="faq.html#why-use-soil-organic-carbon-soc-instead-of-above-and-below-ground-carbon-to-measure-carbon-stocks">Why use soil organic carbon (SOC) instead of above and below-ground carbon to  measure carbon stocks?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="faq.html#is-it-possible-to-measure-identify-processes-of-degradation-linked-to-salinization-using-this-tool">Is it possible to measure identify processes of degradation linked to salinization using this tool?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#land-degradation-outputs">Land degradation outputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#how-were-the-layers-combined-to-define-the-final-land-degradation-layer">How were the layers combined to define the final land degradation layer?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#why-do-i-see-areas-the-data-says-are-improving-or-degrading-when-i-know-they-are-not">Why do I see areas the data says are improving or degrading when I know they are not?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#all-of-the-sub-indicators-are-measuring-vegetation-how-does-this-contribute-to-understanding-and-identifying-land-degradation">All of the sub-indicators are measuring vegetation: how does this contribute to understanding and identifying land degradation?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#future-plans">Future plans</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="faq.html#when-will-there-be-an-offline-version-of-the-toolbox">When will there be an offline version of the toolbox?</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Background</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html">Land Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Background/LD_indicators.html#land-degradation-indicators">Land Degradation Indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#sdg15-3-1-indicator">SDG15.3.1 Indicator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#sdg-15-3-1-sub-indicators">SDG 15.3.1 Sub-indicators</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#productivity">Productivity</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#landcover">Landcover</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../Background/LD_indicators.html#carbon-stocks">Carbon-stocks</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#combining-productivity-indicators">Combining Productivity Indicators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#vegetation-loss-gain-hotspots">Vegetation Loss/Gain hotspots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#forest-change">Forest Change</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-gain-loss">Forest Gain/Loss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-fires">Forest Fires</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Background/SDG_indicators.html">SDG15.3.1 Indicator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Background/SDG_indicators.html#sdg-15-3-1-sub-indicators">SDG 15.3.1 Sub-indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Background/SDG_indicators.html#productivity">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Background/SDG_indicators.html#combining-productivity-indicators">Combining Productivity Indicators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Background/SDG_indicators.html#landcover">Landcover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Background/SDG_indicators.html#carbon-stocks">Carbon-stocks</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Background/vegetationloss.html">Vegetation Loss/Gain hotspots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Background/Forest_change.html">Forest Change</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Background/Forest_change.html#forest-gain-loss">Forest Gain/Loss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Background/Forest_change.html#forest-fires">Forest Fires</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Web Service Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Service_Guide.html">Serivice Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#misland-site-tour">MISLAND Site Tour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#registration-and-log-in">Registration and Log in</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_SDG.html">SDG 15.3.1 indicator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Calculate_SDG.html#compute-sdg-15-3-1-sub-indicators">Compute SDG 15.3.1 Sub-indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Calculate_SDG.html#land-productivity">Land Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Calculate_SDG.html#landcover-change">Landcover Change</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Calculate_SDG.html#carbon-stocks">Carbon Stocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Calculate_SDG.html#compute-sdg-15-3-1-indicator">Compute SDG 15.3.1 Indicator</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_vegetationloss.html">Calculate Vegetation Loss/Gain indicators</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_Forestloss.html">Calculate Forest Change</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Calculate_Forestloss.html#computing-forest-loss">Computing Forest Loss</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Calculate_Forestloss.html#computing-forest-fires">Computing Forest Fires</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Calculate_Medalus.html">Calculating Sensitivity to Desertification (MEDALUS)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Calculate_Medalus.html#calculating-individual-quality-indicators">Calculating Individual Quality Indicators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Calculate_Medalus.html#calculate-the-environmental-sensitivity-areas-index-esai">Calculate the Environmental Sensitivity Areas Index(ESAI)</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Download_results.html">Exporting Outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Download_results.html#export-map">Export Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Download_results.html#export-chart">Export Chart</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Download_data.html">Download data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Download_data.html#downloading-raster-data">Downloading Raster Data</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Qgis Plugin Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html">Plugin Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#modifying-the-qgis-plugin-code">Modifying the QGIS Plugin code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#downloading-the-misland-code">Downloading the MISLAND code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#installing-dependencies">Installing dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#python">Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#python-dependencies">Python dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#pyqt">PyQt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#changing-the-version-of-the-plugin">Changing the version of the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#testing-changes-to-the-plugin">Testing changes to the plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#syncing-and-deploying-changes-to-the-binaries">Syncing and deploying changes to the binaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#building-a-plugin-zip-file">Building a plugin ZIP file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#deploying-the-development-version-zip-file">Deploying the development version ZIP file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#modifying-the-earth-engine-processing-code">Modifying the Earth Engine processing code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#setting-up-dependencies">Setting up dependencies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#trends-earth-cli">trends.earth-CLI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#docker">docker</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#testing-an-earth-engine-script-locally">Testing an Earth Engine script locally</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/plugin_development.html#deploying-a-gee-script-to-api-trends-earth">Deploying a GEE script to api.trends.earth</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/before_installing.html">Before installing the toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/before_installing.html#download-qgis">Download QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/before_installing.html#install-qgis">Install QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/installing.html">Installing the toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/installing.html#installing-the-development-version">Installing the development version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Registration.html">Registration and settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Registration.html#registration">Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Registration.html#updating-your-user">Updating your user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Registration.html#forgot-password">Forgot password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Registration.html#advanced-settings">Advanced settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html">Calculate SDG 15.3.1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#calculate-indicators-with-simplified-tool">Calculate indicators with simplified tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#calculate-productivity">Calculate productivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#productivity-trajectory">Productivity Trajectory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#productivity-performance">Productivity Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#productivity-state">Productivity State</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#calculate-land-cover">Calculate land cover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#calculate-soil-carbon">Calculate soil carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_sdg15.html#compute-sdg-indicator-15-3-1">Compute SDG Indicator 15.3.1</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Calculate_vegetation.html">Calculate Vegetation Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_vegetation.html#compute-vegatation-indices">Compute Vegatation Indices</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html">Calculate Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html#step-1-compute-forest-change-and-total-carbon">Step 1: Compute Forest Change and Total Carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_forest.html#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html">Calculate Desertification (MEDALUS)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#soil-quality-index-sqi">1. Soil Quality Index (SQI)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#a-using-default-data-computed-on-google-earth-engine">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#b-using-custom-data-computed-locally-on-device">b. Using Custom data (Computed locally on device)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#raw-data-download">Raw Data Download</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#extracting-soil-drainage-soil-texture-and-rock-fragment-layers-from-hwsd-data">Extracting Soil Drainage, Soil Texture and Rock Fragment Layers from HWSD DATA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#compute-soil-quality-index">Compute Soil Quality Index</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#vegetation-quality-index-vqi">2. Vegetation Quality Index (VQI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#climate-quality-index-cqi">3. Climate Quality Index (CQI)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#id1">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#id2">b. Using Custom data (Computed locally on device)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#management-quality-index-mqi">4. Management Quality Index (MQI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/Calculate_medalus.html#environmentally-sensitive-area-esa-index-combined-desertification-layer">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/gee_tasks.html">View and download results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/load_data.html">Load Custom Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/load_data.html#load-a-dataset-produced-by-misland">Load a dataset produced by MISLAND</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#productivity">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#land-cover">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#soil-organic-carbon">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/load_data.html#load-a-custom-input-dataset">Load a custom input dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#id1">Productivity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#id2">Land cover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Qgis_Plugin/load_data.html#id3">Soil organic carbon</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/Download_data.html">Download raw data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/visualization.html">Visualization tools</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">QGIS Plugin Training Material</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/sdg_15_training.html">Calculate SDG 15.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Qgis_Plugin/vegetation_degradation_training.html">Calculate Vegetation/Forest Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/vegetation_degradation_training.html#compute-vegatation-indices">Compute Vegatation Indices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/vegetation_degradation_training.html#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Qgis_Plugin/vegetation_degradation_training.html#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: black" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Monitoring Integrated Service for Land Degradation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Dataset coding</li>
+
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dataset-coding">
+<h1>Dataset coding<a class="headerlink" href="#dataset-coding" title="Permalink to this headline"></a></h1>
+<p>The spatial data produced by MISLAND-North Africa is in GeoTiff format. This is a
+widely supported format, so theese datasets can be used within QGIS as well as
+within any other GIS software.</p>
+<p>If you wish to use MISLAND-North Africa data outside of the tool itself, you will need to
+know how the data is coded. The tables below provide guidance on what the exact
+layers are that are produced by each analysis in MISLAND-North Africa.</p>
+<p>To see which of the below layers is contained within a MISLAND-North Africa output
+file, use the <a class="reference external" href="../documentation/load_data.html">load data</a> tool. When you
+choose a file with that toool, it will show you a list of the layers within
+that file, as well as the band number for each layer.</p>
+<section id="sdg-15-3-1-indicator">
+<h2>SDG 15.3.1 Indicator<a class="headerlink" href="#sdg-15-3-1-indicator" title="Permalink to this headline"></a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>Degradation</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>No change</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Improvement</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="productivity">
+<h2>Productivity<a class="headerlink" href="#productivity" title="Permalink to this headline"></a></h2>
+<section id="productivity-trajectory-trend">
+<h3>Productivity trajectory (trend)<a class="headerlink" href="#productivity-trajectory-trend" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>Any other value</p></td>
+<td><p>Linear trend of annually
+integrated NDVI, scaled by 10,000</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="productivity-trajectory-significance">
+<h3>Productivity trajectory (significance)<a class="headerlink" href="#productivity-trajectory-significance" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>-3</p></td>
+<td><p>Significant decline (p &gt; .99)</p></td>
+</tr>
+<tr class="row-even"><td><p>-2</p></td>
+<td><p>Significant decline (p &gt; .95)</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>Significant decline (p &gt; .90)</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>No significant change</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Significant increase (p &gt; .90)</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Significant increase (p &gt; .95)</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Significant increase (p &gt; .99)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="productivity-performance-degradation">
+<h3>Productivity performance (degradation)<a class="headerlink" href="#productivity-performance-degradation" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>Degradation</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>No change</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="productivity-performance-ratio">
+<h3>Productivity performance (ratio)<a class="headerlink" href="#productivity-performance-ratio" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 92%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>Ratio of mean NDVI and maximum productivity. See background on
+<a class="reference external" href="../background/understanding_indicators15.html#productivity-performance">performance</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="productivity-performance-units">
+<h3>Productivity performance (units)<a class="headerlink" href="#productivity-performance-units" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>Any other value</p></td>
+<td><p>ID number of unit used to calculate performance. See background on
+<a class="reference external" href="../background/understanding_indicators15.html#productivity-performance">performance</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="productivity-state-degradation">
+<h3>Productivity state (degradation)<a class="headerlink" href="#productivity-state-degradation" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>Any other value</p></td>
+<td><p>Change in productivity state classes between baseline and
+target period, calculated as the rank in the target period
+minus the rank in the baseline period. Positive values
+indicate improvement, negative values indicate decline.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="productivity-state-classes">
+<h3>Productivity state classes<a class="headerlink" href="#productivity-state-classes" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>Any other value</p></td>
+<td><p>Percentile class for productivity state. See background on
+<a class="reference external" href="../background/understanding_indicators15.html#productivity-state">productivity state</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="productivity-state-ndvi-mean">
+<h3>Productivity state NDVI mean<a class="headerlink" href="#productivity-state-ndvi-mean" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>Any other value</p></td>
+<td><p>Mean annually integrated NDVI for the baseline period chosen for
+productivity state, scaled by 10,000. See background on
+<a class="reference external" href="../background/understanding_indicators15.html#productivity-state">productivity state</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sdg-15-3-1-productivity-indicator">
+<h3>SDG 15.3.1 productivity indicator<a class="headerlink" href="#sdg-15-3-1-productivity-indicator" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Declining</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Early signs of decline</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Stable but stressed</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Stable</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Increasing</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="land-productivity-dynamics">
+<h3>Land productivity dynamics<a class="headerlink" href="#land-productivity-dynamics" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Declining</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Moderate decline</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Stressed</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Stable</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Increasing</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="land-cover">
+<h2>Land cover<a class="headerlink" href="#land-cover" title="Permalink to this headline"></a></h2>
+<section id="land-cover-degradation">
+<h3>Land cover (degradation)<a class="headerlink" href="#land-cover-degradation" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>Degradation</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>No change</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Improvement</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="land-cover-7-class">
+<h3>Land cover (7 class)<a class="headerlink" href="#land-cover-7-class" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Tree-covered</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Grasslands</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Cropland</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Wetland</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Artificial</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Other land</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Water body</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="land-cover-esa-classes">
+<h3>Land cover (ESA classes)<a class="headerlink" href="#land-cover-esa-classes" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 91%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>Cropland, rainfed</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>Herbaceous cover</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>Tree or shrub cover</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>Cropland, irrigated or post‐flooding</p></td>
+</tr>
+<tr class="row-odd"><td><p>30</p></td>
+<td><p>Mosaic cropland (&gt;50%) / natural vegetation (tree, shrub, herbaceous cover) (&lt;50%)</p></td>
+</tr>
+<tr class="row-even"><td><p>40</p></td>
+<td><p>Mosaic natural vegetation (tree, shrub, herbaceous cover) (&gt;50%) / cropland (&lt;50%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>50</p></td>
+<td><p>Tree cover, broadleaved, evergreen, closed to open (&gt;15%)</p></td>
+</tr>
+<tr class="row-even"><td><p>60</p></td>
+<td><p>Tree cover, broadleaved, deciduous, closed to open (&gt;15%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>61</p></td>
+<td><p>Tree cover, broadleaved, deciduous, closed (&gt;40%)</p></td>
+</tr>
+<tr class="row-even"><td><p>62</p></td>
+<td><p>Tree cover, broadleaved, deciduous, open (15‐40%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>70</p></td>
+<td><p>Tree cover, needleleaved, evergreen, closed to open (&gt;15%)</p></td>
+</tr>
+<tr class="row-even"><td><p>71</p></td>
+<td><p>Tree cover, needleleaved, evergreen, closed (&gt;40%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>72</p></td>
+<td><p>Tree cover, needleleaved, evergreen, open (15‐40%)</p></td>
+</tr>
+<tr class="row-even"><td><p>80</p></td>
+<td><p>Tree cover, needleleaved, deciduous, closed to open (&gt;15%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>81</p></td>
+<td><p>Tree cover, needleleaved, deciduous, closed (&gt;40%)</p></td>
+</tr>
+<tr class="row-even"><td><p>82</p></td>
+<td><p>Tree cover, needleleaved, deciduous, open (15‐40%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>90</p></td>
+<td><p>Tree cover, mixed leaf type (broadleaved and needleleaved)</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p>Mosaic tree and shrub (&gt;50%) / herbaceous cover (&lt;50%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>110</p></td>
+<td><p>Mosaic herbaceous cover (&gt;50%) / tree and shrub (&lt;50%)</p></td>
+</tr>
+<tr class="row-even"><td><p>120</p></td>
+<td><p>Shrubland</p></td>
+</tr>
+<tr class="row-odd"><td><p>121</p></td>
+<td><p>Evergreen shrubland</p></td>
+</tr>
+<tr class="row-even"><td><p>122</p></td>
+<td><p>Deciduous shrubland</p></td>
+</tr>
+<tr class="row-odd"><td><p>130</p></td>
+<td><p>Grassland</p></td>
+</tr>
+<tr class="row-even"><td><p>140</p></td>
+<td><p>Lichens and mosses</p></td>
+</tr>
+<tr class="row-odd"><td><p>150</p></td>
+<td><p>Sparse vegetation (tree, shrub, herbaceous cover) (&lt;15%)</p></td>
+</tr>
+<tr class="row-even"><td><p>151</p></td>
+<td><p>Sparse tree (&lt;15%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>152</p></td>
+<td><p>Sparse shrub (&lt;15%)</p></td>
+</tr>
+<tr class="row-even"><td><p>153</p></td>
+<td><p>Sparse herbaceous cover (&lt;15%)</p></td>
+</tr>
+<tr class="row-odd"><td><p>160</p></td>
+<td><p>Tree cover, flooded, fresh or brakish water</p></td>
+</tr>
+<tr class="row-even"><td><p>170</p></td>
+<td><p>Tree cover, flooded, saline water</p></td>
+</tr>
+<tr class="row-odd"><td><p>180</p></td>
+<td><p>Shrub or herbaceous cover, flooded, fresh/saline/brakish water</p></td>
+</tr>
+<tr class="row-even"><td><p>190</p></td>
+<td><p>Urban areas</p></td>
+</tr>
+<tr class="row-odd"><td><p>200</p></td>
+<td><p>Bare areas</p></td>
+</tr>
+<tr class="row-even"><td><p>201</p></td>
+<td><p>Consolidated bare areas</p></td>
+</tr>
+<tr class="row-odd"><td><p>202</p></td>
+<td><p>Unconsolidated bare areas</p></td>
+</tr>
+<tr class="row-even"><td><p>210</p></td>
+<td><p>Water bodies</p></td>
+</tr>
+<tr class="row-odd"><td><p>220</p></td>
+<td><p>Permanent snow and ice</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="land-cover-transitions">
+<h3>Land cover (transitions)<a class="headerlink" href="#land-cover-transitions" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Tree-covered - Tree-covered (no change)</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Grassland - Grassland (no change)</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Cropland - Cropland (no change)</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Wetland - Wetland (no change)</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Artificial - Artificial (no change)</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Other land - Other land (no change)</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Water body - Water body (no change)</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>Forest - Grassland</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>Forest - Cropland</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>Forest - Wetland</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>Forest - Artificial</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>Forest - Other land</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>Forest - Water body</p></td>
+</tr>
+<tr class="row-even"><td><p>21</p></td>
+<td><p>Grassland - Forest</p></td>
+</tr>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>Grassland - Cropland</p></td>
+</tr>
+<tr class="row-even"><td><p>24</p></td>
+<td><p>Grassland - Wetland</p></td>
+</tr>
+<tr class="row-odd"><td><p>25</p></td>
+<td><p>Grassland - Artificial</p></td>
+</tr>
+<tr class="row-even"><td><p>26</p></td>
+<td><p>Grassland - Other land</p></td>
+</tr>
+<tr class="row-odd"><td><p>27</p></td>
+<td><p>Grassland - Water body</p></td>
+</tr>
+<tr class="row-even"><td><p>31</p></td>
+<td><p>Cropland - Forest</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>Cropland - Grassland</p></td>
+</tr>
+<tr class="row-even"><td><p>34</p></td>
+<td><p>Cropland - Wetland</p></td>
+</tr>
+<tr class="row-odd"><td><p>35</p></td>
+<td><p>Cropland - Artificial</p></td>
+</tr>
+<tr class="row-even"><td><p>36</p></td>
+<td><p>Cropland - Other land</p></td>
+</tr>
+<tr class="row-odd"><td><p>37</p></td>
+<td><p>Cropland - Water body</p></td>
+</tr>
+<tr class="row-even"><td><p>41</p></td>
+<td><p>Wetland - Forest</p></td>
+</tr>
+<tr class="row-odd"><td><p>42</p></td>
+<td><p>Wetland - Grassland</p></td>
+</tr>
+<tr class="row-even"><td><p>43</p></td>
+<td><p>Wetland - Cropland</p></td>
+</tr>
+<tr class="row-odd"><td><p>45</p></td>
+<td><p>Wetland - Artificial</p></td>
+</tr>
+<tr class="row-even"><td><p>46</p></td>
+<td><p>Wetland - Other land</p></td>
+</tr>
+<tr class="row-odd"><td><p>47</p></td>
+<td><p>Wetland - Water body</p></td>
+</tr>
+<tr class="row-even"><td><p>51</p></td>
+<td><p>Artificial - Forest</p></td>
+</tr>
+<tr class="row-odd"><td><p>52</p></td>
+<td><p>Artificial - Grassland</p></td>
+</tr>
+<tr class="row-even"><td><p>53</p></td>
+<td><p>Artificial - Cropland</p></td>
+</tr>
+<tr class="row-odd"><td><p>54</p></td>
+<td><p>Artificial - Wetland</p></td>
+</tr>
+<tr class="row-even"><td><p>56</p></td>
+<td><p>Artificial - Other land</p></td>
+</tr>
+<tr class="row-odd"><td><p>57</p></td>
+<td><p>Artificial - Water body</p></td>
+</tr>
+<tr class="row-even"><td><p>61</p></td>
+<td><p>Other land - Forest</p></td>
+</tr>
+<tr class="row-odd"><td><p>62</p></td>
+<td><p>Other land - Grassland</p></td>
+</tr>
+<tr class="row-even"><td><p>63</p></td>
+<td><p>Other land - Cropland</p></td>
+</tr>
+<tr class="row-odd"><td><p>64</p></td>
+<td><p>Other land - Wetland</p></td>
+</tr>
+<tr class="row-even"><td><p>65</p></td>
+<td><p>Other land - Artificial</p></td>
+</tr>
+<tr class="row-odd"><td><p>67</p></td>
+<td><p>Other land - Water body</p></td>
+</tr>
+<tr class="row-even"><td><p>71</p></td>
+<td><p>Water body - Forest</p></td>
+</tr>
+<tr class="row-odd"><td><p>72</p></td>
+<td><p>Water body - Grassland</p></td>
+</tr>
+<tr class="row-even"><td><p>73</p></td>
+<td><p>Water body - Cropland</p></td>
+</tr>
+<tr class="row-odd"><td><p>74</p></td>
+<td><p>Water body - Wetland</p></td>
+</tr>
+<tr class="row-even"><td><p>75</p></td>
+<td><p>Water body - Artificial</p></td>
+</tr>
+<tr class="row-odd"><td><p>76</p></td>
+<td><p>Water body - Other land</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="soil-organic-carbon">
+<h2>Soil organic carbon<a class="headerlink" href="#soil-organic-carbon" title="Permalink to this headline"></a></h2>
+<section id="soil-organic-carbon-degradation">
+<h3>Soil organic carbon (degradation)<a class="headerlink" href="#soil-organic-carbon-degradation" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>Any other value</p></td>
+<td><p>Percentage change in soil organic carbon content (0 - 30 cm depth)
+from baseline to target year. Positive values indicate increase,
+negative values indicate decrease.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h3>Soil organic carbon<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 81%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>Any other value</p></td>
+<td><p>Soil organic carbon content (0 - 30 cm depth) in metric tons per hectare</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="population">
+<h3>Population<a class="headerlink" href="#population" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-32768</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>Any other value</p></td>
+<td><p>Total population within grid cell</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="delta-normalized-burnt-ratio">
+<h3>Delta Normalized Burnt Ratio<a class="headerlink" href="#delta-normalized-burnt-ratio" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>-500</p></td>
+<td><p>No data</p></td>
+</tr>
+<tr class="row-odd"><td><p>-350</p></td>
+<td><p>Hight Severety</p></td>
+</tr>
+<tr class="row-even"><td><p>-300</p></td>
+<td><p>Moderate High Severety</p></td>
+</tr>
+<tr class="row-odd"><td><p>-200</p></td>
+<td><p>Moderate Low Severety</p></td>
+</tr>
+<tr class="row-even"><td><p>-100</p></td>
+<td><p>Low Severety</p></td>
+</tr>
+<tr class="row-odd"><td><p>100</p></td>
+<td><p>Unburned</p></td>
+</tr>
+<tr class="row-even"><td><p>300</p></td>
+<td><p>Enhanced Growth Low</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Enhanced Growth High</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="data.html" class="btn btn-neutral float-left" title="Data sources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="Frequently asked questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, LocateIT Kenya Ltd.
+      <span class="lastupdated">Last updated on True.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

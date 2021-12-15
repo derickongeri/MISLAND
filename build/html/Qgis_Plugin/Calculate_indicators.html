@@ -1,0 +1,1189 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Calculate indicators &mdash; Monitoring Integrated Service for Land Degradation 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Plot data" href="Plot_data.html" />
+    <link rel="prev" title="Registration and settings" href="Registration.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: black" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Monitoring Integrated Service for Land Degradation
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/general_information.html">General Infortmation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#get-in-touch-with-the-team">Get in touch with the team</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#authors">Authors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#aknowledgement">Aknowledgement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/general_information.html#linces">Linces</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/data.html">Data sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#ndvi">NDVI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-moisture">Soil moisture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#precipitation">Precipitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#evapotranspiration">Evapotranspiration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#land-cover">Land cover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-carbon">Soil carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#agroecological-zones">Agroecological Zones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#soil-quality">Soil Quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#climate">Climate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/data.html#administrative-boundaries">Administrative Boundaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Layers.html">Dataset coding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#sdg-15-3-1-indicator">SDG 15.3.1 Indicator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#productivity">Productivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-trajectory-trend">Productivity trajectory (trend)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-trajectory-significance">Productivity trajectory (significance)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-degradation">Productivity performance (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-ratio">Productivity performance (ratio)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-performance-units">Productivity performance (units)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-degradation">Productivity state (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-classes">Productivity state classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#productivity-state-ndvi-mean">Productivity state NDVI mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#sdg-15-3-1-productivity-indicator">SDG 15.3.1 productivity indicator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-productivity-dynamics">Land productivity dynamics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#land-cover">Land cover</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-degradation">Land cover (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-7-class">Land cover (7 class)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-esa-classes">Land cover (ESA classes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#land-cover-transitions">Land cover (transitions)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Layers.html#soil-organic-carbon">Soil organic carbon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#soil-organic-carbon-degradation">Soil organic carbon (degradation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#id3">Soil organic carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#population">Population</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Layers.html#delta-normalized-burnt-ratio">Delta Normalized Burnt Ratio</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Background</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Background/LD_indicators.html">Land Degradation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Background/LD_indicators.html#land-degradation-indicators">Land Degradation Indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#sdg15-3-1-indicator">SDG15.3.1 Indicator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#sdg-15-3-1-sub-indicators">SDG 15.3.1 Sub-indicators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#combining-productivity-indicators">Combining Productivity Indicators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#vegetation-loss-gain-hotspots">Vegetation Loss/Gain hotspots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Background/LD_indicators.html#forest-change">Forest Change</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-gain-loss">Forest Gain/Loss</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Background/LD_indicators.html#forest-fires">Forest Fires</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Web Service Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Service/Service_Guide.html">Serivice Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#misland-service-tour">MISLAND Service Tour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#registration-and-log-in">Registration and Log in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#calculate-indicators">Calculate Indicators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#sdg-15-3-1-indicator">SDG 15.3.1 indicator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Service/Service_Guide.html#compute-sdg-15-3-1-sub-indicators">compute SDG 15.3.1 Sub-indicators</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#vegetation-loss-gain-indicators">Vegetation Loss/Gain indicators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#forest-change">Forest Change</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#forest-fires">Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Service/Service_Guide.html#exporting-outputs">Exporting Outputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#export-map">Export Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#export-chart">Export Chart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Service/Service_Guide.html#download-data">Download data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Qgis Plugin Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="before_installing.html">Before installing the toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="before_installing.html#download-qgis">Download QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="before_installing.html#install-qgis">Install QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installing the toolbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installing.html#installing-the-development-version-recommended">Installing the development version (recommended)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Registration.html">Registration and settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Registration.html#registration">Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Registration.html#updating-your-user">Updating your user</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Registration.html#forgot-password">Forgot password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Registration.html#advanced-settings">Advanced settings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calculate indicators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-indicators-with-simplified-tool">Calculate indicators with simplified tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-productivity">Calculate productivity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-trajectory">Productivity Trajectory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-performance">Productivity Performance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#productivity-state">Productivity State</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-land-cover">Calculate land cover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-soil-carbon">Calculate soil carbon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compute-sdg-indicator-15-3-1">Compute SDG Indicator 15.3.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compute-vegatation-indices">Compute Vegatation Indices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compute-forest-fires">Compute Forest Fires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compute-forest-change-and-total-carbon-summary">Compute Forest Change and Total Carbon &amp; Summary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-compute-forest-change-and-total-carbon">Step 1: Compute Forest Change and Total Carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-generate-carbon-change-summary">Step 2: Generate Carbon Change Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#compute-mediterrenean-desertification-and-land-use-medalus">Compute Mediterrenean Desertification and Land Use (MEDALUS)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#soil-quality-index-sqi">1. Soil Quality Index (SQI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#a-using-default-data-computed-on-google-earth-engine">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#b-using-custom-data-computed-locally-on-device">b. Using Custom data (Computed locally on device)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#vegetation-quality-index-vqi">2. Vegetation Quality Index (VQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#climate-quality-index-cqi">3. Climate Quality Index (CQI)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">a. Using default data (Computed on Google Earth Engine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">b. Using Custom data (Computed locally on device)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#management-quality-index-mqi">4. Management Quality Index (MQI)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Plot_data.html">Plot data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Download_data.html">Download data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Visualization tools</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Monitoring Integrated Service for Land Degradation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Calculate indicators</li>
+    
+    
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="calculate-indicators">
+<h1><a class="toc-backref" href="#id5">Calculate indicators</a><a class="headerlink" href="#calculate-indicators" title="Permalink to this headline">¶</a></h1>
+<img alt="../_images/plugin_toolbar_calculate.png" class="align-center" src="../_images/plugin_toolbar_calculate.png" />
+<p>Sustainable Development Goal 15.3 intends to combat desertification, restore
+degraded land and soil, including land affected by desertification, drought and
+floods, and strive to achieve a land degradation-neutral world by 2030. In
+order to assess the progress to this goal, the agreed-upon indicator for SDG
+15.3 (proportion of land area degraded) is a combination of three
+sub-indicators: change in land productivity, change in land cover and change
+in soil organic carbon.</p>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#calculate-indicators" id="id5">Calculate indicators</a></p>
+<ul>
+<li><p><a class="reference internal" href="#calculate-indicators-with-simplified-tool" id="id6">Calculate indicators with simplified tool</a></p></li>
+<li><p><a class="reference internal" href="#calculate-productivity" id="id7">Calculate productivity</a></p>
+<ul>
+<li><p><a class="reference internal" href="#productivity-trajectory" id="id8">Productivity Trajectory</a></p></li>
+<li><p><a class="reference internal" href="#productivity-performance" id="id9">Productivity Performance</a></p></li>
+<li><p><a class="reference internal" href="#productivity-state" id="id10">Productivity State</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#calculate-land-cover" id="id11">Calculate land cover</a></p></li>
+<li><p><a class="reference internal" href="#calculate-soil-carbon" id="id12">Calculate soil carbon</a></p></li>
+<li><p><a class="reference internal" href="#compute-sdg-indicator-15-3-1" id="id13">Compute SDG Indicator 15.3.1</a></p></li>
+<li><p><a class="reference internal" href="#compute-vegatation-indices" id="id14">Compute Vegatation Indices</a></p></li>
+<li><p><a class="reference internal" href="#compute-forest-fires" id="id15">Compute Forest Fires</a></p></li>
+<li><p><a class="reference internal" href="#compute-forest-change-and-total-carbon-summary" id="id16">Compute Forest Change and Total Carbon &amp; Summary</a></p>
+<ul>
+<li><p><a class="reference internal" href="#step-1-compute-forest-change-and-total-carbon" id="id17">Step 1: Compute Forest Change and Total Carbon</a></p></li>
+<li><p><a class="reference internal" href="#step-2-generate-carbon-change-summary" id="id18">Step 2: Generate Carbon Change Summary</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#compute-mediterrenean-desertification-and-land-use-medalus" id="id19">Compute Mediterrenean Desertification and Land Use (MEDALUS)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#soil-quality-index-sqi" id="id20">1. Soil Quality Index (SQI)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#a-using-default-data-computed-on-google-earth-engine" id="id21">a. Using default data (Computed on Google Earth Engine)</a></p></li>
+<li><p><a class="reference internal" href="#b-using-custom-data-computed-locally-on-device" id="id22">b. Using Custom data (Computed locally on device)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#vegetation-quality-index-vqi" id="id23">2. Vegetation Quality Index (VQI)</a></p></li>
+<li><p><a class="reference internal" href="#climate-quality-index-cqi" id="id24">3. Climate Quality Index (CQI)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id25">a. Using default data (Computed on Google Earth Engine)</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id26">b. Using Custom data (Computed locally on device)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#management-quality-index-mqi" id="id27">4. Management Quality Index (MQI)</a></p></li>
+<li><p><a class="reference internal" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer" id="id28">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>To select the methods and datasets to calculate these indicators, indicators
+click on the calculator icon highlighted above. This will open up the
+“Calculate Indicators” dialog box.</p>
+<img alt="../_images/LDindicator.PNG" class="align-center" src="../_images/LDindicator.PNG" />
+<p>Select the Land degradation indicator (SDG indicator 15.3.1) to open the window for this analysis.</p>
+<img alt="../_images/SDG15.PNG" class="align-center" src="../_images/SDG15.PNG" />
+<p>There are several options for calculating the SDG 15.3.1 Indicator.
+MISLAND supports calculating the indicator using the same process as was
+used by the UNCCD for the default data provided to countries for the 2018
+reporting process. The tool also supports customizing this data, or even
+replacing individual datasets with national-level or other global datasets.</p>
+<ul class="simple">
+<li><p>To calculate all three SDG 15.3.1 indicators in one step, using default
+settings for most of the indicators, click “Calculate all three indicators in
+one step”.</p></li>
+<li><p>To calculate one of the three SDG 15.3.1 indicators, using customized
+settings, or national-level data, click “Productivity”, “Land cover”, or
+“Soil organic carbon”.</p></li>
+<li><p>To calculate a summary table showing statistics on each of the three
+indicators, click “Calculate final SDG 15.3.1 indicator and summary table”.
+Note that you must first compute the indicators using one of the above
+options.</p></li>
+<li><p>To calculate a summary table showing statistics on each of the three
+indicators for multiple sub-divisions, click “Calculate area summaries of a raster on sub-units”.
+Note that you must first compute the indicators using one of the above
+options.</p></li>
+</ul>
+<p>There are three different indicators that are combined to create the SDG 15.3.1
+indicator</p>
+<ul class="simple">
+<li><p>Productivity: measures the trajectory, performance and state of primary
+productivity</p></li>
+<li><p>Land cover: calculates land cover change relative to a baseline period, enter
+a transition matrix indicating which transitions indicate degradation,
+stability or improvement.</p></li>
+<li><p>Soil carbon: compute changes in soil organic carbon as a consequence of
+changes in land cover.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-15-3-1</span> section of this manual for a detailed
+explanation of how each of these sub-indicators is computed in
+MISLAND</p>
+</div>
+<p>There are two ways to calculate the indicators: 1) using a simplified tool that
+will calculate all three indicators at once, but with limited options for
+customization, or 2) using individual tools for each indicator that offer
+complete control over how they are calculated.</p>
+<div class="section" id="calculate-indicators-with-simplified-tool">
+<h2><a class="toc-backref" href="#id6">Calculate indicators with simplified tool</a><a class="headerlink" href="#calculate-indicators-with-simplified-tool" title="Permalink to this headline">¶</a></h2>
+<p>This tool allows users to calculate all three sub-indicators in one step.
+Select the “Calculate all three sub-indicators in one step” button.</p>
+<ol class="arabic simple">
+<li><p>Select the parameters for Setup. The Period is the Initial and Final year
+for the analysis and select one of the two Land Productivity datasets.
+Select Next.</p></li>
+</ol>
+<img alt="../_images/image022.png" class="align-center" src="../_images/image022.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Land Cover dataset. The first option is the default ESA dataset.</p></li>
+</ol>
+<img alt="../_images/image023.png" class="align-center" src="../_images/image023.png" />
+<ol class="arabic simple" start="3">
+<li><p>Select Edit definition to change the aggregation from the ESA Land Cover
+dataset into 7 classes.</p></li>
+</ol>
+<img alt="../_images/image024.png" class="align-center" src="../_images/image024.png" />
+<p>The second option allows users to upload a custom land cover dataset. This
+requires two datasets to compare change over time. Select Next.</p>
+<img alt="../_images/image025.png" class="align-center" src="../_images/image025.png" />
+<ol class="arabic simple" start="4">
+<li><p>The user can now define the effects of land cover change and how it is
+classified as degrading or improving.</p></li>
+</ol>
+<img alt="../_images/image026.png" class="align-center" src="../_images/image026.png" />
+<ol class="arabic simple" start="5">
+<li><p>Select an area to run the analysis or upload a shapefile boundary</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The provided boundaries are from <a class="reference external" href="http://www.naturalearthdata.com">Natural Earth</a>, and are in the <a class="reference external" href="https://creativecommons.org/publicdomain">public domain</a>. The boundaries and names
+used, and the designations used, in MISLAND do not imply official
+endorsement or acceptance by Conservation International Foundation, or by
+its partner organizations and contributors.</p>
+<p>If using MISLAND for official purposes, it is recommended that users
+choose an official boundary provided by the designated office of their
+country.</p>
+</div>
+<img alt="../_images/image027.png" class="align-center" src="../_images/image027.png" />
+<ol class="arabic simple" start="6">
+<li><p>Name the task and make notes for future reference</p></li>
+<li><p>Click on “Calculate” to submit your task to Google Earth Engine</p></li>
+</ol>
+<img alt="../_images/image028.png" class="align-center" src="../_images/image028.png" />
+</div>
+<div class="section" id="calculate-productivity">
+<h2><a class="toc-backref" href="#id7">Calculate productivity</a><a class="headerlink" href="#calculate-productivity" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-productivity</span> background information in this
+manual for a detailed explanation of how productivity is computed.</p>
+</div>
+<p>Productivity measures the trajectory, performance and state of primary
+productivity using either 8km AVHRR, 250m MODIS or 30m LANDSAT 7 (under development) datasets. The user can select
+one or multiple indicators to calculate, the NDVI dataset, name the tasks and
+enter in explanatory notes for their intended reporting area.</p>
+<div class="section" id="productivity-trajectory">
+<h3><a class="toc-backref" href="#id8">Productivity Trajectory</a><a class="headerlink" href="#productivity-trajectory" title="Permalink to this headline">¶</a></h3>
+<p>Trajectory assesses the rate of change of productivity over time. To calculate
+trajectory:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-productivity-trajectory</span> section in this
+manual for a detailed explanation of this indicator is computed.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Select an indicator to calculate</p></li>
+<li><p>Select NDVI dataset to use and select Next</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The valid date range is set by the NDVI dataset selected within the first
+tab: AVHRR dates compare 1982-2015 and MODIS 2001-2016.</p>
+</div>
+<img alt="../_images/image029.png" class="align-center" src="../_images/image029.png" />
+<ol class="arabic simple" start="3">
+<li><p>In the tab “Advanced”, select the method to be used to compute the
+productivity trajectory analysis. The options are:</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-productivity-climate-correction</span> information
+in this manual for a more detailed explanation of each of these
+calculations.</p>
+</div>
+<ul class="simple">
+<li><p><strong>NDVI trend</strong>: This dataset shows the trend in annually integrated NDVI time
+series (2001-2015) using MODIS (250m) dataset (MOD13Q1) or AVHRR (8km;
+GIMMS3g.v1). The normalized difference vegetation index (NDVI) is the ratio
+of the difference between near-infrared band (NIR) and the red band (RED) and
+the sum of these two bands (Rouse et al., 1974; Deering 1978) and reviewed in
+Tucker (1979).</p></li>
+<li><p><strong>RUE</strong>: is defined as the ratio between net primary production (NPP), in
+this case annual integrals of NDVI, and rainfall. It has been increasingly
+used to analyze the variability of vegetation production in arid and
+semi-arid biomes, where rainfall is a major limiting factor for plant growth</p></li>
+<li><p><strong>RESTREND</strong>: this method attempts to adjust the NDVI signals from the effect
+of particular climatic drivers, such as rainfall or soil moisture, using a
+pixel-by-pixel linear regression on the NDVI time series and the climate
+signal. The linear model and the climatic data is used then to predict NDVI,
+and to compute the residuals between the observed and climate-predicted NDVI
+annual integrals. The NDVI residual trend is finally plotted to spatially
+represent overall trends in primary productivity independent of climate.</p></li>
+<li><p><strong>WUE</strong>: is defined as the ratio between net primary production (NPP), in
+this case annual integrals of NDVI, and evapotranspiration.</p></li>
+</ul>
+<img alt="../_images/image030.png" class="align-center" src="../_images/image030.png" />
+</div>
+<div class="section" id="productivity-performance">
+<h3><a class="toc-backref" href="#id9">Productivity Performance</a><a class="headerlink" href="#productivity-performance" title="Permalink to this headline">¶</a></h3>
+<p>Performance is a comparison of how productivity in an area compares to
+productivity in similar areas at the same point in time. To calculate
+performance:</p>
+<ol class="arabic simple">
+<li><p>Select the start and end year of the period of analysis  for comparison.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-productivity-performance</span> section in this
+manual for a detailed explanation of this indicator is computed.</p>
+</div>
+</div>
+<div class="section" id="productivity-state">
+<h3><a class="toc-backref" href="#id10">Productivity State</a><a class="headerlink" href="#productivity-state" title="Permalink to this headline">¶</a></h3>
+<p>State performs a comparison of how current productivity in an area compares to
+past productivity. To calculate state:</p>
+<ol class="arabic simple">
+<li><p>Define the baseline and comparison periods for the computation of the State
+sub-indicator.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-productivity-state</span> section in this manual for
+a detailed explanation of this indicator is computed.</p>
+</div>
+<p>The next step is to define the study area on which to perform the analysis. The
+tool allows selecting the area of interest in one of two ways:</p>
+<ol class="arabic simple">
+<li><p>Selects first (i.e. country) and/or second (i.e. province or state)
+administrative boundary from a drop-down menu.</p></li>
+<li><p>The user can provide a shapefile, KML, or geojson defining an area of
+interest. Once this is done, Select Next.</p></li>
+</ol>
+<img alt="../_images/image031.png" class="align-center" src="../_images/image031.png" />
+<ol class="arabic simple" start="3">
+<li><p>The next step is to write a Task name and some notes to indicate which
+options were selected for the analysis.</p></li>
+</ol>
+<img alt="../_images/image032.png" class="align-center" src="../_images/image032.png" />
+<ol class="arabic simple" start="4">
+<li><p>When all the parameters have been defined, click “Calculate”, and the task
+will be submitted to Google Earth Engine for computing. When the task is
+completed (processing time will vary depending on server usage, but for most
+countries it takes only a few minutes most of the time), you’ll receive an
+email notifying the successful completion.</p></li>
+<li><p>When the Google Earth Engine task has completed and you received the email,
+click “Refresh List” and the status will show FINISHED. Click on the task
+and select “Download results” at the bottom of the window. A pop up window
+will open for you to select where to save the layer and to assign it a name.
+Then click “Save”. The layer will be saved on your computer and
+automatically loaded into yoour current QGIS project.</p></li>
+</ol>
+<img alt="../_images/output_productivity.png" class="align-center" src="../_images/output_productivity.png" />
+</div>
+</div>
+<div class="section" id="calculate-land-cover">
+<h2><a class="toc-backref" href="#id11">Calculate land cover</a><a class="headerlink" href="#calculate-land-cover" title="Permalink to this headline">¶</a></h2>
+<p>Changes in land cover is one of the indicators used to track potential land
+degradation which need to be reported to the UNCCD and to track progress
+towards SDG 15.3.1. While some land cover transitions indicate, in most cases,
+processes of land degradation, the interpretation of those transitions are for
+the most part context specific. For that reason, this indicator requires the
+input of the user to identify which changes in land cover will be considered as
+degradation, improvement or no change in terms of degradation. The toolbox
+allows users to calculate land cover change relative to a baseline period,
+enter a transition matrix indicating which transitions indicate degradation,
+stability or improvement.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-land-cover</span> background information in this
+manual for a detailed explanation of how land cover change is computed.</p>
+</div>
+<p>To calculate the land cover change indicator:</p>
+<ol class="arabic simple">
+<li><p>Click on the Calculate Indicators button from the toolbox bar, then select
+Land cover.</p></li>
+</ol>
+<img alt="../_images/image033.png" class="align-center" src="../_images/image033.png" />
+<ol class="arabic simple" start="2">
+<li><p>Within the “Land Cover Setup tab” the user selects the baseline and target years</p></li>
+</ol>
+<img alt="../_images/image034.png" class="align-center" src="../_images/image034.png" />
+<ol class="arabic simple" start="3">
+<li><p>The land cover aggregation can be customized using the ‘Edit definition’
+button. The user can define their own aggregation of land cover classes from
+the 37 ESA land cover classes to the 7 UNCCD categories.</p>
+<ol class="upperalpha simple">
+<li><p>Select the dial button for the “Custom” option and select “Create new
+definition”</p></li>
+<li><p>Edit the aggregation suitable for the area of interest</p></li>
+<li><p>Select “Save definition” and select Next</p></li>
+</ol>
+</li>
+</ol>
+<img alt="../_images/image035.png" class="align-center" src="../_images/image035.png" />
+<ol class="arabic" start="4">
+<li><p>Within the “Define Degradation tab” user define the meaning of each land
+cover transition in terms of degradation. The options are: stable (0),
+degradation (-) or improvement (+). For example, the default for cropland to
+cropland is 0 because the land cover stays the same and is therefore stable.
+The default for forest to cropland is -1 because forest is likely cut to
+clear way for agriculture and would be considered deforestation. The user is
+encouraged to thoroughly evaluate the meaning of each transition based on
+their knowledge of the study area, since this matrix will have an important
+effect on the land degradation identified by this subindicator.</p>
+<p>Users can keep the default values or create unique transition values of
+their own.</p>
+</li>
+</ol>
+<img alt="../_images/image036.png" class="align-center" src="../_images/image036.png" />
+<ol class="arabic simple" start="5">
+<li><p>The next step is to define the study area on which to perform the analysis.
+The toolbox allows this task to be completed in one of two ways:</p>
+<ol class="upperalpha simple">
+<li><p>The user selects first (i.e. country) and second (i.e. province or state)
+administrative boundary from a drop-down menu.</p></li>
+<li><p>The user can upload a shapefile with an area of interest.</p></li>
+</ol>
+</li>
+</ol>
+<img alt="../_images/image037.png" class="align-center" src="../_images/image037.png" />
+<ol class="arabic simple" start="6">
+<li><p>The next step is to add the task name and relevant notes for the analysis.</p></li>
+</ol>
+<img alt="../_images/image038.png" class="align-center" src="../_images/image038.png" />
+<ol class="arabic simple" start="7">
+<li><p>When all the parameters have been defined, click “Calculate”, and the task
+will be submitted to Google Earth Engine for computing. When the task is
+completed (processing time will vary depending on server usage, but for most
+countries it takes only a few minutes most of the time), you’ll receive an
+email notifying the successful completion.</p></li>
+<li><p>When the Google Earth Engine task has completed and you received the email,
+click “Refresh List” and the status will show FINISHED. Click on the task
+and select “Download results” at the bottom of the window. A pop up window
+will open for you to select where to save the layer and to assign it a name.
+Then click “Save”. The layer will be saved on your computer and
+automatically loaded into yoour current QGIS project.</p></li>
+</ol>
+<img alt="../_images/output_landcover.png" class="align-center" src="../_images/output_landcover.png" />
+</div>
+<div class="section" id="calculate-soil-carbon">
+<h2><a class="toc-backref" href="#id12">Calculate soil carbon</a><a class="headerlink" href="#calculate-soil-carbon" title="Permalink to this headline">¶</a></h2>
+<p>Soil Organic Carbon is calculated as a proxy for carbon stocks. It is measured
+using soil data and changes in land cover.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-soc</span> background information in this manual for
+a detailed explanation of how soil organic carbon change is computed.</p>
+</div>
+<p>To calculate degradation in soil organic carbon:</p>
+<img alt="../_images/image039.png" class="align-center" src="../_images/image039.png" />
+<ol class="arabic simple">
+<li><p>Select Soil organic carbon button under Calculate Indicators</p></li>
+</ol>
+<img alt="../_images/image040.png" class="align-center" src="../_images/image040.png" />
+<ol class="arabic simple" start="2">
+<li><p>The Land Cover Setup tab allows the user to define the period for analysis
+with the baseline and target year. Users can select the Edit definition
+button to change the land cover aggregation method or upload a datasets.</p></li>
+</ol>
+<img alt="../_images/image041.png" class="align-center" src="../_images/image041.png" />
+<ol class="arabic simple" start="3">
+<li><p>The “Advanced” tab allows users to specify the Climate regime.</p></li>
+</ol>
+<img alt="../_images/image042.png" class="align-center" src="../_images/image042.png" />
+<ol class="arabic simple" start="4">
+<li><p>Users can select an area or upload a polygon shapefile for analysis</p></li>
+</ol>
+<img alt="../_images/image043.png" class="align-center" src="../_images/image043.png" />
+<ol class="arabic simple" start="6">
+<li><p>The next step is to add the task name and relevant notes for the analysis.</p></li>
+<li><p>When all the parameters have been defined, click “Calculate”, and the task
+will be submitted to Google Earth Engine for computing. When the task is
+completed (processing time will vary depending on server usage, but for most
+countries it takes only a few minutes most of the time), you’ll receive an
+email notifying the successful completion.</p></li>
+<li><p>When the Google Earth Engine task has completed and you received the email,
+click “Refresh List” and the status will show FINISHED. Click on the task
+and select “Download results” at the bottom of the window. A pop up window
+will open for you to select where to save the layer and to assign it a name.
+Then click “Save”. The layer will be saved on your computer and
+automatically loaded into your current QGIS project.</p></li>
+</ol>
+<img alt="../_images/output_soc.png" class="align-center" src="../_images/output_soc.png" />
+</div>
+<div class="section" id="compute-sdg-indicator-15-3-1">
+<h2><a class="toc-backref" href="#id13">Compute SDG Indicator 15.3.1</a><a class="headerlink" href="#compute-sdg-indicator-15-3-1" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <span class="xref std std-ref">indicator-15-3-1-combining-indicators</span> section of this
+manual for a detailed explanation of how the sub-indicators are combined to
+calculate the final SDG 15.3.1 indicator.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Once you have computed the three sub-indicators (productivity, land cover
+and soil organic carbon), and they are loaded into the QGIS project. Click
+on the Calculate icon (<a href="#id3"><span class="problematic" id="id4">|iconCalculator|</span></a>). This will open up the “Calculate
+Indicator” dialog box. This time click on Step 2 “Calculate final SDG 15.3.1
+indicator and summary table”.</p></li>
+<li><p>The input window will open already populated with the correct sub-indicators
+(that if you have them loaded to the QGIS map)</p></li>
+</ol>
+<img alt="../_images/sdg_input.png" class="align-center" src="../_images/sdg_input.png" />
+<ol class="arabic simple" start="3">
+<li><p>Select the name and location where to save the output raster layer and the
+excel file with the areas computed.</p></li>
+</ol>
+<img alt="../_images/sdg_output.png" class="align-center" src="../_images/sdg_output.png" />
+<ol class="arabic simple" start="4">
+<li><p>Define the area of analysis. In this example, the country boundary.</p></li>
+</ol>
+<img alt="../_images/sdg_area.png" class="align-center" src="../_images/sdg_area.png" />
+<ol class="arabic simple" start="5">
+<li><p>Give a name to the task and click “Calculate”</p></li>
+</ol>
+<img alt="../_images/sdg_options.png" class="align-center" src="../_images/sdg_options.png" />
+<ol class="arabic simple" start="6">
+<li><p>This calculation is run on your computer, so depending on the size of the
+area and the computing power of your computer, it could take a few minutes.
+When completed, the final SDG indicator will be loaded into the QGIS map and
+the Excel file with the areas will be saved in the folder you selected. when
+done, a message will pop up.</p></li>
+</ol>
+<img alt="../_images/sdg_done.png" class="align-center" src="../_images/sdg_done.png" />
+<ol class="arabic simple" start="7">
+<li><p>Click OK and two layers will be loaded to your map: the <strong>5 classes
+productivity</strong> and the <strong>SDG 15.3.1</strong> indicators.</p></li>
+</ol>
+<img alt="../_images/sdg_maps.png" class="align-center" src="../_images/sdg_maps.png" />
+<ol class="arabic simple" start="8">
+<li><p>If you navigate to the folder you selected for storing the files, you can
+open the Excel files with the areas computed for each of the sub-indicators
+and the final SDG. NOTE: You may get an error message when opening the file,
+just click ok and the file will open regardless. We are working to fix this
+error.</p></li>
+</ol>
+<img alt="../_images/sdg_excel.png" class="align-center" src="../_images/sdg_excel.png" />
+</div>
+<div class="section" id="compute-vegatation-indices">
+<h2><a class="toc-backref" href="#id14">Compute Vegatation Indices</a><a class="headerlink" href="#compute-vegatation-indices" title="Permalink to this headline">¶</a></h2>
+<p>Land degradation hotspots (LDH) are produced via the analysis of time-series
+vegetation indices data and are used to characterize areas of different sizes,
+where the vegetation cover and the soil types are severely degraded. Vegetation
+loss/gain hotspots will be calculated based on time series observation of selected
+suit of vegetation indices depending on the climatic zones and terrain morphology
+of the North African countries</p>
+<p>Vegation Indices computed from Landsat 7 ETM+ include:</p>
+<ol class="arabic">
+<li><p><strong>NDVI (humid, sub-humid and semi-arid zones)</strong></p>
+<p>DVI is preferable for global vegetation monitoring since it helps to compensate for
+changes in lighting conditions, surface slope, exposure, and other external factors.
+NDVI is calculated in accordance with the formula:</p>
+<img alt="../_images/ndvi.png" class="align-center" src="../_images/ndvi.png" />
+<p>NIR – reflection in the near-infrared spectrum
+RED – reflection in the red range of the spectrum</p>
+<p>According to this formula, the density of vegetation (NDVI) at a certain point of the
+image is equal to the difference in the intensities of reflected light in the red and
+infrared range divided by the sum of these intensities.</p>
+<p>This index defines values ​​from -1.0 to 1.0, basically representing greens, where negative
+values ​​are mainly formed from clouds, water and snow, and values ​​close to zero are
+primarily formed from rocks and bare soil. Very small values ​​(0.1 or less) of the NDVI
+function correspond to empty areas of rocks, sand or snow. Moderate values ​​(from 0.2 to 0.3)
+represent shrubs and meadows, while large values ​​(from 0.6 to 0.8) indicate temperate and
+tropical forests.</p>
+</li>
+<li><p><strong>MSAVI2 (arid and stepic zones)</strong></p>
+<p>MSAVI2 is soil adjusted vegetation indices that seek to address some of the limitation of
+NDVI when applied to areas with a high degree of exposed soil surface.It eliminates the need
+to find the soil line from a feature-space plot or even explicitly specify the soil brightness
+correction factor:</p>
+<img alt="../_images/msavi2.png" class="align-center" src="../_images/msavi2.png" />
+</li>
+<li><p><strong>SAVI (desert areas)</strong></p>
+<p>SAVI is used to correct Normalized Difference Vegetation Index (NDVI) for the influence of
+soil brightness in areas where vegetative cover is low. Landsat Surface Reflectance-derived
+SAVI is calculated as a ratio between the R and NIR values with a soil brightness correction
+factor (L) defined as 0.5 to accommodate most land cover types.</p>
+<img alt="../_images/savi.png" class="align-center" src="../_images/savi.png" />
+</li>
+</ol>
+<p>To compute the above vegetation indices, click on the calculator icon . This will open up the
+“Calculate Indicators” dialog box.</p>
+<img alt="../_images/plugin_toolbar_calculate.png" class="align-center" src="../_images/plugin_toolbar_calculate.png" />
+<p>Select the “Vegetation Indices Time-Series” to open the window for this analysis.</p>
+<img alt="../_images/vegetation_indices.png" class="align-center" src="../_images/vegetation_indices.png" />
+<p>From the list of vegetation indices provided select your desired index and provide a title to your
+plot. Select the area of interest i.e point or polygon, label your task and calculate the index.</p>
+<img alt="../_images/vegetation_indices_calc.png" class="align-center" src="../_images/vegetation_indices_calc.png" />
+<p>To view your final plot go to “Download results from Earth Engine” and refresh the list, then select
+the task and download the results. This will plot a graph of your index over time.</p>
+<img alt="../_images/vegetation_indices_task.png" class="align-center" src="../_images/vegetation_indices_task.png" />
+<img alt="../_images/vegetation_indices_plot.png" class="align-center" src="../_images/vegetation_indices_plot.png" />
+</div>
+<div class="section" id="compute-forest-fires">
+<h2><a class="toc-backref" href="#id15">Compute Forest Fires</a><a class="headerlink" href="#compute-forest-fires" title="Permalink to this headline">¶</a></h2>
+<p>Burnt areas and forest fires are be highlighted and mapped out form remotely sensed <strong>Landsat 8 /Sentinel 2</strong>
+data using the Normalized Burn Ratio (NBR). NBR is designed to highlight burned areas and estimate burn
+severity. It uses near-infrared (NIR) and shortwave-infrared (SWIR) wavelengths. Before fire events,
+healthy vegetation has very high NIR reflectance and a low SWIR reflectance. In contrast, recently
+burned areas show low reflectance in the NIR and high reflectance in the SWIR band.</p>
+<p>The NBR is be calculated for Landsat/Sentinel images before the fire (pre-fire NBR) and after
+the fire (post-fire NBR). The <strong>difference between the pre-fire NBR and the post-fire NBR</strong> referred
+to as <strong>delta NBR (dNBR)</strong> is computed to highlight the areas of forest disturbance by fire event.</p>
+<p>Classification of the dNBR is be used for burn severity assessment, as areas with higher dNBR
+values indicate more severe damage whereas areas with negative dNBR values might show increased
+vegetation productivity. dNBR is classified according to burn severity ranges proposed by
+the United States Geological Survey(USGS)</p>
+<p>To compute the above forest fires, click on the calculator icon . This will open up the
+“Calculate Indicators” dialog box.</p>
+<img alt="../_images/plugin_toolbar_calculate.png" class="align-center" src="../_images/plugin_toolbar_calculate.png" />
+<p>Select the “Forest Degradation Hotspots” to open the window for this analysis then select Forest Fires.</p>
+<img alt="../_images/forest_degradation.png" class="align-center" src="../_images/forest_degradation.png" />
+<p>Select either “Landsat 8” or  “Sentinel 2”, a Pre-fire and Post-fire perio, the area of interest then calculate
+your parameters.</p>
+<img alt="../_images/forest_degradation_dataset.png" class="align-center" src="../_images/forest_degradation_dataset.png" />
+<p>To view your final result go to “Download results from Earth Engine” and refresh the list, then select
+the task and download the results. This will add 3 datasets to the map view i.e Prefire NBR, Postfire NBR and dNBR imagery.</p>
+<img alt="../_images/vegetation_indices.png" class="align-center" src="../_images/vegetation_indices.png" />
+</div>
+<div class="section" id="compute-forest-change-and-total-carbon-summary">
+<h2><a class="toc-backref" href="#id16">Compute Forest Change and Total Carbon &amp; Summary</a><a class="headerlink" href="#compute-forest-change-and-total-carbon-summary" title="Permalink to this headline">¶</a></h2>
+<p>The quantification of the forest gain/loss hotspots will be based on pre-existing high-resolution
+global maps derived from Hansen Global Forest change dataset that can be accessed using Google
+Earth Engine API. The maps are produced from time-series analysis of Landsat images characterizing
+forest extent and change over time.</p>
+<div class="section" id="step-1-compute-forest-change-and-total-carbon">
+<h3><a class="toc-backref" href="#id17">Step 1: Compute Forest Change and Total Carbon</a><a class="headerlink" href="#step-1-compute-forest-change-and-total-carbon" title="Permalink to this headline">¶</a></h3>
+<p>To compute Forest Change and Total Carbon, click on the calculator icon . This will open up the
+“Calculate Indicators” dialog box.</p>
+<p>Select Forest Change and Total Carbon and select <strong>Step 1</strong>, calculate Forest Change and Total Carbon
+to open the window for this analysis.</p>
+<img alt="../_images/vegetation_indices.png" class="align-center" src="../_images/vegetation_indices.png" />
+<img alt="../_images/forest_carbon.png" class="align-center" src="../_images/forest_carbon.png" />
+<img alt="../_images/forest_carbon_1.png" class="align-center" src="../_images/forest_carbon_1.png" />
+<p>Provide an Initial and Target year for the Hansen Global Forest Change dataset. Also provide
+a value considered forest cover percentage.</p>
+<img alt="../_images/forest_carbon_1_year.png" class="align-center" src="../_images/forest_carbon_1_year.png" />
+<p>Next select the above ground biomass dataset to be used and the method for calculating the root to shoot
+ratio. Procees to select the area of interest and label your task then calculate.</p>
+<img alt="../_images/forest_carbon_1_method.png" class="align-center" src="../_images/forest_carbon_1_method.png" />
+<p>To view your final result go to “Download results from Earth Engine” and refresh the list, then select
+the task and download the results. This will add 2 datasets to the map view i.e Total carbon and Forest loss</p>
+<img alt="../_images/forest_fire_result.png" class="align-center" src="../_images/forest_fire_result.png" />
+</div>
+<div class="section" id="step-2-generate-carbon-change-summary">
+<h3><a class="toc-backref" href="#id18">Step 2: Generate Carbon Change Summary</a><a class="headerlink" href="#step-2-generate-carbon-change-summary" title="Permalink to this headline">¶</a></h3>
+<p>To generate a carbon change summary, select <strong>Step 2</strong>, Calculate carbon change summary table to open the window
+for analysis.</p>
+<img alt="../_images/forest_carbon_2.png" class="align-center" src="../_images/forest_carbon_2.png" />
+<p>Provide the input datasets generated from step 1 (Auto-detected if already loaded onto the map view).</p>
+<img alt="../_images/forest_carbon_2_input.png" class="align-center" src="../_images/forest_carbon_2_input.png" />
+<p>Set the output location for the summary table file, select the same area of interest as in step 1 and calculate.</p>
+<img alt="../_images/forest_carbon_2_output.png" class="align-center" src="../_images/forest_carbon_2_output.png" />
+<p>A summary file in xlsx format will be generated on completion similar to the one shown below.</p>
+<img alt="../_images/forest_carbon_excel.png" class="align-center" src="../_images/forest_carbon_excel.png" />
+</div>
+</div>
+<div class="section" id="compute-mediterrenean-desertification-and-land-use-medalus">
+<h2><a class="toc-backref" href="#id19">Compute Mediterrenean Desertification and Land Use (MEDALUS)</a><a class="headerlink" href="#compute-mediterrenean-desertification-and-land-use-medalus" title="Permalink to this headline">¶</a></h2>
+<p>The Mediterranean Desertification and Land Use (MEDALUS) is the name of a project supported
+by Europe to assess, model and understand the desertification phenomena that increasingly
+affect the Mediterranean area. It provides a satisfied result about land degradation vulnerability.</p>
+<p>The MEDALUS approach identifies environmentally sensitive areas (ESAs) through the Environmentally
+Sensitive Area Index (ESAI). This index can be used to obtain an in-depth understanding of the parameters
+causing the desertification threat at a certain point. This approach is simple, robust, widely applicable,
+and acceptable to new indicators and parameters and can be adjusted to several level scales. , the method
+was used for the analysis of the main indicators identified to be driving forces of land degradation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Maintain the same area of interest for all computations within MEDALUS.</p>
+</div>
+<div class="section" id="soil-quality-index-sqi">
+<h3><a class="toc-backref" href="#id20">1. Soil Quality Index (SQI)</a><a class="headerlink" href="#soil-quality-index-sqi" title="Permalink to this headline">¶</a></h3>
+<p>Soil is a crucial factor in evaluating the Environmental Sensitivity of an ecosystem, especially in the arid,
+semi-arid and dry sub-humid zones. Soil properties related to desertification and degradation phenomena affect two principal parameters:
+(i) water storage and retention capacity;
+(ii) erosion resistance.</p>
+<p>The formula used to compute the SQI is as shown below:</p>
+<p><strong>SQI  = (Parent material x Depth x Texture x Slope x Drainage x Rock Fragments)^1/6</strong></p>
+<p>Default datasets used for sqi are as shown below:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Indicator</strong></p></th>
+<th class="head"><p><strong>Variables</strong></p></th>
+<th class="head"><p><strong>Data Source</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Soil Quality Index</p></td>
+<td><p>Slope</p></td>
+<td><p><a class="reference external" href="https://developers.google.com/earth-engine/datasets/catalog/CGIAR_SRTM90_V4">SRTM Digital Elevation</a></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Soil Depth</p></td>
+<td><p>Custom User Input</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Rock Fragments</p></td>
+<td><p><a class="reference external" href="https://webarchive.iiasa.ac.at/Research/LUC/External-World-soil-database/HTML/HWSD_Data.html?sb=4">Harmonized World Soil Database</a></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Parent Material</p></td>
+<td><p><a class="reference external" href="http://www.fao.org/geonetwork/srv/en/metadata.show%3Fid=14116">Digital Sol Map of the world</a></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Drainage</p></td>
+<td><p><a class="reference external" href="https://webarchive.iiasa.ac.at/Research/LUC/External-World-soil-database/HTML/HWSD_Data.html?sb=4">Harmonized World Soil Database</a></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Soil Texture</p></td>
+<td><p><a class="reference external" href="https://developers.google.com/earth-engine/datasets/catalog/OpenLandMap_SOL_SOL_TEXTURE-CLASS_USDA-TT_M_v02">OpenLandMap Soil texture class (USDA system)</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Soil Quality Index can be calculated in two ways:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Using default data (Computed on Google Earth Engine)</p></li>
+<li><p>Using Custom data (Computed locally on device)</p></li>
+</ol>
+</div></blockquote>
+<div class="section" id="a-using-default-data-computed-on-google-earth-engine">
+<h4><a class="toc-backref" href="#id21">a. Using default data (Computed on Google Earth Engine)</a><a class="headerlink" href="#a-using-default-data-computed-on-google-earth-engine" title="Permalink to this headline">¶</a></h4>
+<p>Inorder to compute Soil Quality Index using default data use the following steps.</p>
+<p>First open the calculate indicators toolbox and select MEDALUS then select the Soil Quality Index
+option as shown.</p>
+<img alt="../_images/medalus_toolbox.png" class="align-center" src="../_images/medalus_toolbox.png" />
+<img alt="../_images/medalus_sqi.png" class="align-center" src="../_images/medalus_sqi.png" />
+<p>Input soil depth (cm) and edit soil texture aggregation method according to case study as shown. This
+will reclassify soil depth values according to the definition selected.</p>
+<img alt="../_images/sqi_toolbox.png" class="align-center" src="../_images/sqi_toolbox.png" />
+<img alt="../_images/sqi_texture_agg.png" class="align-center" src="../_images/sqi_texture_agg.png" />
+<p>Proceed to select an area of interest and run the computation.</p>
+</div>
+<div class="section" id="b-using-custom-data-computed-locally-on-device">
+<h4><a class="toc-backref" href="#id22">b. Using Custom data (Computed locally on device)</a><a class="headerlink" href="#b-using-custom-data-computed-locally-on-device" title="Permalink to this headline">¶</a></h4>
+<p>This step requires the data to be available locally. First Input soil depth (cm) then Select Custom soil
+quality datasets instead of default and import sqi datasets as below.</p>
+<img alt="../_images/sqi_custom.png" class="align-center" src="../_images/sqi_custom.png" />
+<p>Select import and select a raster or vector dataset of interest. Select the band number for the
+raster dataset. Input the aggregation definition, study year and the reclassified output destination file as shown:</p>
+<img alt="../_images/sqi_load_raster.png" class="align-center" src="../_images/sqi_load_raster.png" />
+<p>Ensure to reclassifiy values correctly according to case study. Once all 4 datasets are imported proceed
+to select an area of interest and run the computation. You will be required to select a destination for your
+output file.</p>
+<img alt="../_images/sqi_aggregation.png" class="align-center" src="../_images/sqi_aggregation.png" />
+</div>
+</div>
+<div class="section" id="vegetation-quality-index-vqi">
+<h3><a class="toc-backref" href="#id23">2. Vegetation Quality Index (VQI)</a><a class="headerlink" href="#vegetation-quality-index-vqi" title="Permalink to this headline">¶</a></h3>
+<p>The Vegetation Quality index is derived as the geometric mean of the characteristics of the vegetation. Fire Hazard layers (RI),
+Fire Resistance (FR), drought (RS), vegetation erosion protection (PE) and cover plant (CV) according to the
+following formula:</p>
+<p><strong>VQI = (RI x PE x RS x CV) ^ ¼</strong></p>
+<p>Default datasets used for vqi are as shown below:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Indicator</strong></p></th>
+<th class="head"><p><strong>Variables</strong></p></th>
+<th class="head"><p><strong>Data Source</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Vegetation Quality Index</p></td>
+<td><p>Fire Risk</p></td>
+<td><p><a class="reference external" href="http://maps.elie.ucl.ac.be/CCI/viewer/">ESA CCI–land cover map v2.0.7–2015</a></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Drought Resistance</p></td>
+<td><p><a class="reference external" href="http://maps.elie.ucl.ac.be/CCI/viewer/">ESA CCI–land cover map v2.0.7–2015</a></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Erosion Protection</p></td>
+<td><p><a class="reference external" href="http://maps.elie.ucl.ac.be/CCI/viewer/">ESA CCI–land cover map v2.0.7–2015</a></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Plant Cover</p></td>
+<td><p><a class="reference external" href="https://developers.google.com/earth-engine/datasets/catalog/VITO_PROBAV_C1_S1_TOC_100M">PROBA-V C1 Top Of Canopy Daily Synthesis 100m</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>To compute vegetation quality index, select Vegetation Quality Index option under the MEDALUS toolbar. For each of the 3 datasets, i.e
+- Fire Risk
+- Drought Resistance
+- Erosion Protection</p>
+<img alt="../_images/vqi_toolbox.png" class="align-center" src="../_images/vqi_toolbox.png" />
+<p>Select the land cover year and an aggregation definition or use default set aggregation. This will reclassify
+land cover classes based on definition provided.</p>
+<img alt="../_images/vqi_agg.png" class="align-center" src="../_images/vqi_agg.png" />
+<p>For Plant cover, select a start and end date. Proceed to select an area of interest and run the computation.</p>
+</div>
+<div class="section" id="climate-quality-index-cqi">
+<h3><a class="toc-backref" href="#id24">3. Climate Quality Index (CQI)</a><a class="headerlink" href="#climate-quality-index-cqi" title="Permalink to this headline">¶</a></h3>
+<p>Climate quality is assessed on the basis of how it influences water availability to the plants. The climate quality index, according to the MEDALUS approach, is obtained by cross-referencing the three layers of
+information namely precipitation and aridity index using the following equation:</p>
+<p><strong>CQI = (precipitation x aridity index) ^ 1/2</strong></p>
+<p>Default datasets used for CQI are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Indicator</strong></p></th>
+<th class="head"><p><strong>Variables</strong></p></th>
+<th class="head"><p><strong>Data Source</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Climate Quality Index</p></td>
+<td><p>Precipitation</p></td>
+<td><p><a class="reference external" href="developers.google.com/earth-engine/datasets/catalog/IDAHO_EPSCOR_TERRACLIMATE">TerraClimate Monthly Climate and Climatic Water Balance for Global Terrestrial Surfaces</a></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Potential Evapotranspiration</p></td>
+<td><p><a class="reference external" href="developers.google.com/earth-engine/datasets/catalog/IDAHO_EPSCOR_TERRACLIMATE">TerraClimate Monthly Climate and Climatic Water Balance for Global Terrestrial Surfaces</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Climate Quality Index can be calculated in two ways:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Using default data (Computed on Google Earth Engine)</p></li>
+<li><p>Using Custom data (Computed locally on device)</p></li>
+</ol>
+</div></blockquote>
+<div class="section" id="id1">
+<h4><a class="toc-backref" href="#id25">a. Using default data (Computed on Google Earth Engine)</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Select a year of study between 1979-2020. Proceed to select and area of interest and run the computation.</p>
+<img alt="../_images/cqi_toolbox.png" class="align-center" src="../_images/cqi_toolbox.png" />
+</div>
+<div class="section" id="id2">
+<h4><a class="toc-backref" href="#id26">b. Using Custom data (Computed locally on device)</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>This step requires the data to be available locally. Load both a potential evapotranspiration and precipitation dataset to the
+plugin as shown below.</p>
+<img alt="../_images/cqi_toolbox_custom.png" class="align-center" src="../_images/cqi_toolbox_custom.png" />
+<p>Proceed to select an area of interest and run the computation. You will be required to select a destination for your
+output file.</p>
+</div>
+</div>
+<div class="section" id="management-quality-index-mqi">
+<h3><a class="toc-backref" href="#id27">4. Management Quality Index (MQI)</a><a class="headerlink" href="#management-quality-index-mqi" title="Permalink to this headline">¶</a></h3>
+<p>The Management quality index, according to the MEDALUS approach, is obtained by cross-referencing the two layers of information
+namely Land-Use intensity (LU) and Population Density (PD) using the following equation:</p>
+<p><strong>MQI = (LU X PD)^1/2</strong></p>
+<p>Default datasets used for MQI are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Indicator</strong></p></th>
+<th class="head"><p><strong>Variables</strong></p></th>
+<th class="head"><p><strong>Data Source</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Management Quality Index</p></td>
+<td><p>Land Use Intensity</p></td>
+<td><p><a class="reference external" href="http://maps.elie.ucl.ac.be/CCI/viewer/">ESA CCI–land cover map v2.0.7–2015</a></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Population Density</p></td>
+<td><p><a class="reference external" href="https://developers.google.com/earth-engine/datasets/catalog/CIESIN_GPWv411_GPW_Population_Density">GPWv411: Population Density (Gridded Population of the World Version 4.11)</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>To compute vegetation quality index, select Management Quality Index option under the MEDALUS toolbar. Select
+the land cover year an and set aggregation definition for Land Use Intensity. This will reclassify land cover classes
+based on definition provided.</p>
+<img alt="../_images/mqi_toolbox.png" class="align-center" src="../_images/mqi_toolbox.png" />
+<img alt="../_images/mqi_agg.png" class="align-center" src="../_images/mqi_agg.png" />
+<p>Proceed to select an area of interest and run the computation. You will be required to select a destination for your
+output file.</p>
+</div>
+<div class="section" id="environmentally-sensitive-area-esa-index-combined-desertification-layer">
+<h3><a class="toc-backref" href="#id28">Environmentally sensitive area (ESA) Index (Combined Desertification Layer)</a><a class="headerlink" href="#environmentally-sensitive-area-esa-index-combined-desertification-layer" title="Permalink to this headline">¶</a></h3>
+<p>The environmentally sensitive area (ESA) index (ESAI) is computed according to the original procedure as a geometric
+mean of the four quality values recorded at each location (i.e., in each elementary pixel; Equation 2):</p>
+<p><strong>ESAI = (SQI x VQI x CQI x MQI) ^ 1/4</strong></p>
+<p>To compute the final desertification layer all MEDALUS subindicator must be already computed i.e SQI, VQI, CQI, MQI.
+In the MEDALUS toolbox select Calculate <strong>final MEDALUS option</strong> as shown below:</p>
+<img alt="../_images/esai.png" class="align-center" src="../_images/esai.png" />
+<p>Load all 4 layers to the plugin, select the area of interest and compute the ESAI. You will be required to
+select a destination for your output file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All layers will be automatically loaded into the plugin if they are available and loaded within QGIS.</p>
+</div>
+<img alt="../_images/esai_toolbox.png" class="align-center" src="../_images/esai_toolbox.png" />
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="Plot_data.html" class="btn btn-neutral float-right" title="Plot data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Registration.html" class="btn btn-neutral float-left" title="Registration and settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, LocateIT Kenya Ltd.
+      <span class="lastupdated">
+        Last updated on True.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
